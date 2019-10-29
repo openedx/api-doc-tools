@@ -1,0 +1,10 @@
+[run]
+branch = True
+data_file = .coverage
+source=edx_api_doc_tools
+omit =
+    test_settings
+    *migrations*
+    *admin.py
+    *static*
+    *templates*
