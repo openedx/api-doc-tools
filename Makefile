@@ -72,14 +72,14 @@ selfcheck: ## check that the Makefile is well-formed
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	rm -rf docs/_build
-	cd api-doc-tools && ../manage.py makemessages -l en -v1 -d django
-	cd api-doc-tools && ../manage.py makemessages -l en -v1 -d djangojs
+	cd edx_api_doc_tools && ../manage.py makemessages -l en -v1 -d django
+	cd edx_api_doc_tools && ../manage.py makemessages -l en -v1 -d djangojs
 
 compile_translations: ## compile translation files, outputting .po files for each supported language
-	cd api-doc-tools && ../manage.py compilemessages
+	cd edx_api_doc_tools && ../manage.py compilemessages
 
 detect_changed_source_translations:
-	cd api-doc-tools && i18n_tool changed
+	cd edx_api_doc_tools && i18n_tool changed
 
 pull_translations: ## pull translations from Transifex
 	tx pull -af --mode reviewed
