@@ -25,7 +25,15 @@ coverage: clean ## generate and view HTML coverage report
 	pytest --cov-report html
 	$(BROWSER)htmlcov/index.html
 
-docs: ## generate Sphinx HTML documentation, including API docs
+build_docs:
+	doc8 --ignore-path docs/_build README.rst docs
+	rm -f docs/edx_api_doc_tools.rst
+	rm -f docs/modules.rst
+	make -C docs clean
+	make -C docs html
+	python setup.py check --restructuredtext --strict
+
+docs: build_docs ## generate Sphinx HTML documentation, including API docs
 	tox -e docs
 	$(BROWSER)docs/_build/html/index.html
 
@@ -44,11 +52,28 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
 	mv requirements/test.tmp requirements/test.txt
 
-quality: ## check coding style with pycodestyle and pylint
-	tox -e quality
+CHECKABLE_PYTHON=tests test_utils edx_api_doc_tools manage.py setup.py test_settings.py
+
+style:
+	pycodestyle $(CHECKABLE_PYTHON)
+	pydocstyle $(CHECKABLE_PYTHON)
+
+isort_check:
+	isort --check-only --diff --recursive $(CHECKABLE_PYTHON)
+
+pylint:
+	touch tests/__init__.py
+	pylint $(CHECKABLE_PYTHON)
+	pylint --py3k $(CHECKABLE_PYTHON)
+	rm tests/__init__.py
+
+quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
+	make selfcheck
 
 pii_check: ## check for PII annotations on all Django models
-	tox -e pii_check
+	DJANGO_SETTINGS_MODULE=test_settings \
+	code_annotations django_find_annotations --config_file .pii_annotations.yml \
+	--lint --report --coverage
 
 requirements: ## install development environment requirements
 	pip install -qr requirements/pip-tools.txt
