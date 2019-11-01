@@ -8,13 +8,15 @@ from __future__ import absolute_import, unicode_literals
 import os
 import sys
 
+
 PWD = os.path.abspath(os.path.dirname(__file__))
 
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_settings')
     sys.path.append(PWD)
     try:
-        from django.core.management import execute_from_command_line  # pylint: disable=wrong-import-position
+        # pylint: disable=wrong-import-position
+        from django.core.management import execute_from_command_line
     except ImportError:
         # The above import may fail for some other reason. Ensure that the
         # issue is really that Django is missing to avoid masking other
