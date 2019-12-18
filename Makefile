@@ -60,11 +60,14 @@ upgrade: upgrade-pip-tools ## update the requirements/*.txt files with the lates
 	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
 	mv requirements/test.tmp requirements/test.txt
 
-CHECKABLE_PYTHON=tests test_utils edx_api_doc_tools manage.py setup.py test_settings.py
+CHECKABLE_PYTHON=tests test_utils example edx_api_doc_tools manage.py setup.py test_settings.py
 
 style:
 	pycodestyle $(CHECKABLE_PYTHON)
 	pydocstyle $(CHECKABLE_PYTHON)
+
+isort:  # sort all imports.
+	isort --recursive $(CHECKABLE_PYTHON)
 
 isort_check:
 	isort --check-only --diff --recursive $(CHECKABLE_PYTHON)
