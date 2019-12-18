@@ -4,5 +4,25 @@
 #
 #    make upgrade
 #
-django==1.11.25
+certifi==2019.11.28       # via requests
+chardet==3.0.4            # via requests
+coreapi==2.3.3            # via drf-yasg
+coreschema==0.0.4         # via coreapi, drf-yasg
+django==1.11.27
+djangorestframework==3.9.4
+drf-yasg==1.17.0
+idna==2.8                 # via requests
+inflection==0.3.1         # via drf-yasg
+itypes==1.1.0             # via coreapi
+jinja2==2.10.3            # via coreschema
+markupsafe==1.1.1         # via jinja2
+packaging==19.2           # via drf-yasg
+pyparsing==2.4.5          # via packaging
 pytz==2019.3              # via django
+requests==2.22.0          # via coreapi
+ruamel.ordereddict==0.4.14 ; python_version == "2.7"  # via ruamel.yaml
+ruamel.yaml.clib==0.2.0   # via ruamel.yaml
+ruamel.yaml==0.16.5       # via drf-yasg
+six==1.13.0               # via drf-yasg, packaging
+uritemplate==3.0.0        # via coreapi, drf-yasg
+urllib3==1.25.7           # via requests

@@ -1,5 +1,6 @@
 # Core requirements for using this application
 -c constraints.txt
 
+djangorestframework
+drf-yasg
 Django>=1.11,<2.0          # Web application framework
-

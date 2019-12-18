@@ -8,8 +8,11 @@
 # pin when possible.  Writing an issue against the offending project and
 # linking to it here is good.
 
-# This packages is a backport which can only be installed on Python 2.7
+# These packages are backports which can't be installed in Python 3.
+backports.functools-lru-cache ; python_version == "2.7"
+functools32 ; python_version == "2.7"
 futures ; python_version == "2.7"
+ruamel.ordereddict ; python_version == "2.7"
 
 # A dependency of pytest.  Pytest doesn't constrain it and 6.0.0 onward
 # only works with python 3
