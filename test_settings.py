@@ -31,8 +31,17 @@ DATABASES = {
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'drf_yasg',
     'edx_api_doc_tools',
 )
+
+TEMPLATES = [
+    {
+        'NAME': 'django',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    }
+]
 
 LOCALE_PATHS = [
     root('edx_api_doc_tools', 'conf', 'locale'),

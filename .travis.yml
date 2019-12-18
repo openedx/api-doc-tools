@@ -4,14 +4,12 @@ language: python
 
 matrix:
   include:
-    - python: 2.7
-      env: COMMAND=tox TOXENV=django18
-    - python: 2.7
+    - python: 3.5
       env: COMMAND=tox TOXENV=django111
     - python: 3.6
-      env: COMMAND=tox TOXENV=django18
-    - python: 3.6
       env: COMMAND=tox TOXENV=django111
+    - python: 3.5
+      env: COMMAND=tox TOXENV=django20
     - python: 3.6
       env: COMMAND=tox TOXENV=django20
     - python: 3.6
