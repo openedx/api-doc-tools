@@ -77,3 +77,6 @@ tests/__init__.py
 
 # Development task artifacts
 default.db
+
+# Common virtualenv directory
+.venv*

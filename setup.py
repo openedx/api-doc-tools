@@ -64,9 +64,9 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
 
 setup(
-    name='api-doc-tools',
+    name='edx-api-doc-tools',
     version=VERSION,
-    description="""Tools for writing and generating API documentation for edX REST APIs""",
+    description="Tools for writing and generating API documentation for edX REST APIs",
     long_description=README + '\n\n' + CHANGELOG,
     author='edX',
     author_email='oscm@edx.org',

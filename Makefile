@@ -1,6 +1,9 @@
-.PHONY: clean compile_translations coverage diff_cover docs dummy_translations \
-        extract_translations fake_translations help pii_check pull_translations push_translations \
-        quality requirements selfcheck test test-all upgrade validate
+.PHONY: build_docs build_dummy_translations clean compile_translations \
+        coverage detect_changed_source_translations diff_cover docs \
+        dummy_translations extract_translations help isort isort_check \
+        pii_check pip-tools pull_translations push_translations pylint quality \
+        requirements selfcheck style test test-all upgrade upgrade \
+        upgrade-pip-tools validate validate_translations
 
 .DEFAULT_GOAL := help
 
@@ -25,33 +28,62 @@ coverage: clean ## generate and view HTML coverage report
 	pytest --cov-report html
 	$(BROWSER)htmlcov/index.html
 
-docs: ## generate Sphinx HTML documentation, including API docs
+build_docs:
+	doc8 --ignore-path docs/_build README.rst docs
+	rm -f docs/edx_api_doc_tools.rst
+	rm -f docs/modules.rst
+	make -C docs clean
+	make -C docs html
+	python setup.py check --restructuredtext --strict
+
+docs: build_docs ## generate Sphinx HTML documentation, including API docs
 	tox -e docs
 	$(BROWSER)docs/_build/html/index.html
 
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+pip-tools:
 	pip install -qr requirements/pip-tools.txt
+
+upgrade-pip-tools: pip-tools
+	pip-compile --upgrade requirements/pip-tools.in
+
+upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
+upgrade: upgrade-pip-tools ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	# Make sure to compile files after any other files they include!
-	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
-	pip-compile --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --upgrade -o requirements/test.txt requirements/test.in
-	pip-compile --upgrade -o requirements/doc.txt requirements/doc.in
-	pip-compile --upgrade -o requirements/quality.txt requirements/quality.in
-	pip-compile --upgrade -o requirements/travis.txt requirements/travis.in
-	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
+	make pip-tools  # Reinstall pip-tools in case it was upgraded.
+	pip-compile --upgrade requirements/base.in
+	pip-compile --upgrade requirements/test.in
+	pip-compile --upgrade requirements/doc.in
+	pip-compile --upgrade requirements/quality.in
+	pip-compile --upgrade requirements/travis.in
+	pip-compile --upgrade requirements/dev.in
 	# Let tox control the Django version for tests
 	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
 	mv requirements/test.tmp requirements/test.txt
 
-quality: ## check coding style with pycodestyle and pylint
-	tox -e quality
+CHECKABLE_PYTHON=tests test_utils edx_api_doc_tools manage.py setup.py test_settings.py
+
+style:
+	pycodestyle $(CHECKABLE_PYTHON)
+	pydocstyle $(CHECKABLE_PYTHON)
+
+isort_check:
+	isort --check-only --diff --recursive $(CHECKABLE_PYTHON)
+
+pylint:
+	echo '"""This file exists only to satisify pylint; it is not committed."""' > tests/__init__.py
+	pylint $(CHECKABLE_PYTHON)
+	pylint --py3k $(CHECKABLE_PYTHON)
+	rm tests/__init__.py
+
+quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
+	make selfcheck
 
 pii_check: ## check for PII annotations on all Django models
-	tox -e pii_check
+	DJANGO_SETTINGS_MODULE=test_settings \
+	code_annotations django_find_annotations --config_file .pii_annotations.yml \
+	--lint --report --coverage
 
-requirements: ## install development environment requirements
-	pip install -qr requirements/pip-tools.txt
+requirements: pip-tools ## install development environment requirements
 	pip-sync requirements/dev.txt requirements/private.*
 
 test: clean ## run tests in the current virtualenv
@@ -72,14 +104,14 @@ selfcheck: ## check that the Makefile is well-formed
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	rm -rf docs/_build
-	cd api-doc-tools && ../manage.py makemessages -l en -v1 -d django
-	cd api-doc-tools && ../manage.py makemessages -l en -v1 -d djangojs
+	cd edx_api_doc_tools && ../manage.py makemessages -l en -v1 -d django
+	cd edx_api_doc_tools && ../manage.py makemessages -l en -v1 -d djangojs
 
 compile_translations: ## compile translation files, outputting .po files for each supported language
-	cd api-doc-tools && ../manage.py compilemessages
+	cd edx_api_doc_tools && ../manage.py compilemessages
 
 detect_changed_source_translations:
-	cd api-doc-tools && i18n_tool changed
+	cd edx_api_doc_tools && i18n_tool changed
 
 pull_translations: ## pull translations from Transifex
 	tx pull -af --mode reviewed
