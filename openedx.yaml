@@ -2,16 +2,50 @@
 
 ---
 owner: nedbat
-nick: api-doc-tools
 tags:
     - tools
 oeps:
-    oep-2: True
+    oep-2: true  # openedx.yaml
+    oep-7: true  # Python 3
+    oep-18: true  # dep management
+    oep-19: true  # dev docs
     oep-3:
-        state: False
-        reason: TODO - Implement for this application if appropriate
+        applicable: false
+    oep-4:
+        applicable: false
     oep-5:
-        state: False
-        reason: TODO - Implement for this application if appropriate
+        applicable: false
+    oep-6:
+        applicable: false
+    oep-9:
+        applicable: false
+    oep-10:
+        applicable: false
+    oep-11:
+        applicable: false
+    oep-12:
+        applicable: false
+    oep-13:
+        applicable: false
+    oep-14:
+        applicable: false
+    oep-15:
+        applicable: false
+    oep-16:
+        applicable: false
+    oep-17:
+        applicable: false
+    oep-21:
+        applicable: false
+    oep-22:
+        applicable: false
+    oep-23:
+        applicable: false
+    oep-25:
+        applicable: false
+    oep-26:
+        applicable: false
     oep-30:
-        state: True
+        applicable: false
+    oep-32:
+        applicable: false

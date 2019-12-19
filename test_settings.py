@@ -41,3 +41,5 @@ LOCALE_PATHS = [
 ROOT_URLCONF = 'edx_api_doc_tools.urls'
 
 SECRET_KEY = 'insecure-secret-key'
+
+MIDDLEWARE = ()
