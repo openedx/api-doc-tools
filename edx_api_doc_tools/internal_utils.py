@@ -25,7 +25,7 @@ def split_docstring(docstring):
     """
     Split a docstring into a summary and a description.
 
-    Args:
+    Arguments:
         docstring (str): the docstring
 
     Returns:

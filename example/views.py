@@ -36,8 +36,6 @@ from .serializers import HedgehogSerializer
 )
 @schema_for(
     'retrieve',
-    # TODO!: The below string becomes the operation's description instead
-    #        of its summary for some reason.
     """
     Fetch details for a _single_ hedgehog by key.
     """,
