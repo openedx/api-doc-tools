@@ -14,6 +14,10 @@ from django.apps import AppConfig
 class EdxApiDocToolsConfig(AppConfig):
     """
     Configuration for this app.
+
+    # TODO: How do we make it so 'drf_yasg' is automatically
+    # installed as a Django app when 'edx_api_doc_tools'
+    # is added to INSTALLED_APPS? Currently, both must be added manually.
     """
     name = 'edx_api_doc_tools'
     verbose_name = 'edX REST API Documentation Tools'
