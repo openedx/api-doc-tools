@@ -70,6 +70,9 @@
                                 "$ref": "#/definitions/Hedgehog"
                             }
                         }
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
                     }
                 },
                 "tags": [
@@ -78,8 +81,8 @@
             },
             "post": {
                 "operationId": "hedgehog_v0_hogs_create",
-                "summary": "A viewset for hedgehogs.",
-                "description": "Supports listing, retrieval, creation, partial-update, and full-update of\nhedgehogs.",
+                "summary": "Create a new hedgehog.",
+                "description": "If successful, an absolute URI for the hedgehog is returned in the\n'Location' HTTP response header.",
                 "parameters": [
                     {
                         "name": "data",
@@ -88,6 +91,13 @@
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
+                    },
+                    {
+                        "name": "hedgehog_key",
+                        "in": "path",
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "type": "string",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -96,6 +106,15 @@
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
+                    },
+                    "401": {
+                        "description": "Not authenticated"
+                    },
+                    "403": {
+                        "description": "Operation not permitted."
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
                     }
                 },
                 "tags": [
@@ -113,7 +132,7 @@
                     {
                         "name": "hedgehog_key",
                         "in": "path",
-                        "description": "Key identifying the a hog. Lowercase, letters only.",
+                        "description": "Key identifying the hog. Lowercase letters only.",
                         "type": "string",
                         "required": true
                     }
@@ -126,7 +145,7 @@
                         }
                     },
                     "404": {
-                        "description": "hedgehog with given key not found"
+                        "description": "Hedgehog with given key not found."
                     }
                 },
                 "tags": [
@@ -135,8 +154,8 @@
             },
             "put": {
                 "operationId": "hedgehog_v0_hogs_update",
-                "summary": "A viewset for hedgehogs.",
-                "description": "Supports listing, retrieval, creation, partial-update, and full-update of\nhedgehogs.",
+                "summary": "Create a or modify a hedgehog.",
+                "description": "Create a or modify a hedgehog.",
                 "parameters": [
                     {
                         "name": "data",
@@ -145,6 +164,13 @@
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
+                    },
+                    {
+                        "name": "hedgehog_key",
+                        "in": "path",
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "type": "string",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -153,6 +179,15 @@
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
+                    },
+                    "401": {
+                        "description": "Not authenticated"
+                    },
+                    "403": {
+                        "description": "Operation not permitted."
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
                     }
                 },
                 "tags": [
@@ -161,8 +196,8 @@
             },
             "patch": {
                 "operationId": "hedgehog_v0_hogs_partial_update",
-                "summary": "A viewset for hedgehogs.",
-                "description": "Supports listing, retrieval, creation, partial-update, and full-update of\nhedgehogs.",
+                "summary": "Modify an existing hedgehog.",
+                "description": "Modify an existing hedgehog.",
                 "parameters": [
                     {
                         "name": "data",
@@ -171,6 +206,13 @@
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
+                    },
+                    {
+                        "name": "hedgehog_key",
+                        "in": "path",
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "type": "string",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -179,6 +221,15 @@
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
+                    },
+                    "401": {
+                        "description": "Not authenticated"
+                    },
+                    "403": {
+                        "description": "Operation not permitted."
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
                     }
                 },
                 "tags": [
@@ -187,12 +238,29 @@
             },
             "delete": {
                 "operationId": "hedgehog_v0_hogs_delete",
-                "summary": "A viewset for hedgehogs.",
-                "description": "Supports listing, retrieval, creation, partial-update, and full-update of\nhedgehogs.",
-                "parameters": [],
+                "summary": "Wipe a hedgehog from the database.",
+                "description": "Wipe a hedgehog from the database.",
+                "parameters": [
+                    {
+                        "name": "hedgehog_key",
+                        "in": "path",
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "204": {
-                        "description": ""
+                        "description": "Hedgehog successfully removed."
+                    },
+                    "401": {
+                        "description": "Not authenticated"
+                    },
+                    "403": {
+                        "description": "Operation not permitted."
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
                     }
                 },
                 "tags": [

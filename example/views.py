@@ -3,8 +3,6 @@ REST API views for reading and writing to the edX Hedgehog Database.
 
 Documented using edx_api_doc_tools.
 
-TODO! finish documenting HedgehogViewSet.
-
 TODO: also give an example of documenting "traditional" (non-ViewSet) DRF views.
 """
 from __future__ import absolute_import, unicode_literals
@@ -16,6 +14,19 @@ from edx_api_doc_tools import path_parameter, query_parameter, schema_for
 
 from .data import get_hedgehogs
 from .serializers import HedgehogSerializer
+
+
+HEDGEHOG_KEY_PARAMETER = path_parameter(
+    'hedgehog_key', str, "Key identifying the hog. Lowercase letters only."
+)
+HEDGEHOG_404_RESPONSE = {
+    404: 'Hedgehog with given key not found.',
+}
+HEDGEHOG_ERROR_RESPONSES = {
+    401: 'Not authenticated',
+    403: 'Operation not permitted.',
+    **HEDGEHOG_404_RESPONSE
+}
 
 
 @schema_for(
@@ -33,24 +44,53 @@ from .serializers import HedgehogSerializer
         query_parameter('fav-food', str, "Filter hogs by favorite food."),
         query_parameter('graduated', bool, "Filter hogs by whether they graudated."),
     ],
+    responses=HEDGEHOG_404_RESPONSE,
 )
 @schema_for(
     'retrieve',
     """
     Fetch details for a _single_ hedgehog by key.
     """,
-    parameters=[
-        path_parameter(
-            'hedgehog_key', str, "Key identifying the a hog. Lowercase, letters only."
-        ),
-    ],
-    responses={
-        404: 'hedgehog with given key not found',
-    },
+    parameters=[HEDGEHOG_KEY_PARAMETER],
+    responses=HEDGEHOG_404_RESPONSE,
+)
+@schema_for(
+    'create',
+    """
+    Create a new hedgehog.
+
+    If successful, an absolute URI for the hedgehog is returned in the
+    'Location' HTTP response header.
+    """,
+    parameters=[HEDGEHOG_KEY_PARAMETER],
+    responses=HEDGEHOG_ERROR_RESPONSES,
 )
 @schema_for(
     'update',
-    None,  # `None` defers to class-level docstring.
+    """
+    Create a or modify a hedgehog.
+    """,
+    parameters=[HEDGEHOG_KEY_PARAMETER],
+    responses=HEDGEHOG_ERROR_RESPONSES,
+)
+@schema_for(
+    'partial_update',
+    """
+    Modify an existing hedgehog.
+    """,
+    parameters=[HEDGEHOG_KEY_PARAMETER],
+    responses=HEDGEHOG_ERROR_RESPONSES,
+)
+@schema_for(
+    'destroy',
+    """
+    Wipe a hedgehog from the database.
+    """,
+    parameters=[HEDGEHOG_KEY_PARAMETER],
+    responses={
+        204: 'Hedgehog successfully removed.',
+        **HEDGEHOG_ERROR_RESPONSES,
+    },
 )
 class HedgehogViewSet(ModelViewSet):
     """

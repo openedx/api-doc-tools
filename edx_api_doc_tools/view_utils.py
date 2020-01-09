@@ -73,7 +73,7 @@ def schema(
                 * `None`, which indicates "don't include this response".
         summary (str): One-line summary of operation.
             If None, we attempt to extract it from the first line of the docstring.
-        description (str): Optional multi-line description of opereation.
+        description (str): Optional multi-line description of operation.
             If None, we attempt to extract it from the rest of the docstring.
     """
     for param in parameters or ():
