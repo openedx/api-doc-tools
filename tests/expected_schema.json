@@ -107,6 +107,7 @@
         "/hedgehog/v0/hogs/{hedgehog_key}/": {
             "get": {
                 "operationId": "hedgehog_v0_hogs_read",
+                "summary": "Fetch details for a _single_ hedgehog by key.",
                 "description": "Fetch details for a _single_ hedgehog by key.",
                 "parameters": [
                     {

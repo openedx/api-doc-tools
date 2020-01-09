@@ -6,7 +6,6 @@ External users: import these from __init__.
 from __future__ import absolute_import, unicode_literals
 
 import six
-from django.utils.decorators import method_decorator
 from drf_yasg.utils import swagger_auto_schema
 
 from .internal_utils import dedent, split_docstring
@@ -34,14 +33,23 @@ def schema_for(method_name, docstring=None, **schema_kwargs):
         """
         Decorate a view class with the specified schema.
         """
-        decorated_class = method_decorator(
-            name=method_name,
-            decorator=schema(**schema_kwargs),
-        )(view_class)
-        func_docstring = docstring or view_class.__doc__
-        view_func = six.get_unbound_function(getattr(decorated_class, method_name))
-        view_func.__doc__ = func_docstring
-        return decorated_class
+        original_func = getattr(view_class, method_name)
+
+        def new_func(*args, **kwargs):
+            """
+            Defer to the original function.
+
+            This allows us to change the docstring and call `schema` without
+            modifying the original function, which is likely from a DRF library
+            mixin.
+            """
+            return original_func(*args, **kwargs)
+        new_func.__name__ = original_func.__name__
+        new_func.__doc__ = docstring
+        schema(**schema_kwargs)(new_func)
+        setattr(view_class, method_name, new_func)
+        return view_class
+
     return schema_for_inner
 
 
@@ -71,6 +79,8 @@ def schema(parameters=None, responses=None):
     def schema_inner(view_func):
         """
         Decorate a view function with the specified schema.
+
+        Modifies `view_func` in-place, but also returns it.
         """
         summary, description = split_docstring(view_func.__doc__)
         return swagger_auto_schema(
