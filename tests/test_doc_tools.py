@@ -6,9 +6,11 @@ from __future__ import absolute_import, unicode_literals
 import json
 from os.path import dirname, join
 
+import pytest
 from django.test import SimpleTestCase
 from django.test.utils import override_settings
 
+from edx_api_doc_tools.internal_utils import split_docstring
 from example import urls as example_urls
 
 
@@ -80,3 +82,33 @@ class DocViewTests(SimpleTestCase):
         # 'application/openapi+json'.
         actual = json.loads(ui_data_response.content.decode('utf-8'))
         assert actual == expected
+
+
+@pytest.mark.parametrize("docstring, summary, description", [
+    (None, None, None),
+    ("", None, None),
+    ("hello", "hello", None),
+    (
+        """
+        A summary.
+        """,
+        "A summary.",
+        None,
+    ),
+    (
+        """
+        This is an awesome function.
+
+        It does lots
+        of cool things.
+
+        Really, lots.
+        """,
+        "This is an awesome function.",
+        "It does lots\nof cool things.\n\nReally, lots."
+    ),
+])
+def test_split_docstring(docstring, summary, description):
+    actual_summary, actual_description = split_docstring(docstring)
+    assert actual_summary == summary
+    assert actual_description == description

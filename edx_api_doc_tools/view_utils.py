@@ -9,7 +9,7 @@ import six
 from django.utils.decorators import method_decorator
 from drf_yasg.utils import swagger_auto_schema
 
-from .internal_utils import dedent
+from .internal_utils import dedent, split_docstring
 
 
 def schema_for(method_name, docstring=None, **schema_kwargs):
@@ -72,14 +72,7 @@ def schema(parameters=None, responses=None):
         """
         Decorate a view function with the specified schema.
         """
-        summary = None
-        description = None
-        if view_func.__doc__:
-            doc_lines = view_func.__doc__.strip().split("\n")
-            if doc_lines:
-                summary = doc_lines[0].strip()
-            if len(doc_lines) > 1:
-                description = dedent("\n".join(doc_lines[1:]))
+        summary, description = split_docstring(view_func.__doc__)
         return swagger_auto_schema(
             manual_parameters=parameters,
             responses=responses,

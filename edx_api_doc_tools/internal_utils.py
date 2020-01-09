@@ -19,3 +19,25 @@ def dedent(text):
             # First line is blank, discard it.
             text = rest
     return textwrap.dedent(text)
+
+
+def split_docstring(docstring):
+    """
+    Split a docstring into a summary and a description.
+
+    Args:
+        docstring (str): the docstring
+
+    Returns:
+        summary (str or None): a one-line summary.
+        description (str or None): the multi-line description.
+    """
+    summary = None
+    description = None
+    if docstring:
+        doc_lines = docstring.strip().split("\n")
+        if doc_lines:
+            summary = doc_lines[0].strip()
+        if len(doc_lines) > 1:
+            description = dedent("\n".join(doc_lines[1:]))
+    return summary, description
