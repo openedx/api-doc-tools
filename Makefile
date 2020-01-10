@@ -29,7 +29,7 @@ coverage: clean ## generate and view HTML coverage report
 	$(BROWSER)htmlcov/index.html
 
 build_docs:
-	doc8 --ignore-path docs/_build README.rst docs
+	doc8 --ignore-path docs/_build README.md docs
 	rm -f docs/edx_api_doc_tools.rst
 	rm -f docs/modules.rst
 	make -C docs clean
