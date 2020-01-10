@@ -5,11 +5,15 @@ from __future__ import absolute_import, unicode_literals
 
 import json
 from os.path import dirname, join
+from unittest.mock import patch
 
 import pytest
+from django.conf import settings
+from django.core.exceptions import ImproperlyConfigured
 from django.test import SimpleTestCase
 from django.test.utils import override_settings
 
+from edx_api_doc_tools.apps import EdxApiDocToolsConfig
 from edx_api_doc_tools.internal_utils import split_docstring
 from example import urls as example_urls
 
@@ -112,3 +116,39 @@ def test_split_docstring(docstring, summary, description):
     actual_summary, actual_description = split_docstring(docstring)
     assert actual_summary == summary
     assert actual_description == description
+
+
+class AppConfigTests(SimpleTestCase):
+    """
+    Tests for EdxApiDocToolsConfig.
+    """
+    original_app_ready_fn = EdxApiDocToolsConfig.ready
+
+    def setUp(self):
+        super(AppConfigTests, self).setUp()
+        self.called_app_ready = False
+
+    def test_app_ready_fails_without_yasg(self):
+        """
+        Assert that `EdxApiDocToolsConfig.ready` requires 'drf_yasg' to be installed.
+        """
+        installed_apps_sans_yasg = [
+            app_label for app_label in settings.INSTALLED_APPS
+            if app_label != 'drf_yasg'
+        ]
+        with patch.object(EdxApiDocToolsConfig, 'ready', new=self.mock_app_ready):
+            with override_settings(INSTALLED_APPS=installed_apps_sans_yasg):
+                # `override_settings` causes Django to reload,
+                # which should trigger a call to `mock_app_ready`.
+                pass
+        assert self.called_app_ready
+
+    def mock_app_ready(self, *args, **kwargs):
+        """
+        Wrap EdxApiDocToolsConfig.ready.
+
+        Assert that it complain that drf_yasg isn't installed.
+        """
+        with pytest.raises(ImproperlyConfigured, match="drf_yasg\' must also be added"):
+            self.original_app_ready_fn(*args, **kwargs)
+        self.called_app_ready = True

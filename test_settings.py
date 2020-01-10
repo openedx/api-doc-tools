@@ -32,7 +32,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'drf_yasg',
-    'edx_api_doc_tools.apps.EdxApiDocToolsConfig',
+    'edx_api_doc_tools',
 )
 
 TEMPLATES = [
