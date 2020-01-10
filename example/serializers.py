@@ -17,7 +17,6 @@ class HedgehogSerializer(serializers.Serializer):
     key = serializers.SlugField()
     name = serializers.CharField()
     weight_grams = serializers.IntegerField()
-    # TODO: How can we make `weight_ounces` be schema'd as a float instead of a string?
     weight_ounces = serializers.SerializerMethodField()
     fav_food = serializers.ChoiceField(
         [
@@ -33,5 +32,15 @@ class HedgehogSerializer(serializers.Serializer):
     def get_weight_ounces(self, obj):
         """
         Convert the hedgehog's (`obj`) weight from grams (int) to ounces (float).
+
+        TODO:
+            In Python 2, there is no easy way of telling drf-yasg that this method
+            returns a `float`, so it assumes that `weight_ounces` is a string field.
+            For those that don't need to support Python 2, however, this method could
+            have been defined as:
+
+                def get_weight_ounces(self, obj) -> float:
+
+            which would correctly mark `weight_ounces` as a numeric field in the schema.
         """
         return obj.weight_grams * 28.3495
