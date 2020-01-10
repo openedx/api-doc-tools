@@ -19,7 +19,7 @@ def make_docs_urls(api_info):
     Create API doc views given an API info object.
 
     Arguments:
-        api_info (openapi.Info)
+        api_info (openapi.Info): Information about the API.
 
     Returns: list[RegexURLPattern]
         A list of url patterns to the API docs.
@@ -47,10 +47,10 @@ def make_api_info(
     Build an API info object.
 
     Arguments:
-        * title (str)
-        * version (str)
-        * email (str)
-        * description (str)
+        title (str): The title of the API.
+        version (str): The version of the API.
+        email (str): Contact email address for API support or questions.
+        description (str): Description of the API.
 
     Returns: openapi.Info
     """
@@ -107,7 +107,7 @@ def make_docs_data_view(api_info):
     Build View for API documentation data (either JSON or YAML).
 
     Arguments:
-        api_info (openapi.Info)
+        api_info (openapi.Info): Information about the API.
 
     Returns: View
 
@@ -129,7 +129,7 @@ def make_docs_ui_view(api_info):
     Build View for browsable API documentation.
 
     Arguments:
-        api_info (openapi.Info)
+        api_info (openapi.Info): Information about the API.
 
     Returns: View
 

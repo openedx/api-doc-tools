@@ -62,10 +62,10 @@ def parameter(name, in_, param_type, description=None):
     Define a typed parameter.
 
     Arguments:
-        name (str)
-        in_ (ParameterLocation attribute)
-        param_type (type|str): a member of either `PARAM_TYPES`
-        description (str)
+        name (str): The name of the parameter.
+        in_ (ParameterLocation attribute): How the parameter is passed in.
+        param_type (type|str): a member of `PARAM_TYPES`.
+        description (str): Description of the parameter.
 
     Returns: openapi.Parameter
     """
@@ -83,7 +83,7 @@ def parameter(name, in_, param_type, description=None):
     )
 
 
-class ParameterLocation(object):
+class ParameterLocation:
     """
     Location of API parameter in request.
     """

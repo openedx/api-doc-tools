@@ -23,8 +23,6 @@ class DocViewTests(SimpleTestCase):
     """
     Test that the API docs generated from the example Hedgehog API look right.
     """
-    # pylint: disable=open-builtin
-
     base_path = dirname(__file__)
     path_of_expected_schema = join(base_path, 'expected_schema.json')
     path_of_actual_schema = join(base_path, 'actual_schema.json')

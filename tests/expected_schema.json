@@ -311,7 +311,7 @@
                 },
                 "weight_ounces": {
                     "title": "Weight ounces",
-                    "type": "string",
+                    "type": "number",
                     "readOnly": true
                 },
                 "fav_food": {

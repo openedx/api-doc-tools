@@ -5,7 +5,6 @@ External users: import these from __init__.
 """
 from __future__ import absolute_import, unicode_literals
 
-import six
 from django.utils.decorators import method_decorator
 from drf_yasg.utils import swagger_auto_schema
 
@@ -63,14 +62,13 @@ def schema(
     description fields should be in Markdown and will be automatically dedented.
 
     Arguments:
-        parameters (list[openapi.Parameter]):
-            Optional list of parameters to the API endpoint.
-        responses (dict[int, object]):
-            Optional map from HTTP statuses to either:
-                * a serializer class corresponding to that status
-                * a string describing when that status occurs
-                * an openapi.Schema object
-                * `None`, which indicates "don't include this response".
+        parameters (list[openapi.Parameter]): Optional list of parameters to
+            the API endpoint.
+        responses (dict[int, object]): Optional map from HTTP statuses to either:
+            * a serializer class corresponding to that status
+            * a string describing when that status occurs
+            * an openapi.Schema object
+            * `None`, which indicates "don't include this response".
         summary (str): One-line summary of operation.
             If None, we attempt to extract it from the first line of the docstring.
         description (str): Optional multi-line description of operation.
@@ -78,9 +76,6 @@ def schema(
     """
     for param in parameters or ():
         param.description = dedent(param.description)
-
-    # TODO: Remove this line when we drop Python 2 support.
-    responses = _fix_responses_for_python_2(responses)
 
     def schema_inner(view_func):
         """
@@ -96,37 +91,6 @@ def schema(
             operation_description=final_description,
         )(view_func)
     return schema_inner
-
-
-def _fix_responses_for_python_2(responses):
-    """
-    Fix list of responses so that drf-yasg handles them correctly in Python 2.
-
-    This is a temporary hack, necessary because drf-yasg doesn't explicitly support py2.
-
-    Specifically, drf-yasg expects string response descriptions to be of type `str`,
-    which in Py2, doesn't work on unicode strings.
-
-    The offending line:
-    github.com/axnsan12/drf-yasg/blob/1.17.0/src/drf_yasg/inspectors/view.py#L249
-
-    TODO: Remove this function when we drop Python 2 support.
-
-    Arguments:
-        responses: dict[int, object]
-
-    Returns: dict[int, object]
-    """
-    if six.PY3 or responses is None:
-        return responses
-    return {
-        http_status: (
-            value.encode('utf-8')
-            if isinstance(value, unicode)  # pylint: disable=undefined-variable
-            else value
-        )
-        for http_status, value in responses.iteritems()
-    }
 
 
 def is_schema_request(request):
