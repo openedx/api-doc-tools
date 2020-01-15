@@ -22,6 +22,6 @@ pytz==2019.3              # via django
 requests==2.22.0          # via coreapi
 ruamel.yaml.clib==0.2.0   # via ruamel.yaml
 ruamel.yaml==0.16.5       # via drf-yasg
-six==1.13.0               # via drf-yasg, packaging
+six==1.14.0               # via drf-yasg, packaging
 uritemplate==3.0.1        # via coreapi, drf-yasg
 urllib3==1.25.7           # via requests
