@@ -16,12 +16,10 @@ matrix:
       env: COMMAND=tox TOXENV=docs
     - python: 3.6
       env: COMMAND="make quality" PIPEXTRA="-r requirements/quality.txt"
-    - python: 3.6
-      env: COMMAND="make pii_check" PIPEXTRA="-r requirements/quality.txt"
 
 cache:
   - pip
-  
+
 before_install:
   - pip install --upgrade pip
 
