@@ -40,6 +40,6 @@ from .data import (
 from .view_utils import is_schema_request, schema, schema_for
 
 
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 default_app_config = 'edx_api_doc_tools.apps.EdxApiDocToolsConfig'
