@@ -2,26 +2,31 @@
 
 language: python
 
+env:
+  global:
+    - COMMAND=tox
+
 matrix:
   include:
     - python: 3.5
-      env: COMMAND=tox TOXENV=django111
+      env: TOXENV=django111
     - python: 3.6
-      env: COMMAND=tox TOXENV=django111
+      env: TOXENV=django111
     - python: 3.5
-      env: COMMAND=tox TOXENV=django20
+      env: TOXENV=django20
     - python: 3.6
-      env: COMMAND=tox TOXENV=django20
+      env: TOXENV=django20
     - python: 3.6
-      env: COMMAND=tox TOXENV=docs
+      env: TOXENV=docs
     - python: 3.6
-      env: COMMAND="make quality" PIPEXTRA="-r requirements/quality.txt"
-    - python: 3.6
-      env: COMMAND="make pii_check" PIPEXTRA="-r requirements/quality.txt"
+      env:
+        - COMMAND="make quality"
+        - PIPEXTRA="-r requirements/quality.txt"
+        - DEPLOY_PYPI=true
 
 cache:
   - pip
-  
+
 before_install:
   - pip install --upgrade pip
 
@@ -34,12 +39,12 @@ script:
 after_success:
   - codecov
 
-# Set password via "travis encrypt --add deploy.password"; for details, see
-# https://docs.travis-ci.com/user/deployment/pypi
 deploy:
   provider: pypi
-  user: edx
+  user: "__token__"
   distributions: sdist bdist_wheel
   on:
     tags: true
-    condition: '$TOXENV = quality'
+    condition: '$DEPLOY_PYPI = true'
+  password:
+    secure: "NWq4j/gFq2Sk5HKYfXhyqyFnbSeQJDTA7ao0KekJ1HTfhv65gN8XIel85//9AbS4xgz0iPvVr1PZNY6Ddoy9t8n2W4mihjXvKxW2N5Q+XjTClPPxejChfvPt8vKhd03Mw0X07McJ/DdBM+RT+T/oH0dD2YzbxtkrxwBvi4zPepqs+4drPZbBWFsQPeAw9adZkQkgBW3fm2RDXww8iQs5dGunHo8FcC2oHLS5sB8N3mhY0ED7NRLn1OzZmxHg7y826SpBaGNtGKj8k7fU0KA2YfxHqfhNxzGsBh1Qj80aUtgBI2uXtSN5UIxRuEJ204FanZANuYlSQec1YaFqiw6f0DMau7TvHvENWVhvhArJBqWYWVwB4jL/A1j8lzBURfEvYkm7hiCqF4gQMiu3gbrO/i+cRI0C1pbZreYnh3vlY0DdSWGcApFXsQxCpPbZBYkNeuGs7P626kWjeA8iDtFJT38wK+OBtDeNc0hwxkdCxcov+Y0aWNlhbxoHx/gJqfiirKSDhpx8vM+h9/fUQ5WiXAr5ZYFA0uxAKrSZcbJ1N7Eb+Nj6nadYw/WwP1PXhXQAwRaFFJzG5jPwP67WDuVjyy98BM3HvqcYLn29ZXrsdhMrdsKVDu4Yg3hXUOeO2yOhT6uvcMqlWl+b5NgT4DPCZ04/4NqwMJWa6CxX/cnMXOc="

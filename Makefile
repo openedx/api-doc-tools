@@ -1,7 +1,7 @@
 .PHONY: build_docs build_dummy_translations clean compile_translations \
         coverage detect_changed_source_translations diff_cover docs \
         dummy_translations extract_translations help isort isort_check \
-        pii_check pip-tools pull_translations push_translations pylint quality \
+        pip-tools pull_translations push_translations pylint quality \
         requirements selfcheck style test test-all upgrade upgrade \
         upgrade-pip-tools validate validate_translations
 
@@ -81,11 +81,6 @@ pylint:
 quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
 	make selfcheck
 
-pii_check: ## check for PII annotations on all Django models
-	DJANGO_SETTINGS_MODULE=test_settings \
-	code_annotations django_find_annotations --config_file .pii_annotations.yml \
-	--lint --report --coverage
-
 requirements: pip-tools ## install development environment requirements
 	pip-sync requirements/dev.txt requirements/private.*
 
@@ -95,10 +90,10 @@ test: clean ## run tests in the current virtualenv
 diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml
 
-test-all: quality pii_check ## run tests on every supported Python/Django combination
+test-all: quality ## run tests on every supported Python/Django combination
 	tox
 
-validate: quality pii_check test ## run tests and quality checks
+validate: quality test ## run tests and quality checks
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."
