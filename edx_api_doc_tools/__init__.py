@@ -1,5 +1,5 @@
 """
-Tools for writing and generating API documentation for edX REST APIs.
+Tools for writing and generating API documentation for Open edX REST APIs.
 
 In this file is the public Python API for REST documentation.
 
