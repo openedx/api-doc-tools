@@ -4,7 +4,8 @@
    contain the root `toctree` directive.
 
 edx-api-doc-tools
-===============================
+=================
+
 Tools for writing and generating API documentation for edX REST APIs
 
 Contents:

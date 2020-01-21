@@ -148,9 +148,9 @@ def make_docs_ui_view(api_info):
 
 class ApiSchemaGenerator(OpenAPISchemaGenerator):
     """
-    A schema generator for /api/*.
+    A schema generator for ``/api/*``.
 
-    Only includes endpoints in the /api/* url tree, and sets the path prefix
+    Only includes endpoints in the ``/api/*`` url tree, and sets the path prefix
     appropriately.
     """
     def get_endpoints(self, request):
