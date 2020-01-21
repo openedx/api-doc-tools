@@ -124,8 +124,8 @@ Have a question about this repository, or about Open edX in general?  Please ref
 
 
 
-.. |pypi| image:: https://img.shields.io/pypi/v/api-doc-tools.svg
-    :target: https://pypi.python.org/pypi/api-doc-tools/
+.. |pypi| image:: https://img.shields.io/pypi/v/edx-api-doc-tools.svg
+    :target: https://pypi.python.org/pypi/edx-api-doc-tools/
     :alt: PyPI
 .. |travis| image:: https://travis-ci.org/edx/api-doc-tools.svg?branch=master
     :target: https://travis-ci.org/edx/api-doc-tools
@@ -136,8 +136,8 @@ Have a question about this repository, or about Open edX in general?  Please ref
 .. |readthedocs| image:: https://readthedocs.org/projects/api-doc-tools/badge/?version=latest
     :target: http://api-doc-tools.readthedocs.io/en/latest/
     :alt: Documentation
-.. |pyversions| image:: https://img.shields.io/pypi/pyversions/api-doc-tools.svg
-    :target: https://pypi.python.org/pypi/api-doc-tools/
+.. |pyversions| image:: https://img.shields.io/pypi/pyversions/edx-api-doc-tools.svg
+    :target: https://pypi.python.org/pypi/edx-api-doc-tools/
     :alt: Supported
 .. |license| image:: https://img.shields.io/github/license/edx/api-doc-tools.svg
     :target: https://github.com/edx/api-doc-tools/blob/master/LICENSE.txt
