@@ -34,7 +34,8 @@ build_docs:
 	rm -f docs/modules.rst
 	make -C docs clean
 	make -C docs html
-	python setup.py check --restructuredtext --strict
+	python setup.py sdist
+	twine check dist/*.tar.gz
 
 docs: build_docs ## generate Sphinx HTML documentation, including API docs
 	tox -e docs

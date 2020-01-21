@@ -21,6 +21,6 @@ six==1.14.0               # via packaging, tox
 toml==0.10.0              # via tox
 tox-battery==0.5.1
 tox==3.14.3
-urllib3==1.25.7           # via requests
+urllib3==1.25.8           # via requests
 virtualenv==16.7.9        # via tox
 zipp==1.0.0               # via importlib-metadata
