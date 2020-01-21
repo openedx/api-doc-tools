@@ -37,7 +37,7 @@ build_docs:
 	python setup.py sdist
 	twine check dist/*.tar.gz
 
-docs: build_docs ## generate Sphinx HTML documentation, including API docs
+docs: ## generate and show Sphinx HTML documentation, including API docs
 	tox -e docs
 	$(BROWSER)docs/_build/html/index.html
 
