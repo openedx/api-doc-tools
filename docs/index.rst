@@ -10,6 +10,7 @@ Contents:
     :maxdepth: 2
 
     adding
+    writing
     api
     development
     changelog

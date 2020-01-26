@@ -29,6 +29,9 @@ Quick Start
 To start using this tool in your project, see
 `Adding edx-api-doc-tools to your project <docs/adding.rst>`_.
 
+To write docs using this tool, see
+`Writing API documentation <docs/writing.rst>`_.
+
 
 Documentation
 -------------
