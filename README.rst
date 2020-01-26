@@ -17,64 +17,18 @@ documentation under `/api-docs`.
 .. _drf-yasg: https://github.com/axnsan12/drf-yasg
 .. _OpenAPI Specification: https://swagger.io/docs/specification/about/
 
-This library is intended for use with `Open edX`_ services, but could be used
+This library was developed for use with `Open edX`_ services, but could be used
 to document any Django REST Framework API.
 
 .. _Open edX: https://open.edx.org/
 
+
 Quick Start
 -----------
 
-First, add ``edx-api-doc-tools`` to your requirements and install it into your
-environment.
+To start using this tool in your project, see
+`Adding edx-api-doc-tools to your project <docs/adding.rst>`_.
 
-Next, add the following to your list of installed apps in Django settings::
-
-    INSTALLED_APPS = (
-        ... # your other installed apps
-        drf_yasg,
-        edx_api_doc_tools,
-    )
-
-Then, in ``urls.py``::
-
-    ...
-    from edx_api_doc_tools import make_api_info, make_docs_urls
-    ...
-    api_info = make_api_info(title="Registrar API", version="v2")
-    urlpatterns += make_docs_urls(api_info)
-
-
-Your should now be able to load the Swagger UI in a browser at
-`https://${your_service}/api-docs`.  Note that by default, documentation is
-only generated for views under the root path ``/api``.  Generation for other
-views is possible but requires some extra configuration.
-
-Finally, you can enrich the generated documentation::
-
-    ...
-    from edx_api_doc_tools import parameter, schema
-    ...
-    class MyView(APIView):
-
-        @schema(
-            parameters=[
-                parameter('min_date', str, 'Filter response by minimum date.'),
-            ],
-            responses={
-                403: 'User lacks required permission.'
-                404: 'Resource does not exist.'
-                # Note that 2xx response is automatically figured out by drf-yasg,
-                # with reponse schema coming from the serializer, if declared.
-            },
-        )
-        def get(self, request):
-            """
-            Get the resource.
-
-            This docstring will be used in the OpenAPI spec, and *supports Markdown!*
-            """
-            ...
 
 Documentation
 -------------
@@ -88,19 +42,16 @@ License
 The code in this repository is licensed under the Apache Software License 2.0
 unless otherwise noted.
 
-Please see `LICENSE.txt` for details.
+Please see `LICENSE.txt <LICENSE.txt>`_ for details.
 
 How To Contribute
 -----------------
 
-Contributions are very welcome.
-
-Please read `How To Contribute`__ for details.
+Contributions are very welcome.  Please read `How To Contribute`__ for details.
+Even though they were written with `edx-platform` in mind, the guidelines
+should be followed for all Open edX projects.
 
 __ https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst
-
-Even though they were written with `edx-platform` in mind, the guidelines
-should be followed for Open edX code in general.
 
 The pull request description template should be automatically applied if you
 are creating a pull request from GitHub. Otherwise you can find it at
@@ -109,8 +60,8 @@ are creating a pull request from GitHub. Otherwise you can find it at
 The issue report template should be automatically applied if you are creating
 an issue on GitHub as well. Otherwise you can find it at `ISSUE_TEMPLATE.md`_.
 
-.. _PULL_REQUEST_TEMPLATE.md: https://github.com/edx/api-doc-tools/blob/master/.github/PULL_REQUEST_TEMPLATE.md
-.. _ISSUE_TEMPLATE.md: https://github.com/edx/api-doc-tools/blob/master/.github/ISSUE_TEMPLATE.md
+.. _PULL_REQUEST_TEMPLATE.md: .github/PULL_REQUEST_TEMPLATE.md
+.. _ISSUE_TEMPLATE.md: .github/ISSUE_TEMPLATE.md
 
 Reporting Security Issues
 -------------------------
@@ -120,7 +71,7 @@ Please do not report security issues in public. Please email security@edx.org.
 Getting Help
 ------------
 
-Have a question about this repository, or about Open edX in general?  Please refer to this `list of resources <https://open.edx.org/getting-help>`_ if you need any assistance.
+Have a question about this repository, or about the Open edX project in general?  Please refer to this `list of resources <https://open.edx.org/getting-help>`_ if you need any assistance.
 
 
 
