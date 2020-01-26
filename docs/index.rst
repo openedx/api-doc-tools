@@ -10,6 +10,6 @@ Contents:
     :maxdepth: 2
 
     adding
-    modules
+    api
     development
     changelog
