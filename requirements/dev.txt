@@ -39,7 +39,7 @@ lazy-object-proxy==1.4.3
 markupsafe==1.1.1
 mccabe==0.6.1
 more-itertools==8.1.0
-packaging==20.0
+packaging==20.1
 path.py==12.4.0           # via edx-i18n-tools
 path==13.1.0              # via path.py
 pathlib2==2.3.5
@@ -69,9 +69,8 @@ ruamel.yaml==0.16.6
 six==1.14.0
 snowballstemmer==2.0.0
 toml==0.10.0
-tox-battery==0.5.1
 tox==3.14.3
-tqdm==4.41.1
+tqdm==4.42.0
 twine==1.15.0
 typed-ast==1.4.1
 uritemplate==3.0.1
@@ -80,7 +79,7 @@ virtualenv==16.7.9
 wcwidth==0.1.8
 webencodings==0.5.1
 wrapt==1.11.2
-zipp==1.0.0
+zipp==1.1.0
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

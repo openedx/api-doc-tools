@@ -27,7 +27,7 @@ itypes==1.1.0
 jinja2==2.10.3
 markupsafe==1.1.1
 more-itertools==8.1.0
-packaging==20.0
+packaging==20.1
 pathlib2==2.3.5
 pbr==5.4.4                # via stevedore
 pkginfo==1.5.0.1          # via twine
@@ -61,7 +61,7 @@ uritemplate==3.0.1
 urllib3==1.25.8
 wcwidth==0.1.8
 webencodings==0.5.1       # via bleach
-zipp==1.0.0
+zipp==1.1.0
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
