@@ -8,9 +8,10 @@ TODO: also give an example of documenting "traditional" (non-ViewSet) DRF views.
 from __future__ import absolute_import, unicode_literals
 
 from rest_framework.exceptions import APIException, NotFound
+from rest_framework.generics import GenericAPIView
 from rest_framework.viewsets import ModelViewSet
 
-from edx_api_doc_tools import path_parameter, query_parameter, schema_for
+from edx_api_doc_tools import path_parameter, query_parameter, schema, schema_for
 
 from .data import get_hedgehogs
 from .serializers import HedgehogSerializer
@@ -137,6 +138,19 @@ class HedgehogViewSet(ModelViewSet):
     def perform_destroy(self, instance):
         """
         Destroy a Hedeghog; result of a DELETE (Unimplemented).
+        """
+        raise EndpointNotImplemented()
+
+
+class HedgehogInfoView(GenericAPIView):
+    """Information about the API."""
+
+    @schema()
+    def get(self, request):
+        """
+        Get information about the Hedgehog API.
+
+        Returns a object with keys and values describing the API.
         """
         raise EndpointNotImplemented()
 

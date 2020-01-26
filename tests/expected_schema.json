@@ -312,6 +312,23 @@
                     "hedgehog"
                 ]
             }
+        },
+        "/hedgehog/v0/info": {
+            "get": {
+                "description": "Returns a object with keys and values describing the API.",
+                "operationId": "hedgehog_v0_info_list",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Get information about the Hedgehog API.",
+                "tags": [
+                    "hedgehog"
+                ]
+            },
+            "parameters": []
         }
     },
     "produces": [
