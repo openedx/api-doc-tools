@@ -32,7 +32,9 @@ def _uuid(i):
     """
     Return a UUID-4 with a predetermined format, for test repeatability.
 
-    Example:
-        ``_uuid(23) == UUID('11111111-2222-4444-8888-000000000023')``
+    Example::
+
+        _uuid(23) == UUID('11111111-2222-4444-8888-000000000023')
+
     """
     return UUID('11111111-2222-4444-8888-{:012}'.format(i))
