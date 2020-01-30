@@ -15,7 +15,11 @@ Change Log
 Unreleased
 ==========
 
-*
+Added
+-----
+
+* Documentation
+
 
 1.0.2 --- 2020-01-17
 ====================
