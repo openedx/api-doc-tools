@@ -1,26 +1,8 @@
-edx_api_doc_tools package
-============================
+.. _api:
 
-edx_api_doc_tools.apps module
------------------------------
+edx_api_doc_tools module
+========================
 
-.. automodule:: edx_api_doc_tools.apps
+.. automodule:: edx_api_doc_tools
    :members:
-
-edx_api_doc_tools.conf_utils module
------------------------------------
-
-.. automodule:: edx_api_doc_tools.conf_utils
-   :members:
-
-edx_api_doc_tools.data module
------------------------------
-
-.. automodule:: edx_api_doc_tools.data
-   :members:
-
-edx_api_doc_tools.view_utils module
------------------------------------
-
-.. automodule:: edx_api_doc_tools.view_utils
-   :members:
+   :imported-members:
