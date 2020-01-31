@@ -1,6 +1,5 @@
-##########
 Change Log
-##########
+==========
 
 ..
    All enhancements and patches to edx_api_doc_tools will be documented
@@ -13,14 +12,12 @@ Change Log
 .. There should always be an "Unreleased" section for changes pending release.
 
 Unreleased
-==========
+----------
 
-*
+* Added documentation
+
 
 1.0.2 --- 2020-01-17
-====================
-
-Added
------
+--------------------
 
 * First release on PyPI.

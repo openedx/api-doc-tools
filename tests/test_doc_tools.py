@@ -4,7 +4,7 @@ Tests for API docs tooling.
 from __future__ import absolute_import, unicode_literals
 
 import json
-from os.path import dirname, join
+import os.path
 from unittest.mock import patch
 
 import pytest
@@ -23,9 +23,9 @@ class DocViewTests(SimpleTestCase):
     """
     Test that the API docs generated from the example Hedgehog API look right.
     """
-    base_path = dirname(__file__)
-    path_of_expected_schema = join(base_path, 'expected_schema.json')
-    path_of_actual_schema = join(base_path, 'actual_schema.json')
+    base_path = os.path.dirname(__file__)
+    path_of_expected_schema = os.path.join(base_path, 'expected_schema.json')
+    path_of_actual_schema = os.path.join(base_path, 'actual_schema.json')
 
     def test_get_data_view(self):
         """
@@ -51,12 +51,13 @@ class DocViewTests(SimpleTestCase):
         assert response.status_code == 200
         actual_schema = response.json()
         with open(self.path_of_actual_schema, 'w') as f:
-            json.dump(actual_schema, f, indent=4)
+            json.dump(actual_schema, f, indent=4, sort_keys=True)
         with open(self.path_of_expected_schema, 'r') as schema_file:
             expected_schema = json.load(schema_file)
         assert actual_schema == expected_schema, (
-            "Generated schema (dumped to actual_schema.json) "
+            "Generated schema (dumped to {}) "
             "did not match schema loaded from expected_schema.json."
+            .format(os.path.relpath(self.path_of_actual_schema))
         )
 
     def test_get_ui_view(self):

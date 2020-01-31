@@ -24,7 +24,8 @@ def make_docs_urls(api_info):
     Returns: list[RegexURLPattern]
         A list of url patterns to the API docs.
 
-    Example:
+    Example::
+
         # File: urls.py
         from edx_api_doc_tools import make_docs_urls, make_api_info
         urlpatterns = [ ... ] # Your URL patterns.
@@ -76,7 +77,8 @@ def get_docs_urls(docs_data_view, docs_ui_view):
     Returns: list[RegexURLPattern]
         A list of url patterns to the API docs.
 
-    Example:
+    Example::
+
         # File: urls.py
         from edx_api_doc_tools import get_docs_urls
         from .views import custom_doc_data_view, custom_doc_ui_view
@@ -111,7 +113,8 @@ def make_docs_data_view(api_info):
 
     Returns: View
 
-    Example:
+    Example::
+
         from edx_api_doc_tools import make_api_info, make_docs_data_view
         api_info = make_api_info(title="Awesome API", version="v42")
         my_data_view = make_docs_data_view(api_info)
@@ -133,7 +136,8 @@ def make_docs_ui_view(api_info):
 
     Returns: View
 
-    Example:
+    Example::
+
         from edx_api_doc_tools import make_api_info, make_docs_ui_view
         api_info = make_api_info(title="Awesome API", version="v42")
         my_ui_view = make_docs_ui_view(api_info)
@@ -148,9 +152,9 @@ def make_docs_ui_view(api_info):
 
 class ApiSchemaGenerator(OpenAPISchemaGenerator):
     """
-    A schema generator for /api/*.
+    A schema generator for ``/api/*``.
 
-    Only includes endpoints in the /api/* url tree, and sets the path prefix
+    Only includes endpoints in the ``/api/*`` url tree, and sets the path prefix
     appropriately.
     """
     def get_endpoints(self, request):

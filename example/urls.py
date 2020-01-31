@@ -3,11 +3,12 @@ REST API URLs for reading and writing to the edX Hedgehog Database.
 """
 from __future__ import absolute_import, unicode_literals
 
+from django.conf.urls import url
 from rest_framework.routers import SimpleRouter
 
 from edx_api_doc_tools import make_api_info, make_docs_urls
 
-from .views import HedgehogViewSet
+from .views import HedgehogInfoView, HedgehogViewSet
 
 
 urlpatterns = []
@@ -15,6 +16,10 @@ urlpatterns = []
 ROUTER = SimpleRouter()
 ROUTER.register(r'api/hedgehog/v0/hogs', HedgehogViewSet, basename='hedgehog')
 urlpatterns += ROUTER.urls
+
+urlpatterns += [
+    url(r'/api/hedgehog/v0/info', HedgehogInfoView.as_view()),
+]
 
 urlpatterns += make_docs_urls(
     make_api_info(

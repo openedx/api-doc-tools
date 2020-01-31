@@ -1,63 +1,99 @@
 {
-    "swagger": "2.0",
-    "info": {
-        "title": "edX Hedgehog Service API",
-        "description": "A REST API for interacting with the edX hedgehog service.",
-        "contact": {
-            "email": "hedgehog-support@example.com"
-        },
-        "version": "v0"
-    },
-    "host": "testserver",
-    "schemes": [
-        "http"
-    ],
     "basePath": "/api",
     "consumes": [
         "application/json"
     ],
-    "produces": [
-        "application/json"
-    ],
-    "securityDefinitions": {
-        "Basic": {
-            "type": "basic"
+    "definitions": {
+        "Hedgehog": {
+            "properties": {
+                "fav_food": {
+                    "enum": [
+                        "critters",
+                        "crawlies",
+                        "strawberries"
+                    ],
+                    "title": "Fav food",
+                    "type": "string"
+                },
+                "is_college_graduate": {
+                    "default": false,
+                    "title": "Is college graduate",
+                    "type": "boolean"
+                },
+                "key": {
+                    "format": "slug",
+                    "minLength": 1,
+                    "pattern": "^[-a-zA-Z0-9_]+$",
+                    "title": "Key",
+                    "type": "string"
+                },
+                "name": {
+                    "minLength": 1,
+                    "title": "Name",
+                    "type": "string"
+                },
+                "uuid": {
+                    "format": "uuid",
+                    "title": "Uuid",
+                    "type": "string"
+                },
+                "weight_grams": {
+                    "title": "Weight grams",
+                    "type": "integer"
+                },
+                "weight_ounces": {
+                    "readOnly": true,
+                    "title": "Weight ounces",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "uuid",
+                "key",
+                "name",
+                "weight_grams",
+                "fav_food"
+            ],
+            "type": "object"
         }
     },
-    "security": [
-        {
-            "Basic": []
-        }
-    ],
+    "host": "testserver",
+    "info": {
+        "contact": {
+            "email": "hedgehog-support@example.com"
+        },
+        "description": "A REST API for interacting with the edX hedgehog service.",
+        "title": "edX Hedgehog Service API",
+        "version": "v0"
+    },
     "paths": {
         "/hedgehog/v0/hogs/": {
             "get": {
-                "operationId": "hedgehog_v0_hogs_list",
-                "summary": "Fetch the list of edX hedgehogs.",
                 "description": "Hedgehogs can be filtered by minimum weight (grams or ounces),\ntheir favorite food, whether they graduated college,\nor any combination of those criterion.",
+                "operationId": "hedgehog_v0_hogs_list",
                 "parameters": [
                     {
-                        "name": "min-grams",
-                        "in": "query",
                         "description": "Filter on whether minimum weight (grams).",
+                        "in": "query",
+                        "name": "min-grams",
                         "type": "integer"
                     },
                     {
-                        "name": "min-ounces",
-                        "in": "query",
                         "description": "Filter hogs by minimum weight (ounces).",
+                        "in": "query",
+                        "name": "min-ounces",
                         "type": "number"
                     },
                     {
-                        "name": "fav-food",
-                        "in": "query",
                         "description": "Filter hogs by favorite food.",
+                        "in": "query",
+                        "name": "fav-food",
                         "type": "string"
                     },
                     {
-                        "name": "graduated",
-                        "in": "query",
                         "description": "Filter hogs by whether they graudated.",
+                        "in": "query",
+                        "name": "graduated",
                         "type": "boolean"
                     }
                 ],
@@ -65,39 +101,40 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "type": "array",
                             "items": {
                                 "$ref": "#/definitions/Hedgehog"
-                            }
+                            },
+                            "type": "array"
                         }
                     },
                     "404": {
                         "description": "Hedgehog with given key not found."
                     }
                 },
+                "summary": "Fetch the list of edX hedgehogs.",
                 "tags": [
                     "hedgehog"
                 ]
             },
+            "parameters": [],
             "post": {
-                "operationId": "hedgehog_v0_hogs_create",
-                "summary": "Create a new hedgehog.",
                 "description": "If successful, an absolute URI for the hedgehog is returned in the\n'Location' HTTP response header.",
+                "operationId": "hedgehog_v0_hogs_create",
                 "parameters": [
                     {
-                        "name": "data",
                         "in": "body",
+                        "name": "data",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Hedgehog"
                         }
                     },
                     {
-                        "name": "hedgehog_key",
-                        "in": "path",
                         "description": "Key identifying the hog. Lowercase letters only.",
-                        "type": "string",
-                        "required": true
+                        "in": "path",
+                        "name": "hedgehog_key",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -117,136 +154,23 @@
                         "description": "Hedgehog with given key not found."
                     }
                 },
+                "summary": "Create a new hedgehog.",
                 "tags": [
                     "hedgehog"
                 ]
-            },
-            "parameters": []
+            }
         },
         "/hedgehog/v0/hogs/{hedgehog_key}/": {
-            "get": {
-                "operationId": "hedgehog_v0_hogs_read",
-                "summary": "Fetch details for a _single_ hedgehog by key.",
-                "description": "Fetch details for a _single_ hedgehog by key.",
-                "parameters": [
-                    {
-                        "name": "hedgehog_key",
-                        "in": "path",
-                        "description": "Key identifying the hog. Lowercase letters only.",
-                        "type": "string",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/Hedgehog"
-                        }
-                    },
-                    "404": {
-                        "description": "Hedgehog with given key not found."
-                    }
-                },
-                "tags": [
-                    "hedgehog"
-                ]
-            },
-            "put": {
-                "operationId": "hedgehog_v0_hogs_update",
-                "summary": "Create a or modify a hedgehog.",
-                "description": "Create a or modify a hedgehog.",
-                "parameters": [
-                    {
-                        "name": "data",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/Hedgehog"
-                        }
-                    },
-                    {
-                        "name": "hedgehog_key",
-                        "in": "path",
-                        "description": "Key identifying the hog. Lowercase letters only.",
-                        "type": "string",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/Hedgehog"
-                        }
-                    },
-                    "401": {
-                        "description": "Not authenticated"
-                    },
-                    "403": {
-                        "description": "Operation not permitted."
-                    },
-                    "404": {
-                        "description": "Hedgehog with given key not found."
-                    }
-                },
-                "tags": [
-                    "hedgehog"
-                ]
-            },
-            "patch": {
-                "operationId": "hedgehog_v0_hogs_partial_update",
-                "summary": "Modify an existing hedgehog.",
-                "description": "Modify an existing hedgehog.",
-                "parameters": [
-                    {
-                        "name": "data",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/Hedgehog"
-                        }
-                    },
-                    {
-                        "name": "hedgehog_key",
-                        "in": "path",
-                        "description": "Key identifying the hog. Lowercase letters only.",
-                        "type": "string",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/Hedgehog"
-                        }
-                    },
-                    "401": {
-                        "description": "Not authenticated"
-                    },
-                    "403": {
-                        "description": "Operation not permitted."
-                    },
-                    "404": {
-                        "description": "Hedgehog with given key not found."
-                    }
-                },
-                "tags": [
-                    "hedgehog"
-                ]
-            },
             "delete": {
-                "operationId": "hedgehog_v0_hogs_delete",
-                "summary": "Wipe a hedgehog from the database.",
                 "description": "Wipe a hedgehog from the database.",
+                "operationId": "hedgehog_v0_hogs_delete",
                 "parameters": [
                     {
-                        "name": "hedgehog_key",
-                        "in": "path",
                         "description": "Key identifying the hog. Lowercase letters only.",
-                        "type": "string",
-                        "required": true
+                        "in": "path",
+                        "name": "hedgehog_key",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -263,72 +187,165 @@
                         "description": "Hedgehog with given key not found."
                     }
                 },
+                "summary": "Wipe a hedgehog from the database.",
+                "tags": [
+                    "hedgehog"
+                ]
+            },
+            "get": {
+                "description": "Fetch details for a _single_ hedgehog by key.",
+                "operationId": "hedgehog_v0_hogs_read",
+                "parameters": [
+                    {
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "in": "path",
+                        "name": "hedgehog_key",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
+                    }
+                },
+                "summary": "Fetch details for a _single_ hedgehog by key.",
                 "tags": [
                     "hedgehog"
                 ]
             },
             "parameters": [
                 {
-                    "name": "hedgehog_key",
                     "in": "path",
+                    "name": "hedgehog_key",
                     "required": true,
                     "type": "string"
                 }
-            ]
+            ],
+            "patch": {
+                "description": "Modify an existing hedgehog.",
+                "operationId": "hedgehog_v0_hogs_partial_update",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    },
+                    {
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "in": "path",
+                        "name": "hedgehog_key",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    },
+                    "401": {
+                        "description": "Not authenticated"
+                    },
+                    "403": {
+                        "description": "Operation not permitted."
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
+                    }
+                },
+                "summary": "Modify an existing hedgehog.",
+                "tags": [
+                    "hedgehog"
+                ]
+            },
+            "put": {
+                "description": "Create a or modify a hedgehog.",
+                "operationId": "hedgehog_v0_hogs_update",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    },
+                    {
+                        "description": "Key identifying the hog. Lowercase letters only.",
+                        "in": "path",
+                        "name": "hedgehog_key",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    },
+                    "401": {
+                        "description": "Not authenticated"
+                    },
+                    "403": {
+                        "description": "Operation not permitted."
+                    },
+                    "404": {
+                        "description": "Hedgehog with given key not found."
+                    }
+                },
+                "summary": "Create a or modify a hedgehog.",
+                "tags": [
+                    "hedgehog"
+                ]
+            }
+        },
+        "/hedgehog/v0/info": {
+            "get": {
+                "description": "Returns a object with keys and values describing the API.",
+                "operationId": "hedgehog_v0_info_list",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Get information about the Hedgehog API.",
+                "tags": [
+                    "hedgehog"
+                ]
+            },
+            "parameters": []
         }
     },
-    "definitions": {
-        "Hedgehog": {
-            "required": [
-                "uuid",
-                "key",
-                "name",
-                "weight_grams",
-                "fav_food"
-            ],
-            "type": "object",
-            "properties": {
-                "uuid": {
-                    "title": "Uuid",
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "key": {
-                    "title": "Key",
-                    "type": "string",
-                    "format": "slug",
-                    "pattern": "^[-a-zA-Z0-9_]+$",
-                    "minLength": 1
-                },
-                "name": {
-                    "title": "Name",
-                    "type": "string",
-                    "minLength": 1
-                },
-                "weight_grams": {
-                    "title": "Weight grams",
-                    "type": "integer"
-                },
-                "weight_ounces": {
-                    "title": "Weight ounces",
-                    "type": "number",
-                    "readOnly": true
-                },
-                "fav_food": {
-                    "title": "Fav food",
-                    "type": "string",
-                    "enum": [
-                        "critters",
-                        "crawlies",
-                        "strawberries"
-                    ]
-                },
-                "is_college_graduate": {
-                    "title": "Is college graduate",
-                    "type": "boolean",
-                    "default": false
-                }
-            }
+    "produces": [
+        "application/json"
+    ],
+    "schemes": [
+        "http"
+    ],
+    "security": [
+        {
+            "Basic": []
         }
-    }
+    ],
+    "securityDefinitions": {
+        "Basic": {
+            "type": "basic"
+        }
+    },
+    "swagger": "2.0"
 }

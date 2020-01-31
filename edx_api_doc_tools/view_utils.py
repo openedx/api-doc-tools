@@ -17,22 +17,20 @@ def schema_for(method_name, docstring=None, **schema_kwargs):
 
     Useful when the method you are describing is not defined inside of your
     class body, but is instead defined somewhere up in the DRF view hierarchy.
-    (For applying a schema directly to a method, use the `schema` decorator).
+    (For applying a schema directly to a method, use the :func:`.schema`
+    decorator).
 
-    DRF method names include:
-        'list', 'retrieve', 'get',
-        'post', 'create',
-        'put', 'update',
-        'patch', 'partial_update',
-        'delete', and 'destroy'.
+    DRF method names include: ``list``, ``retrieve``, ``get``, ``post``,
+    ``create``, ``put``, ``update``, ``patch``, ``partial_update``,
+    ``delete``, and ``destroy``.
 
     Arguments:
         method_name (str): Name of the method to decorate.
         docstring (str): Optional summary and description of the operation,
-            which takes the same format that @schema expects of function docstrings
-            (that is, a summary line, followed by a newline, followed by one or
-            more lines of description).
-        **schema_kwargs: kwargs to pass to `schema`.
+            which takes the same format that :func:`.schema` expects of function
+            docstrings (that is, a summary line, followed by a newline,
+            followed by one or more lines of description).
+        **schema_kwargs: kwargs to pass to :func:`.schema`.
     """
     def schema_for_inner(view_class):
         """
@@ -95,6 +93,6 @@ def schema(
 
 def is_schema_request(request):
     """
-    Return whether this request serving an OpenAPI schema.
+    Return whether this request is serving an OpenAPI schema.
     """
     return request.query_params.get('format') == 'openapi'

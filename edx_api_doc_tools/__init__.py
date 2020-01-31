@@ -2,11 +2,11 @@
 Tools for writing and generating API documentation for Open edX REST APIs.
 
 In this file is the public Python API for REST documentation.
-
-The functions are split into separate files for code organization,
-but they are imported into here so they can be imported
-directly from `edx_api_doc_tools`.
 """
+
+# The functions are split into separate files for code organization,
+# but they are imported into here so they can be imported
+# directly from `edx_api_doc_tools`.
 from __future__ import absolute_import, unicode_literals
 
 # Expose OpenAPI module through the edx_api_doc_tools package
@@ -40,6 +40,6 @@ from .data import (
 from .view_utils import is_schema_request, schema, schema_for
 
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 default_app_config = 'edx_api_doc_tools.apps.EdxApiDocToolsConfig'

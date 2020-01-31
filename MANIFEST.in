@@ -1,6 +1,4 @@
 include CHANGELOG.rst
-include CONTRIBUTING.rst
 include LICENSE.txt
 include README.rst
 include requirements/base.in
-recursive-include edx_api_doc_tools *.html *.png *.gif *js *.css *jpg *jpeg *svg *py

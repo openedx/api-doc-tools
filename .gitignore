@@ -64,9 +64,6 @@ output/*/index.html
 
 # Sphinx
 docs/_build
-docs/modules.rst
-docs/edx_api_doc_tools.rst
-docs/edx_api_doc_tools.*.rst
 
 # Private requirements
 requirements/private.in

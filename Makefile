@@ -30,13 +30,12 @@ coverage: clean ## generate and view HTML coverage report
 
 build_docs:
 	doc8 --ignore-path docs/_build README.rst docs
-	rm -f docs/edx_api_doc_tools.rst
-	rm -f docs/modules.rst
 	make -C docs clean
 	make -C docs html
-	python setup.py check --restructuredtext --strict
+	python setup.py sdist
+	twine check dist/*.tar.gz
 
-docs: build_docs ## generate Sphinx HTML documentation, including API docs
+docs: ## generate and show Sphinx HTML documentation, including API docs
 	tox -e docs
 	$(BROWSER)docs/_build/html/index.html
 

@@ -67,6 +67,7 @@ setup(
     version=VERSION,
     description="Tools for writing and generating API documentation for edX REST APIs",
     long_description=README + '\n\n' + CHANGELOG,
+    long_description_content_type="text/x-rst",
     author='edX',
     author_email='oscm@edx.org',
     url='https://github.com/edx/api-doc-tools',
