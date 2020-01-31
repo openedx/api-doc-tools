@@ -86,8 +86,8 @@ Have a question about this repository, or about the Open edX project in general?
 .. |codecov| image:: http://codecov.io/github/edx/api-doc-tools/coverage.svg?branch=master
     :target: http://codecov.io/github/edx/api-doc-tools?branch=master
     :alt: Codecov
-.. |readthedocs| image:: https://readthedocs.org/projects/api-doc-tools/badge/?version=latest
-    :target: http://api-doc-tools.readthedocs.io/en/latest/
+.. |readthedocs| image:: https://readthedocs.org/projects/edx-api-doc-tools/badge/?version=latest
+    :target: http://edx-api-doc-tools.readthedocs.io/en/latest/
     :alt: Documentation
 .. |pyversions| image:: https://img.shields.io/pypi/pyversions/edx-api-doc-tools.svg
     :target: https://pypi.python.org/pypi/edx-api-doc-tools/
