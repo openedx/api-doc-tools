@@ -14,14 +14,14 @@ drf-yasg==1.17.0
 idna==2.8                 # via requests
 inflection==0.3.1         # via drf-yasg
 itypes==1.1.0             # via coreapi
-jinja2==2.10.3            # via coreschema
+jinja2==2.11.1            # via coreschema
 markupsafe==1.1.1         # via jinja2
 packaging==20.1           # via drf-yasg
 pyparsing==2.4.6          # via packaging
 pytz==2019.3              # via django
 requests==2.22.0          # via coreapi
 ruamel.yaml.clib==0.2.0   # via ruamel.yaml
-ruamel.yaml==0.16.6       # via drf-yasg
+ruamel.yaml==0.16.7       # via drf-yasg
 six==1.14.0               # via drf-yasg, packaging
 uritemplate==3.0.1        # via coreapi, drf-yasg
 urllib3==1.25.8           # via requests
