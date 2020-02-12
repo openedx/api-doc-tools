@@ -18,7 +18,7 @@ coreapi==2.3.3
 coreschema==0.0.4
 coverage==5.0.3
 distlib==0.3.0            # via caniusepython3
-django==2.0.13
+django==2.2.10            # via djangorestframework, drf-yasg
 djangorestframework==3.11.0
 docutils==0.16            # via readme-renderer
 drf-yasg==1.17.0
@@ -57,9 +57,9 @@ ruamel.yaml.clib==0.2.0
 ruamel.yaml==0.16.7
 six==1.14.0
 snowballstemmer==2.0.0    # via pydocstyle
+sqlparse==0.3.0           # via django
 tqdm==4.42.1              # via twine
 twine==1.15.0
-typed-ast==1.4.1          # via astroid
 uritemplate==3.0.1
 urllib3==1.25.8
 wcwidth==0.1.8

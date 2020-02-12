@@ -3,4 +3,4 @@
 
 djangorestframework
 drf-yasg
-Django>=1.11,<2.1          # Web application framework
+Django>=1.11,<2.3          # Web application framework
