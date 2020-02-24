@@ -7,13 +7,13 @@
 alabaster==0.7.12         # via sphinx
 attrs==19.3.0
 babel==2.8.0              # via sphinx
-bleach==3.1.0             # via readme-renderer
+bleach==3.1.1             # via readme-renderer
 certifi==2019.11.28
 chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
 coverage==5.0.3
-django==2.0.13
+django==2.0.13            # via djangorestframework, drf-yasg
 djangorestframework==3.11.0
 doc8==0.8.0
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx

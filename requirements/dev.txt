@@ -8,7 +8,7 @@ argparse==1.4.0
 astroid==2.3.3
 attrs==19.3.0
 backports.functools-lru-cache==1.6.1
-bleach==3.1.0
+bleach==3.1.1
 caniusepython3==7.2.0
 certifi==2019.11.28
 chardet==3.0.4
@@ -73,7 +73,6 @@ tox-battery==0.5.2
 tox==3.14.3
 tqdm==4.42.1
 twine==1.15.0
-typed-ast==1.4.1
 uritemplate==3.0.1
 urllib3==1.25.8
 virtualenv==16.7.9
