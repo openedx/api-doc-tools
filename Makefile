@@ -55,9 +55,11 @@ upgrade: upgrade-pip-tools ## update the requirements/*.txt files with the lates
 	pip-compile --upgrade requirements/quality.in
 	pip-compile --upgrade requirements/travis.in
 	pip-compile --upgrade requirements/dev.in
-	# Let tox control the Django version for tests
-	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
-	mv requirements/test.tmp requirements/test.txt
+	# Delete django, drf pins from test.txt so that tox can control
+	# Django version.
+	sed -i.tmp '/^[dD]jango==/d' requirements/test.txt
+	sed -i.tmp '/^djangorestframework==/d' requirements/test.txt
+	rm requirements/test.txt.tmp
 
 CHECKABLE_PYTHON=tests test_utils example edx_api_doc_tools manage.py setup.py test_settings.py
 

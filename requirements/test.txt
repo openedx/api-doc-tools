@@ -10,7 +10,6 @@ chardet==3.0.4            # via -r requirements/base.txt, requests
 coreapi==2.3.3            # via -r requirements/base.txt, drf-yasg
 coreschema==0.0.4         # via -r requirements/base.txt, coreapi, drf-yasg
 coverage==5.0.4           # via pytest-cov
-djangorestframework==3.11.0  # via -r requirements/base.txt, drf-yasg
 drf-yasg==1.17.1          # via -r requirements/base.txt
 idna==2.9                 # via -r requirements/base.txt, requests
 importlib-metadata==1.5.0  # via pluggy, pytest
@@ -32,6 +31,7 @@ requests==2.23.0          # via -r requirements/base.txt, coreapi
 ruamel.yaml.clib==0.2.0   # via -r requirements/base.txt, ruamel.yaml
 ruamel.yaml==0.16.10      # via -r requirements/base.txt, drf-yasg
 six==1.14.0               # via -r requirements/base.txt, drf-yasg, packaging, pathlib2
+sqlparse==0.3.1           # via -r requirements/base.txt, django
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi, drf-yasg
 urllib3==1.25.8           # via -r requirements/base.txt, requests
 wcwidth==0.1.8            # via pytest

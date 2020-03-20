@@ -13,7 +13,7 @@ chardet==3.0.4            # via -r requirements/test.txt, doc8, requests
 coreapi==2.3.3            # via -r requirements/test.txt, drf-yasg
 coreschema==0.0.4         # via -r requirements/test.txt, coreapi, drf-yasg
 coverage==5.0.4           # via -r requirements/test.txt, pytest-cov
-django==2.0.13            # via -r requirements/test.txt, djangorestframework, drf-yasg
+django==2.2.11            # via -r requirements/test.txt, djangorestframework, drf-yasg
 djangorestframework==3.11.0  # via -r requirements/test.txt, drf-yasg
 doc8==0.8.0               # via -r requirements/doc.in
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
@@ -54,6 +54,7 @@ sphinxcontrib-htmlhelp==1.0.3  # via sphinx
 sphinxcontrib-jsmath==1.0.1  # via sphinx
 sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
+sqlparse==0.3.1           # via -r requirements/test.txt, django
 stevedore==1.32.0         # via doc8
 tqdm==4.43.0              # via twine
 twine==1.15.0             # via -r requirements/doc.in

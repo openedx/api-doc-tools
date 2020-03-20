@@ -14,7 +14,17 @@ Change Log
 Unreleased
 ----------
 
-* Added documentation
+
+1.1.0 --- 2020-03-20
+--------------------
+
+* Compatibility with Django 2.1 and 2.2.
+
+
+1.0.3 --- 2020-01-31
+--------------------
+
+* Added documentation.
 
 
 1.0.2 --- 2020-01-17
