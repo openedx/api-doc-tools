@@ -21,7 +21,7 @@ coreschema==0.0.4         # via -r requirements/quality.txt, coreapi, drf-yasg
 coverage==5.0.4           # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
 diff-cover==2.6.0         # via -r requirements/dev.in
 distlib==0.3.0            # via -r requirements/quality.txt, -r requirements/travis.txt, caniusepython3, virtualenv
-django==2.0.13            # via -r requirements/quality.txt, djangorestframework, drf-yasg, edx-i18n-tools
+django==2.2.11            # via -r requirements/quality.txt, djangorestframework, drf-yasg, edx-i18n-tools
 djangorestframework==3.11.0  # via -r requirements/quality.txt, drf-yasg
 docutils==0.16            # via -r requirements/quality.txt, readme-renderer
 drf-yasg==1.17.1          # via -r requirements/quality.txt
@@ -70,6 +70,7 @@ ruamel.yaml.clib==0.2.0   # via -r requirements/quality.txt, ruamel.yaml
 ruamel.yaml==0.16.10      # via -r requirements/quality.txt, drf-yasg
 six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, bleach, diff-cover, drf-yasg, edx-i18n-tools, edx-lint, packaging, pathlib2, pip-tools, readme-renderer, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
+sqlparse==0.3.1           # via -r requirements/quality.txt, django
 toml==0.10.0              # via -r requirements/travis.txt, tox
 tox-battery==0.5.2        # via -r requirements/dev.in
 tox==3.14.5               # via -r requirements/travis.txt, tox-battery

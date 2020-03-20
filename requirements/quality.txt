@@ -18,7 +18,7 @@ coreapi==2.3.3            # via -r requirements/test.txt, drf-yasg
 coreschema==0.0.4         # via -r requirements/test.txt, coreapi, drf-yasg
 coverage==5.0.4           # via -r requirements/test.txt, pytest-cov
 distlib==0.3.0            # via caniusepython3
-django==2.0.13            # via -r requirements/test.txt, djangorestframework, drf-yasg
+django==2.2.11            # via -r requirements/test.txt, djangorestframework, drf-yasg
 djangorestframework==3.11.0  # via -r requirements/test.txt, drf-yasg
 docutils==0.16            # via readme-renderer
 drf-yasg==1.17.1          # via -r requirements/test.txt
@@ -57,6 +57,7 @@ ruamel.yaml.clib==0.2.0   # via -r requirements/test.txt, ruamel.yaml
 ruamel.yaml==0.16.10      # via -r requirements/test.txt, drf-yasg
 six==1.14.0               # via -r requirements/test.txt, astroid, bleach, drf-yasg, edx-lint, packaging, pathlib2, readme-renderer
 snowballstemmer==2.0.0    # via pydocstyle
+sqlparse==0.3.1           # via -r requirements/test.txt, django
 tqdm==4.43.0              # via twine
 twine==1.15.0             # via -r requirements/quality.in
 typed-ast==1.4.1          # via astroid
