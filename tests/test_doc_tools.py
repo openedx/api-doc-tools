@@ -23,6 +23,8 @@ class DocViewTests(SimpleTestCase):
     """
     Test that the API docs generated from the example Hedgehog API look right.
     """
+    maxDiff = None  # Always show full diff output.
+
     base_path = os.path.dirname(__file__)
     path_of_expected_schema = os.path.join(base_path, 'expected_schema.json')
     path_of_actual_schema = os.path.join(base_path, 'actual_schema.json')

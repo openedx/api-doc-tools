@@ -8,17 +8,23 @@ from rest_framework.routers import SimpleRouter
 
 from edx_api_doc_tools import make_api_info, make_docs_urls
 
-from .views import HedgehogInfoView, HedgehogViewSet
+from .views import HedgehogInfoView, HedgehogUndocumentedView, HedgehogUndocumentedViewset, HedgehogViewSet
 
 
 urlpatterns = []
 
 ROUTER = SimpleRouter()
-ROUTER.register(r'api/hedgehog/v0/hogs', HedgehogViewSet, basename='hedgehog')
+ROUTER.register(
+    r'api/hedgehog/v0/hogs', HedgehogViewSet, basename='hedgehog'
+)
+ROUTER.register(
+    r'api/hedgehog/v0/undoc-viewset', HedgehogUndocumentedViewset, basename='undoc-viewset'
+)
 urlpatterns += ROUTER.urls
 
 urlpatterns += [
     url(r'/api/hedgehog/v0/info', HedgehogInfoView.as_view()),
+    url(r'/api/hedgehog/v0/undoc-view', HedgehogUndocumentedView.as_view()),
 ]
 
 urlpatterns += make_docs_urls(

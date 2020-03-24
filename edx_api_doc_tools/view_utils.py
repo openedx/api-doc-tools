@@ -7,6 +7,7 @@ from __future__ import absolute_import, unicode_literals
 
 from django.utils.decorators import method_decorator
 from drf_yasg.utils import swagger_auto_schema
+from rest_framework.viewsets import ViewSet
 
 from .internal_utils import dedent, split_docstring
 
@@ -45,6 +46,61 @@ def schema_for(method_name, docstring=None, **schema_kwargs):
         )(view_class)
         return decorated_class
     return schema_for_inner
+
+
+def exclude_schema_for(*method_names):
+    """
+    Decorate a class to exlcude one or more of of its methods from the API docs.
+
+    Arguments:
+        method_names (list[str]): Names of view methods whose operations will be
+            excluded from the generated API documentation.
+
+    Example::
+
+        @schema_for('get', ...)
+        @schema_for('delete', ...)
+        @exclude_schema_for('put', 'patch')
+        class MyView(RetrieveUpdateDestroyAPIView):
+            pass
+    """
+    def exclude_schema_for_inner(view_class):
+        """
+        Decorate a view class to exclude specified methods.
+        """
+        for method_name in method_names:
+            method_decorator(
+                name=method_name, decorator=exclude_schema
+            )(view_class)
+        return view_class
+    return exclude_schema_for_inner
+
+
+def exclude_all_schemas(view_class):
+    """
+    Decorate a class to exlcude all of its method from the API docs.
+
+    Arguments:
+        view_class (type): A type, typically a subclass of View or ViewSet.
+
+    Example::
+
+        @exclude_all_schemas
+        class MyView(RetrieveUpdateDestroyAPIView):
+            pass
+    """
+    all_viewset_api_methods = {
+        'list', 'retrieve', 'create', 'update', 'partial_update', 'destroy'
+    }
+    all_view_api_methods = {
+        'get', 'post', 'put', 'patch', 'delete'
+    }
+    is_viewset = issubclass(view_class, ViewSet)
+    all_api_methods = all_viewset_api_methods if is_viewset else all_view_api_methods
+    methods_to_exclude = {
+        method for method in all_api_methods if hasattr(view_class, method)
+    }
+    return exclude_schema_for(*methods_to_exclude)(view_class)
 
 
 def schema(
@@ -89,6 +145,25 @@ def schema(
             operation_description=final_description,
         )(view_func)
     return schema_inner
+
+
+def exclude_schema(view_func):
+    """
+    Decorate an API-endpoint-handling function from having its API docs generated.
+
+    Example::
+
+        class MyView(APIView):
+
+            @schema(...)
+            def get(...):
+                pass
+
+            @exclude_schema
+            def post(...):
+                pass
+    """
+    return swagger_auto_schema(auto_schema=None)(view_func)
 
 
 def is_schema_request(request):
