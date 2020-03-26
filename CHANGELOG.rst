@@ -14,6 +14,15 @@ Change Log
 Unreleased
 ----------
 
+1.2.0 --- 2020-03-20
+--------------------
+
+* Added three new decorators for excluding endpoints from API documentation generation:
+
+  * ``@exclude_schema``
+  * ``@exclude_schema_for(method_name)``
+  * ``@exclude_all_schemas``
+
 
 1.1.0 --- 2020-03-20
 --------------------

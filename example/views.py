@@ -9,9 +9,17 @@ from __future__ import absolute_import, unicode_literals
 
 from rest_framework.exceptions import APIException, NotFound
 from rest_framework.generics import GenericAPIView
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ModelViewSet, ViewSet
 
-from edx_api_doc_tools import path_parameter, query_parameter, schema, schema_for
+from edx_api_doc_tools import (
+    exclude_schema,
+    exclude_schema_for,
+    exclude_schema_for_all,
+    path_parameter,
+    query_parameter,
+    schema,
+    schema_for,
+)
 
 from .data import get_hedgehogs
 from .serializers import HedgehogSerializer
@@ -66,22 +74,8 @@ HEDGEHOG_ERROR_RESPONSES = {
     parameters=[HEDGEHOG_KEY_PARAMETER],
     responses=HEDGEHOG_ERROR_RESPONSES,
 )
-@schema_for(
-    'update',
-    """
-    Create a or modify a hedgehog.
-    """,
-    parameters=[HEDGEHOG_KEY_PARAMETER],
-    responses=HEDGEHOG_ERROR_RESPONSES,
-)
-@schema_for(
-    'partial_update',
-    """
-    Modify an existing hedgehog.
-    """,
-    parameters=[HEDGEHOG_KEY_PARAMETER],
-    responses=HEDGEHOG_ERROR_RESPONSES,
-)
+# The next line will exclude the PUT and PATCH endpoints from the API docs.
+@exclude_schema_for('update', 'partial_update')
 @schema_for(
     'destroy',
     """
@@ -142,6 +136,20 @@ class HedgehogViewSet(ModelViewSet):
         raise EndpointNotImplemented()
 
 
+@exclude_schema_for_all
+class HedgehogUndocumentedViewset(ViewSet):
+    """
+    A view that allows us to retrieve something.
+
+    For whatever reason, we don't want it showing up on the API docs page.
+    """
+    def retrieve(self, request):
+        """
+        Retrieve something or other.
+        """
+        raise EndpointNotImplemented()
+
+
 class HedgehogInfoView(GenericAPIView):
     """Information about the API."""
 
@@ -151,6 +159,29 @@ class HedgehogInfoView(GenericAPIView):
         Get information about the Hedgehog API.
 
         Returns a object with keys and values describing the API.
+        """
+        raise EndpointNotImplemented()
+
+    @exclude_schema
+    def patch(self, request):
+        """
+        Update information about the Hedgehog API.
+
+        Internal-only; this endpoint is not exposed in the docs.
+        """
+        raise EndpointNotImplemented()
+
+
+@exclude_schema_for_all
+class HedgehogUndocumentedView(GenericAPIView):
+    """
+    A view that allows us to GET something.
+
+    For whatever reason, we don't want it showing up on the API docs page.
+    """
+    def get(self, request):
+        """
+        Get something or other.
         """
         raise EndpointNotImplemented()
 

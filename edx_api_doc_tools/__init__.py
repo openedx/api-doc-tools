@@ -37,9 +37,16 @@ from .data import (
     query_parameter,
     string_parameter,
 )
-from .view_utils import is_schema_request, schema, schema_for
+from .view_utils import (
+    exclude_schema,
+    exclude_schema_for,
+    exclude_schema_for_all,
+    is_schema_request,
+    schema,
+    schema_for,
+)
 
 
-__version__ = '1.1.0'
+__version__ = '1.2.0'
 
 default_app_config = 'edx_api_doc_tools.apps.EdxApiDocToolsConfig'
