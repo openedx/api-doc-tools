@@ -24,7 +24,7 @@ docutils==0.16            # via readme-renderer
 drf-yasg==1.17.1          # via -r requirements/test.txt
 edx-lint==1.4.1           # via -r requirements/quality.in
 idna==2.9                 # via -r requirements/test.txt, requests
-importlib-metadata==1.5.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==1.5.2  # via -r requirements/test.txt, pluggy, pytest
 inflection==0.3.1         # via -r requirements/test.txt, drf-yasg
 isort==4.3.21             # via -r requirements/quality.in, pylint
 itypes==1.1.0             # via -r requirements/test.txt, coreapi
@@ -63,7 +63,7 @@ twine==1.15.0             # via -r requirements/quality.in
 typed-ast==1.4.1          # via astroid
 uritemplate==3.0.1        # via -r requirements/test.txt, coreapi, drf-yasg
 urllib3==1.25.8           # via -r requirements/test.txt, requests
-wcwidth==0.1.8            # via -r requirements/test.txt, pytest
+wcwidth==0.1.9            # via -r requirements/test.txt, pytest
 webencodings==0.5.1       # via bleach
 wrapt==1.11.2             # via astroid
 zipp==1.2.0               # via -r requirements/test.txt, importlib-metadata

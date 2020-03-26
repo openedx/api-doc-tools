@@ -12,7 +12,7 @@ coreschema==0.0.4         # via -r requirements/base.txt, coreapi, drf-yasg
 coverage==5.0.4           # via pytest-cov
 drf-yasg==1.17.1          # via -r requirements/base.txt
 idna==2.9                 # via -r requirements/base.txt, requests
-importlib-metadata==1.5.0  # via pluggy, pytest
+importlib-metadata==1.5.2  # via pluggy, pytest
 inflection==0.3.1         # via -r requirements/base.txt, drf-yasg
 itypes==1.1.0             # via -r requirements/base.txt, coreapi
 jinja2==2.11.1            # via -r requirements/base.txt, coreschema
@@ -34,5 +34,5 @@ six==1.14.0               # via -r requirements/base.txt, drf-yasg, packaging, p
 sqlparse==0.3.1           # via -r requirements/base.txt, django
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi, drf-yasg
 urllib3==1.25.8           # via -r requirements/base.txt, requests
-wcwidth==0.1.8            # via pytest
+wcwidth==0.1.9            # via pytest
 zipp==1.2.0               # via importlib-metadata
