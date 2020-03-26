@@ -11,6 +11,7 @@ Contents:
 
     adding
     writing
+    excluding
     api
     development
     changelog

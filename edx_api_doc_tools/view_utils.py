@@ -76,7 +76,7 @@ def exclude_schema_for(*method_names):
     return exclude_schema_for_inner
 
 
-def exclude_all_schemas(view_class):
+def exclude_schema_for_all(view_class):
     """
     Decorate a class to exlcude all of its methods from the API docs.
 
@@ -85,7 +85,7 @@ def exclude_all_schemas(view_class):
 
     Example::
 
-        @exclude_all_schemas
+        @exclude_schema_for_all
         class MyView(RetrieveUpdateDestroyAPIView):
             pass
     """

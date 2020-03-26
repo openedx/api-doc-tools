@@ -12,9 +12,9 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.viewsets import ModelViewSet, ViewSet
 
 from edx_api_doc_tools import (
-    exclude_all_schemas,
     exclude_schema,
     exclude_schema_for,
+    exclude_schema_for_all,
     path_parameter,
     query_parameter,
     schema,
@@ -136,7 +136,7 @@ class HedgehogViewSet(ModelViewSet):
         raise EndpointNotImplemented()
 
 
-@exclude_all_schemas
+@exclude_schema_for_all
 class HedgehogUndocumentedViewset(ViewSet):
     """
     A view that allows us to retrieve something.
@@ -172,7 +172,7 @@ class HedgehogInfoView(GenericAPIView):
         raise EndpointNotImplemented()
 
 
-@exclude_all_schemas
+@exclude_schema_for_all
 class HedgehogUndocumentedView(GenericAPIView):
     """
     A view that allows us to GET something.
