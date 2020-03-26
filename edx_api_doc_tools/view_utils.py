@@ -78,7 +78,7 @@ def exclude_schema_for(*method_names):
 
 def exclude_all_schemas(view_class):
     """
-    Decorate a class to exlcude all of its method from the API docs.
+    Decorate a class to exlcude all of its methods from the API docs.
 
     Arguments:
         view_class (type): A type, typically a subclass of View or ViewSet.
@@ -149,7 +149,7 @@ def schema(
 
 def exclude_schema(view_func):
     """
-    Decorate an API-endpoint-handling function from having its API docs generated.
+    Decorate an API-endpoint-handling function to exclude it from the API docs.
 
     Example::
 
