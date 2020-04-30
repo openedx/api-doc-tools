@@ -47,6 +47,6 @@ from .view_utils import (
 )
 
 
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 
 default_app_config = 'edx_api_doc_tools.apps.EdxApiDocToolsConfig'

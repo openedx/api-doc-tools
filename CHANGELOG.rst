@@ -14,6 +14,11 @@ Change Log
 Unreleased
 ----------
 
+1.3.0 --- 2020-04-30
+--------------------
+
+* Remove support for Django<2.2 and add support for python 3.8
+
 1.2.0 --- 2020-03-20
 --------------------
 
