@@ -8,26 +8,12 @@ env:
 
 matrix:
   include:
-    # Most IDAs are Python 3.5 and Django 1.11. Test and run codecov on those.
+    # Most IDAs are Python 3.5 and Django 2.2. Test and run codecov on those.
     - python: 3.5
-      env: TOXENV=django111-drf39 AFTER_SUCCESS=codecov
-    # Test Python 3.5 with all Django versions and latest DRF.
-    - python: 3.5
-      env: TOXENV=django111-drflatest
-    - python: 3.5
-      env: TOXENV=django20-drflatest
-    - python: 3.5
-      env: TOXENV=django21-drflatest
+      env: TOXENV=django22-drf39 AFTER_SUCCESS=codecov
     - python: 3.5
       env: TOXENV=django22-drflatest
-    # Test Python 3.6 with all Django versions and latest DRF.
-    - python: 3.6
-      env: TOXENV=django111-drflatest
-    - python: 3.6
-      env: TOXENV=django20-drflatest
-    - python: 3.6
-      env: TOXENV=django21-drflatest
-    - python: 3.6
+    - python: 3.8
       env: TOXENV=django22-drflatest
     # Test quality in just Python 3.5.
     - python: 3.5
@@ -57,6 +43,7 @@ deploy:
   distributions: sdist bdist_wheel
   on:
     tags: true
+    python: 3.5
     condition: '$DEPLOY_PYPI = true'
   password:
     secure: qOQ4kU13p2LicQ+5+EKhOYUuhLEtk+UaSp/gJmSuo5osxYXtEGIMi8jBaI2SS4oP0HpIfZ0ywhOHpR6bJx5+UCAX+Mwa9UJR28u20Tc0KkoB8TtBvDI9tnH6KQmsjeyCeBlVxo0VSFh/Ox1Ftu3fBsm3duai5xBBfx8yVM9R7hrEAvJwCysXpDEOY2LpcxLTZgtPm9cOwiuwPI0zqxPY+N4JrXxruwaSIuK8WhONl486k/CsWNEAtcHNcbG3XslkhlleRuKQoi/bp+lhZeOs8Ls43GbLxbk1PAk45zDtYB+kkYXPxsgau5fwsVChrw5XAXi6fw9xW0KveQbhXusuQXGbxw7qjXEuMLDC0XgSvLhAQUjTSRhgo+G3u/xl8cSo0dsMUiiBYwtp/3vwncrYrd8OUNgFZ0HpWehc5W5Mm9F8nBNpmAwaB0ESmSAazTYQmA1jQTcxKTgOKn4KMa9EoPlD37d/z10nq1BXugqcCZzheGKWzHa3MvdBfBeMmHaMrG8mUxEelghBxkd0Yh3I3+zk8qIvzem6DgGSbUpCJjkNUin3X6JOHFnpUtlRCaCiCismw5fhvsjyNJys4s/rkfhiADphsxUkRroR8T0szhWDmAssdm6rLin7cvuQ4iyA0hNoQL9AfW3SdL7DCuC2KuvIgPDg6cxd5TVtaem67i8=
