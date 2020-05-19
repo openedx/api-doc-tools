@@ -159,6 +159,23 @@ class HedgehogInfoView(GenericAPIView):
         Get information about the Hedgehog API.
 
         Returns a object with keys and values describing the API.
+
+        Args:
+            request: a Request.
+
+        """
+        raise EndpointNotImplemented()
+
+    def put(self, request):
+        """
+        Not really an endpoint at all, but has no @schema decorator.
+
+        This is to show the difference in treatment.  This is a second
+        paragraph which will be included in the docs.
+
+        Args:
+            request: a Request.
+
         """
         raise EndpointNotImplemented()
 

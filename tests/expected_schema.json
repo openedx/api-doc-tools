@@ -231,7 +231,7 @@
         },
         "/hedgehog/v0/info": {
             "get": {
-                "description": "Returns a object with keys and values describing the API.",
+                "description": "Returns a object with keys and values describing the API.\n\nArgs:\n    request: a Request.",
                 "operationId": "hedgehog_v0_info_list",
                 "parameters": [],
                 "responses": {
@@ -244,7 +244,21 @@
                     "hedgehog"
                 ]
             },
-            "parameters": []
+            "parameters": [],
+            "put": {
+                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "operationId": "hedgehog_v0_info_update",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "tags": [
+                    "hedgehog"
+                ]
+            }
         }
     },
     "produces": [
