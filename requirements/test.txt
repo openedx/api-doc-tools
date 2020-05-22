@@ -17,20 +17,20 @@ inflection==0.4.0         # via -r requirements/base.txt, drf-yasg
 itypes==1.2.0             # via -r requirements/base.txt, coreapi
 jinja2==2.11.2            # via -r requirements/base.txt, coreschema
 markupsafe==1.1.1         # via -r requirements/base.txt, jinja2
-more-itertools==8.2.0     # via pytest
-packaging==20.3           # via -r requirements/base.txt, drf-yasg, pytest
+more-itertools==8.3.0     # via pytest
+packaging==20.4           # via -r requirements/base.txt, drf-yasg, pytest
 pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.8.1                 # via pytest
 pyparsing==2.4.7          # via -r requirements/base.txt, packaging
 pytest-cov==2.8.1         # via -r requirements/test.in
 pytest-django==3.9.0      # via -r requirements/test.in
-pytest==5.4.1             # via pytest-cov, pytest-django
+pytest==5.4.2             # via pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/base.txt, django
 requests==2.23.0          # via -r requirements/base.txt, coreapi
 ruamel.yaml.clib==0.2.0   # via -r requirements/base.txt, ruamel.yaml
 ruamel.yaml==0.16.10      # via -r requirements/base.txt, drf-yasg
-six==1.14.0               # via -r requirements/base.txt, drf-yasg, packaging, pathlib2
+six==1.15.0               # via -r requirements/base.txt, drf-yasg, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
 uritemplate==3.0.1        # via -r requirements/base.txt, coreapi, drf-yasg
 urllib3==1.25.9           # via -r requirements/base.txt, requests
