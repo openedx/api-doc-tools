@@ -10,3 +10,6 @@
 
 # zipp 3.1.0 requires Python >= 3.6
 zipp<2.0.0
+
+# keyring 21.2.1 requires Python >= 3.6
+keyring<=20.0.1
