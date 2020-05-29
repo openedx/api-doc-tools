@@ -16,13 +16,13 @@ inflection==0.4.0         # via drf-yasg
 itypes==1.2.0             # via coreapi
 jinja2==2.11.2            # via coreschema
 markupsafe==1.1.1         # via jinja2
-packaging==20.3           # via drf-yasg
+packaging==20.4           # via drf-yasg
 pyparsing==2.4.7          # via packaging
 pytz==2020.1              # via django
 requests==2.23.0          # via coreapi
 ruamel.yaml.clib==0.2.0   # via ruamel.yaml
 ruamel.yaml==0.16.10      # via drf-yasg
-six==1.14.0               # via drf-yasg, packaging
+six==1.15.0               # via drf-yasg, packaging
 sqlparse==0.3.1           # via django
 uritemplate==3.0.1        # via coreapi, drf-yasg
 urllib3==1.25.9           # via requests
