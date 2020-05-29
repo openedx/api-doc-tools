@@ -25,7 +25,7 @@ importlib-metadata==1.6.0  # via -r requirements/test.txt, keyring, pluggy, pyte
 inflection==0.4.0         # via -r requirements/test.txt, drf-yasg
 itypes==1.2.0             # via -r requirements/test.txt, coreapi
 jinja2==2.11.2            # via -r requirements/test.txt, coreschema, sphinx
-keyring==21.2.1           # via twine
+keyring==20.0.1           # via -c requirements/constraints.txt, twine
 markupsafe==1.1.1         # via -r requirements/test.txt, jinja2
 more-itertools==8.3.0     # via -r requirements/test.txt, pytest
 packaging==20.4           # via -r requirements/test.txt, bleach, drf-yasg, pytest, sphinx

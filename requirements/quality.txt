@@ -25,7 +25,7 @@ inflection==0.4.0         # via -r requirements/test.txt, drf-yasg
 isort==4.3.21             # via -r requirements/quality.in, pylint
 itypes==1.2.0             # via -r requirements/test.txt, coreapi
 jinja2==2.11.2            # via -r requirements/test.txt, coreschema
-keyring==21.2.1           # via twine
+keyring==20.0.1           # via -c requirements/constraints.txt, twine
 lazy-object-proxy==1.4.3  # via astroid
 markupsafe==1.1.1         # via -r requirements/test.txt, jinja2
 mccabe==0.6.1             # via pylint
