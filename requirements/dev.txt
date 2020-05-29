@@ -26,14 +26,13 @@ edx-i18n-tools==0.5.3     # via -r requirements/dev.in
 edx-lint==1.4.1           # via -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
 idna==2.9                 # via -r requirements/quality.txt, -r requirements/travis.txt, requests
-importlib-metadata==1.6.0  # via -r requirements/quality.txt, -r requirements/travis.txt, inflect, keyring, path, pluggy, pytest, tox, twine, virtualenv
+importlib-metadata==1.6.0  # via -r requirements/quality.txt, -r requirements/travis.txt, inflect, path, pluggy, pytest, tox, virtualenv
 inflect==4.1.0            # via jinja2-pluralize
 inflection==0.4.0         # via -r requirements/quality.txt, drf-yasg
 isort==4.3.21             # via -r requirements/quality.txt, pylint
 itypes==1.2.0             # via -r requirements/quality.txt, coreapi
 jinja2-pluralize==0.3.0   # via diff-cover
 jinja2==2.11.2            # via -r requirements/quality.txt, coreschema, diff-cover, jinja2-pluralize
-keyring==20.0.1           # via -c requirements/constraints.txt, -r requirements/quality.txt, twine
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
 markupsafe==1.1.1         # via -r requirements/quality.txt, jinja2
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
@@ -71,7 +70,7 @@ toml==0.10.1              # via -r requirements/travis.txt, tox
 tox-battery==0.6.1        # via -r requirements/dev.in
 tox==3.15.1               # via -r requirements/travis.txt, tox-battery
 tqdm==4.46.0              # via -r requirements/quality.txt, twine
-twine==3.1.1              # via -r requirements/quality.txt
+twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/quality.txt
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 uritemplate==3.0.1        # via -r requirements/quality.txt, coreapi, drf-yasg
 urllib3==1.25.9           # via -r requirements/quality.txt, -r requirements/travis.txt, requests

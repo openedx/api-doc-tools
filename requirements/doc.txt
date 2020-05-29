@@ -21,11 +21,10 @@ drf-yasg==1.17.1          # via -r requirements/test.txt
 edx-sphinx-theme==1.5.0   # via -r requirements/doc.in
 idna==2.9                 # via -r requirements/test.txt, requests
 imagesize==1.2.0          # via sphinx
-importlib-metadata==1.6.0  # via -r requirements/test.txt, keyring, pluggy, pytest, twine
+importlib-metadata==1.6.0  # via -r requirements/test.txt, pluggy, pytest
 inflection==0.4.0         # via -r requirements/test.txt, drf-yasg
 itypes==1.2.0             # via -r requirements/test.txt, coreapi
 jinja2==2.11.2            # via -r requirements/test.txt, coreschema, sphinx
-keyring==20.0.1           # via -c requirements/constraints.txt, twine
 markupsafe==1.1.1         # via -r requirements/test.txt, jinja2
 more-itertools==8.3.0     # via -r requirements/test.txt, pytest
 packaging==20.4           # via -r requirements/test.txt, bleach, drf-yasg, pytest, sphinx
@@ -57,7 +56,7 @@ sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 stevedore==1.32.0         # via doc8
 tqdm==4.46.0              # via twine
-twine==3.1.1              # via -r requirements/doc.in
+twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/doc.in
 uritemplate==3.0.1        # via -r requirements/test.txt, coreapi, drf-yasg
 urllib3==1.25.9           # via -r requirements/test.txt, requests
 wcwidth==0.1.9            # via -r requirements/test.txt, pytest

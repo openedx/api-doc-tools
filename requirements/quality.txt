@@ -20,12 +20,11 @@ docutils==0.16            # via readme-renderer
 drf-yasg==1.17.1          # via -r requirements/test.txt
 edx-lint==1.4.1           # via -r requirements/quality.in
 idna==2.9                 # via -r requirements/test.txt, requests
-importlib-metadata==1.6.0  # via -r requirements/test.txt, keyring, pluggy, pytest, twine
+importlib-metadata==1.6.0  # via -r requirements/test.txt, pluggy, pytest
 inflection==0.4.0         # via -r requirements/test.txt, drf-yasg
 isort==4.3.21             # via -r requirements/quality.in, pylint
 itypes==1.2.0             # via -r requirements/test.txt, coreapi
 jinja2==2.11.2            # via -r requirements/test.txt, coreschema
-keyring==20.0.1           # via -c requirements/constraints.txt, twine
 lazy-object-proxy==1.4.3  # via astroid
 markupsafe==1.1.1         # via -r requirements/test.txt, jinja2
 mccabe==0.6.1             # via pylint
@@ -55,7 +54,7 @@ six==1.15.0               # via -r requirements/test.txt, astroid, bleach, drf-y
 snowballstemmer==2.0.0    # via pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 tqdm==4.46.0              # via twine
-twine==3.1.1              # via -r requirements/quality.in
+twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/quality.in
 typed-ast==1.4.1          # via astroid
 uritemplate==3.0.1        # via -r requirements/test.txt, coreapi, drf-yasg
 urllib3==1.25.9           # via -r requirements/test.txt, requests

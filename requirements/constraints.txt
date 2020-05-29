@@ -13,3 +13,6 @@ zipp<2.0.0
 
 # keyring 21.2.1 requires Python >= 3.6
 keyring<=20.0.1
+
+# twine 1.15.0 requires Python >= 3.6
+twine<=1.15.0
