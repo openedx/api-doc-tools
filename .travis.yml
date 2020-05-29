@@ -15,8 +15,8 @@ matrix:
       env: TOXENV=django22-drflatest
     - python: 3.8
       env: TOXENV=django22-drflatest
-    # Test quality in just Python 3.6.
-    - python: 3.6
+    # Test quality in just Python 3.5.
+    - python: 3.5
       env:
         - COMMAND="make quality"
         - PIPEXTRA="-r requirements/quality.txt"

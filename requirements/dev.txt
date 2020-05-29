@@ -79,7 +79,7 @@ virtualenv==20.0.21       # via -r requirements/travis.txt, tox
 wcwidth==0.1.9            # via -r requirements/quality.txt, pytest
 webencodings==0.5.1       # via -r requirements/quality.txt, bleach
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
-zipp==3.1.0               # via -r requirements/quality.txt, -r requirements/travis.txt, importlib-metadata
+zipp==1.2.0               # via -c requirements/constraints.txt, -r requirements/quality.txt, -r requirements/travis.txt, importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

@@ -23,4 +23,4 @@ toml==0.10.1              # via tox
 tox==3.15.1               # via -r requirements/travis.in
 urllib3==1.25.9           # via requests
 virtualenv==20.0.21       # via tox
-zipp==3.1.0               # via importlib-metadata
+zipp==1.2.0               # via -c requirements/constraints.txt, importlib-metadata
