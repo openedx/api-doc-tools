@@ -7,3 +7,12 @@
 # link to other information that will help people in the future to remove the
 # pin when possible.  Writing an issue against the offending project and
 # linking to it here is good.
+
+# zipp 3.1.0 requires Python >= 3.6
+zipp<2.0.0
+
+# keyring 21.2.1 requires Python >= 3.6
+keyring<=20.0.1
+
+# twine 1.15.0 requires Python >= 3.6
+twine<=1.15.0
