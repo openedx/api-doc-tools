@@ -8,7 +8,7 @@ certifi==2020.4.5.1       # via requests
 chardet==3.0.4            # via requests
 coreapi==2.3.3            # via drf-yasg
 coreschema==0.0.4         # via coreapi, drf-yasg
-django==2.2.12            # via -r requirements/base.in, djangorestframework, drf-yasg
+django==2.2.13            # via -r requirements/base.in, djangorestframework, drf-yasg
 djangorestframework==3.11.0  # via -r requirements/base.in, drf-yasg
 drf-yasg==1.17.1          # via -r requirements/base.in
 idna==2.9                 # via requests
