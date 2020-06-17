@@ -3,7 +3,6 @@ Data definitions for API schemas.
 
 Mostly, we just use the definitions in drf_yasg.openapi
 """
-from __future__ import absolute_import, unicode_literals
 
 from drf_yasg import openapi
 

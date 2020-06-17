@@ -3,7 +3,6 @@ Functions for setting up API doc generation & viewing in a repository.
 
 External users: import these from __init__.
 """
-from __future__ import absolute_import, unicode_literals
 
 from django.conf import settings
 from django.conf.urls import url

@@ -1,7 +1,6 @@
 """
 REST API serializers for reading and writing to the edX Hedgehog Database.
 """
-from __future__ import absolute_import, unicode_literals
 
 from rest_framework import serializers
 

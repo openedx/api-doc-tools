@@ -13,8 +13,6 @@ All configuration values have a default; values that are commented out
 serve to show the default.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 import io
 import os
 import re
@@ -162,7 +160,6 @@ pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
-
 
 # -- Options for HTML output ----------------------------------------------
 

@@ -3,7 +3,6 @@
 """
 Package metadata for edx_api_doc_tools.
 """
-from __future__ import absolute_import, print_function
 
 import os
 import re

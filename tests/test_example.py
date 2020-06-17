@@ -2,7 +2,6 @@
 Make sure our example API works,
 so that we're not testing our doc tools on a broken API.
 """
-from __future__ import absolute_import, unicode_literals
 
 import json
 

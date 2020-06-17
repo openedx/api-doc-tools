@@ -3,8 +3,6 @@ Utilities for annotating API views with schema info.
 
 External users: import these from __init__.
 """
-from __future__ import absolute_import, unicode_literals
-
 from django.utils.decorators import method_decorator
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.viewsets import ViewSet
