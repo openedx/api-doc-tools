@@ -5,7 +5,6 @@ Documented using edx_api_doc_tools.
 
 TODO: also give an example of documenting "traditional" (non-ViewSet) DRF views.
 """
-from __future__ import absolute_import, unicode_literals
 
 from rest_framework.exceptions import APIException, NotFound
 from rest_framework.generics import GenericAPIView

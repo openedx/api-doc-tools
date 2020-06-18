@@ -6,8 +6,6 @@ Under the hood, this app uses drf-yasg
 to generate API spec. It then uses Swagger to serve that spec.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 from django.apps import AppConfig, apps
 from django.core.exceptions import ImproperlyConfigured
 
