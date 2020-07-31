@@ -4,14 +4,14 @@
 #
 #    make upgrade
 #
-certifi==2020.4.5.2       # via requests
+certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
 coreapi==2.3.3            # via drf-yasg
 coreschema==0.0.4         # via coreapi, drf-yasg
-django==2.2.13            # via -r requirements/base.in, djangorestframework, drf-yasg
+django==2.2.14            # via -r requirements/base.in, djangorestframework, drf-yasg
 djangorestframework==3.11.0  # via -r requirements/base.in, drf-yasg
 drf-yasg==1.17.1          # via -r requirements/base.in
-idna==2.9                 # via requests
+idna==2.10                # via requests
 inflection==0.5.0         # via drf-yasg
 itypes==1.2.0             # via coreapi
 jinja2==2.11.2            # via coreschema
@@ -25,4 +25,4 @@ ruamel.yaml==0.16.10      # via drf-yasg
 six==1.15.0               # via drf-yasg, packaging
 sqlparse==0.3.1           # via django
 uritemplate==3.0.1        # via coreapi, drf-yasg
-urllib3==1.25.9           # via requests
+urllib3==1.25.10          # via requests
