@@ -1,7 +1,3 @@
-# openedx.yaml
-
----
-owner: nedbat
 tags:
     - tools
 oeps:
