@@ -87,6 +87,22 @@ class DocViewTests(SimpleTestCase):
         actual = json.loads(ui_data_response.content.decode('utf-8'))
         assert actual == expected
 
+    def test_default_prefix(self):
+        """
+        Test case when the attribute prefix is the default.
+        """
+        with override_settings(EDX_API_DOC_TOOLS_PREFIXES="api/hedgehog/v1/"):
+            response = self.client.get('/api-docs/')
+            assert response.status_code == 200
+
+    def test_settings_prefixes(self):
+        """
+        Test case when the prefixes are declare in the settings.
+        """
+        with override_settings(EDX_API_DOC_TOOLS_PREFIXES=["/enterprise/"]):
+            response = self.client.get('/api-docs/')
+            assert response.status_code == 200
+
 
 @pytest.mark.parametrize("docstring, summary, description", [
     (None, None, None),

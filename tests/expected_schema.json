@@ -1,5 +1,5 @@
 {
-    "basePath": "/api",
+    "basePath": "/",
     "consumes": [
         "application/json"
     ],
@@ -67,10 +67,10 @@
         "version": "v0"
     },
     "paths": {
-        "/hedgehog/v0/hogs/": {
+        "/api/hedgehog/v0/hogs/": {
             "get": {
                 "description": "Hedgehogs can be filtered by minimum weight (grams or ounces),\ntheir favorite food, whether they graduated college,\nor any combination of those criterion.",
-                "operationId": "hedgehog_v0_hogs_list",
+                "operationId": "api_hedgehog_v0_hogs_list",
                 "parameters": [
                     {
                         "description": "Filter on whether minimum weight (grams).",
@@ -113,13 +113,13 @@
                 },
                 "summary": "Fetch the list of edX hedgehogs.",
                 "tags": [
-                    "hedgehog"
+                    "api"
                 ]
             },
             "parameters": [],
             "post": {
                 "description": "If successful, an absolute URI for the hedgehog is returned in the\n'Location' HTTP response header.",
-                "operationId": "hedgehog_v0_hogs_create",
+                "operationId": "api_hedgehog_v0_hogs_create",
                 "parameters": [
                     {
                         "in": "body",
@@ -156,14 +156,14 @@
                 },
                 "summary": "Create a new hedgehog.",
                 "tags": [
-                    "hedgehog"
+                    "api"
                 ]
             }
         },
-        "/hedgehog/v0/hogs/{hedgehog_key}/": {
+        "/api/hedgehog/v0/hogs/{hedgehog_key}/": {
             "delete": {
                 "description": "Wipe a hedgehog from the database.",
-                "operationId": "hedgehog_v0_hogs_delete",
+                "operationId": "api_hedgehog_v0_hogs_delete",
                 "parameters": [
                     {
                         "description": "Key identifying the hog. Lowercase letters only.",
@@ -189,12 +189,12 @@
                 },
                 "summary": "Wipe a hedgehog from the database.",
                 "tags": [
-                    "hedgehog"
+                    "api"
                 ]
             },
             "get": {
                 "description": "Fetch details for a _single_ hedgehog by key.",
-                "operationId": "hedgehog_v0_hogs_read",
+                "operationId": "api_hedgehog_v0_hogs_read",
                 "parameters": [
                     {
                         "description": "Key identifying the hog. Lowercase letters only.",
@@ -217,7 +217,7 @@
                 },
                 "summary": "Fetch details for a _single_ hedgehog by key.",
                 "tags": [
-                    "hedgehog"
+                    "api"
                 ]
             },
             "parameters": [
@@ -229,10 +229,10 @@
                 }
             ]
         },
-        "/hedgehog/v0/info": {
+        "/api/hedgehog/v0/info": {
             "get": {
                 "description": "Returns a object with keys and values describing the API.\n\nArgs:\n    request: a Request.",
-                "operationId": "hedgehog_v0_info_list",
+                "operationId": "api_hedgehog_v0_info_list",
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -241,13 +241,13 @@
                 },
                 "summary": "Get information about the Hedgehog API.",
                 "tags": [
-                    "hedgehog"
+                    "api"
                 ]
             },
             "parameters": [],
             "put": {
                 "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
-                "operationId": "hedgehog_v0_info_update",
+                "operationId": "api_hedgehog_v0_info_update",
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -256,7 +256,38 @@
                 },
                 "summary": "Not really an endpoint at all, but has no @schema decorator.",
                 "tags": [
-                    "hedgehog"
+                    "api"
+                ]
+            }
+        },
+        "/api/hedgehog/v1/info": {
+            "get": {
+                "description": "Returns a object with keys and values describing the API.\n\nArgs:\n    request: a Request.",
+                "operationId": "api_hedgehog_v1_info_list",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Get information about the Hedgehog API.",
+                "tags": [
+                    "api"
+                ]
+            },
+            "parameters": [],
+            "put": {
+                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "operationId": "api_hedgehog_v1_info_update",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "tags": [
+                    "api"
                 ]
             }
         }

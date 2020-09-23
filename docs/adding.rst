@@ -14,6 +14,18 @@ Next, add the following to your list of installed apps in Django settings::
         edx_api_doc_tools,
     )
 
+You can specify the prefixes of the views whose documentation you want to generate.
+To achieve this, add the root paths to the settings file as follows::
+
+    EDX_API_DOC_TOOLS_PREFIXES = [
+        "/api/",
+        "/root2/",
+        "/root3/",
+    ]
+
+Note that if no prefix is added to the list, by default the documentation will
+be generated for views under the root path ``/api``.
+
 Then, in ``urls.py``::
 
     ...
@@ -23,10 +35,8 @@ Then, in ``urls.py``::
     urlpatterns += make_docs_urls(api_info)
 
 
-Your should now be able to load the Swagger UI in a browser at
-`https://${your_service}/api-docs`.  Note that by default, documentation is
-only generated for views under the root path ``/api``.  Generation for other
-views is possible but requires some extra configuration.
+You should now be able to load the Swagger UI in a browser at
+`https://${your_service}/api-docs`.
 
 Finally, you can enrich the generated documentation::
 

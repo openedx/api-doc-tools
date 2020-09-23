@@ -24,6 +24,8 @@ urlpatterns += ROUTER.urls
 urlpatterns += [
     url(r'/api/hedgehog/v0/info', HedgehogInfoView.as_view()),
     url(r'/api/hedgehog/v0/undoc-view', HedgehogUndocumentedView.as_view()),
+    url(r'/api/hedgehog/v1/info', HedgehogInfoView.as_view()),
+    url(r'/api/hedgehog/v1/undoc-view', HedgehogUndocumentedView.as_view()),
 ]
 
 urlpatterns += make_docs_urls(

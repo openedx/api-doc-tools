@@ -160,15 +160,28 @@ class ApiSchemaGenerator(OpenAPISchemaGenerator):
         """
         Return dict of endpoints to be displayed.
         """
+        prefixes = get_endpoints_prefixes()
         endpoints = super(ApiSchemaGenerator, self).get_endpoints(request)
-        subpoints = {p: v for p, v in endpoints.items() if p.startswith("/api/")}
+        subpoints = {p: v for p, v in endpoints.items() if p.startswith(prefixes)}
         return subpoints
 
     def determine_path_prefix(self, paths):
         """
         Return common prefix for all paths.
         """
-        return "/api/"
+        return "/"
+
+
+def get_endpoints_prefixes():
+    """
+    Return the root paths of the endpoints to be displayed.
+    """
+    if getattr(settings, "EDX_API_DOC_TOOLS_PREFIXES", []) and \
+            isinstance(settings.EDX_API_DOC_TOOLS_PREFIXES, list):
+        prefixes = tuple(settings.EDX_API_DOC_TOOLS_PREFIXES)
+    else:
+        prefixes = "/api/"
+    return prefixes
 
 
 def get_docs_cache_timeout():
