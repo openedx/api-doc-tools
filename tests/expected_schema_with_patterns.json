@@ -1,0 +1,66 @@
+{
+    "basePath": "/test/hedgehog/v1",
+    "consumes": [
+        "application/json"
+    ],
+    "definitions": {},
+    "host": "testserver",
+    "info": {
+        "contact": {
+            "email": "hedgehog-support@example.com"
+        },
+        "description": "A REST API for interacting with the edX hedgehog service.",
+        "title": "edX Hedgehog Service API",
+        "version": "v1"
+    },
+    "paths": {
+        "/info": {
+            "get": {
+                "description": "Returns a object with keys and values describing the API.\n\nArgs:\n    request: a Request.",
+                "operationId": "info_list",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Get information about the Hedgehog API.",
+                "tags": [
+                    "info"
+                ]
+            },
+            "parameters": [],
+            "put": {
+                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "operationId": "info_update",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "tags": [
+                    "info"
+                ]
+            }
+        }
+    },
+    "produces": [
+        "application/json"
+    ],
+    "schemes": [
+        "http"
+    ],
+    "security": [
+        {
+            "Basic": []
+        }
+    ],
+    "securityDefinitions": {
+        "Basic": {
+            "type": "basic"
+        }
+    },
+    "swagger": "2.0"
+}

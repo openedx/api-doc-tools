@@ -15,6 +15,7 @@ from django.test.utils import override_settings
 from edx_api_doc_tools.apps import EdxApiDocToolsConfig
 from edx_api_doc_tools.internal_utils import split_docstring
 from example import urls as example_urls
+from example import urls_with_pattern as test_pattern_urls
 
 
 @override_settings(ROOT_URLCONF=example_urls.__name__)
@@ -152,3 +153,32 @@ class AppConfigTests(SimpleTestCase):
         with pytest.raises(ImproperlyConfigured, match="drf_yasg\' must also be added"):
             self.original_app_ready_fn(*args, **kwargs)
         self.called_app_ready = True
+
+
+@override_settings(ROOT_URLCONF=test_pattern_urls.__name__)
+class DocViewPatternTests(SimpleTestCase):
+    """
+    Test that the API docs generated from the example Hedgehog API look right.
+    """
+    maxDiff = None  # Always show full diff output.
+
+    base_path = os.path.dirname(__file__)
+    path_of_expected_schema = os.path.join(base_path, 'expected_schema_with_patterns.json')
+    path_of_actual_schema = os.path.join(base_path, 'actual_schema_with_patterns.json')
+
+    def test_get_data_view(self):
+        """
+        Same test as above, but with different urls and expected_schema
+        """
+        response = self.client.get('/swagger.json')
+        assert response.status_code == 200
+        actual_schema = response.json()
+        with open(self.path_of_actual_schema, 'w') as f:
+            json.dump(actual_schema, f, indent=4, sort_keys=True)
+        with open(self.path_of_expected_schema, 'r') as schema_file:
+            expected_schema = json.load(schema_file)
+        assert actual_schema == expected_schema, (
+            "Generated schema (dumped to {}) "
+            "did not match schema loaded from expected_schema_with_patterns.json."
+            .format(os.path.relpath(self.path_of_actual_schema))
+        )

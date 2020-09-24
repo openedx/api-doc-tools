@@ -14,6 +14,11 @@ Change Log
 Unreleased
 ----------
 
+1.3.2 --- 2020-09-23
+____________________
+
+* Adding option to specify url patterns for generated docs.
+
 1.3.1 --- 2020-05-29
 --------------------
 

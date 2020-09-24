@@ -13,12 +13,13 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
 
-def make_docs_urls(api_info):
+def make_docs_urls(api_info, api_url_patterns=None):
     """
     Create API doc views given an API info object.
 
     Arguments:
         api_info (openapi.Info): Information about the API.
+        api_url_patterns (list of url patterns): URL patterns that API docs will be generated for
 
     Returns: list[RegexURLPattern]
         A list of url patterns to the API docs.
@@ -32,8 +33,8 @@ def make_docs_urls(api_info):
         urlpatterns += make_docs_urls(api_info)
     """
     return get_docs_urls(
-        docs_data_view=make_docs_data_view(api_info),
-        docs_ui_view=make_docs_ui_view(api_info),
+        docs_data_view=make_docs_data_view(api_info, api_url_patterns),
+        docs_ui_view=make_docs_ui_view(api_info, api_url_patterns),
     )
 
 
@@ -103,12 +104,13 @@ def get_docs_urls(docs_data_view, docs_ui_view):
     ]
 
 
-def make_docs_data_view(api_info):
+def make_docs_data_view(api_info, api_url_patterns=None):
     """
     Build View for API documentation data (either JSON or YAML).
 
     Arguments:
         api_info (openapi.Info): Information about the API.
+        api_url_patterns (list of url patterns): URL patterns that API docs will be generated for
 
     Returns: View
 
@@ -118,20 +120,24 @@ def make_docs_data_view(api_info):
         api_info = make_api_info(title="Awesome API", version="v42")
         my_data_view = make_docs_data_view(api_info)
     """
+    schema_generator = get_schema_generator(api_url_patterns)
+
     return get_schema_view(
         api_info,
-        generator_class=ApiSchemaGenerator,
+        generator_class=schema_generator,
         public=True,
         permission_classes=(permissions.AllowAny,),
+        patterns=api_url_patterns,
     ).without_ui(cache_timeout=get_docs_cache_timeout())
 
 
-def make_docs_ui_view(api_info):
+def make_docs_ui_view(api_info, api_url_patterns=None):
     """
     Build View for browsable API documentation.
 
     Arguments:
         api_info (openapi.Info): Information about the API.
+        api_url_patterns (list of url patterns): URL patterns that API docs will be generated for
 
     Returns: View
 
@@ -141,11 +147,14 @@ def make_docs_ui_view(api_info):
         api_info = make_api_info(title="Awesome API", version="v42")
         my_ui_view = make_docs_ui_view(api_info)
     """
+    schema_generator = get_schema_generator(api_url_patterns)
+
     return get_schema_view(
         api_info,
-        generator_class=ApiSchemaGenerator,
+        generator_class=schema_generator,
         public=True,
         permission_classes=(permissions.AllowAny,),
+        patterns=api_url_patterns,
     ).with_ui('swagger', cache_timeout=get_docs_cache_timeout())
 
 
@@ -169,6 +178,25 @@ class ApiSchemaGenerator(OpenAPISchemaGenerator):
         Return common prefix for all paths.
         """
         return "/api/"
+
+
+def get_schema_generator(patterns):
+    """
+    Get correct schema generator.
+
+    Defaults to ApiSchemaGenerator if no url patterns are specified, meaning
+    that base path will be "/api".
+
+    Arguments:
+        patterns (list of url patterns): URL patterns that API docs will be generated for
+
+    Returns:
+        Schema generator object.
+    """
+    if patterns:
+        return OpenAPISchemaGenerator
+    else:
+        return ApiSchemaGenerator
 
 
 def get_docs_cache_timeout():
