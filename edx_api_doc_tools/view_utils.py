@@ -102,6 +102,7 @@ def exclude_schema_for_all(view_class):
 
 
 def schema(
+    body=None,
     parameters=None,
     responses=None,
     summary=None,
@@ -114,6 +115,8 @@ def schema(
     description fields should be in Markdown and will be automatically dedented.
 
     Arguments:
+        body: Optional payload used for POST, PUT, and PATCH requests.
+            Accepts a serializer class.
         parameters (list[openapi.Parameter]): Optional list of parameters to
             the API endpoint.
         responses (dict[int, object]): Optional map from HTTP statuses to either:
@@ -125,6 +128,7 @@ def schema(
             If None, we attempt to extract it from the first line of the docstring.
         description (str): Optional multi-line description of operation.
             If None, we attempt to extract it from the rest of the docstring.
+        request_body (Serializer): Optional serializer class corresponding to the body of the request.
     """
     for param in parameters or ():
         param.description = dedent(param.description)
@@ -137,6 +141,7 @@ def schema(
         final_summary = summary or docstring_summary
         final_description = description or docstring_description or final_summary
         return swagger_auto_schema(
+            request_body=body,
             manual_parameters=parameters,
             responses=responses,
             operation_summary=final_summary,
