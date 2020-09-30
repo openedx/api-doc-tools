@@ -55,8 +55,14 @@ def string_parameter(name, in_, description=None):
     """
     return parameter(name, in_, str, description=description)
 
+def list_parameter(name, items, description=None):
+    """
+    Define a list parameter.
+    """
+    return parameter(name, ParameterLocation.BODY, list, description=description, items=items)
 
-def parameter(name, in_, param_type, description=None):
+
+def parameter(name, in_, param_type, description=None, items=None):
     """
     Define a typed parameter.
 
@@ -65,6 +71,7 @@ def parameter(name, in_, param_type, description=None):
         in_ (ParameterLocation attribute): How the parameter is passed in.
         param_type (type|str): a member of `PARAM_TYPES`.
         description (str): Description of the parameter.
+        items (list): List of items (valid only for list type).
 
     Returns: openapi.Parameter
     """
@@ -79,6 +86,7 @@ def parameter(name, in_, param_type, description=None):
         in_,
         type=openapi_type,
         description=description,
+        items=items,
     )
 
 
