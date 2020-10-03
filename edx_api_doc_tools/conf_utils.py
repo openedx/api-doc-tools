@@ -155,7 +155,7 @@ def make_docs_ui_view(api_info, api_url_patterns=None):
         public=True,
         permission_classes=(permissions.AllowAny,),
         patterns=api_url_patterns,
-    ).with_ui('swagger', cache_timeout=get_docs_cache_timeout())
+    ).with_ui('redoc', cache_timeout=get_docs_cache_timeout())
 
 
 class ApiSchemaGenerator(OpenAPISchemaGenerator):
