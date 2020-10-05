@@ -230,6 +230,20 @@
             ]
         },
         "/hedgehog/v0/info": {
+            "delete": {
+                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "operationId": "hedgehog_v0_info_delete",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "tags": [
+                    "hedgehog"
+                ]
+            },
             "get": {
                 "description": "Returns a object with keys and values describing the API.\n\nArgs:\n    request: a Request.",
                 "operationId": "hedgehog_v0_info_list",
@@ -246,15 +260,27 @@
             },
             "parameters": [],
             "put": {
-                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "description": "This is to show the request_body parameter can be used.\n\nArgs:\n    request: a Request.",
                 "operationId": "hedgehog_v0_info_update",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": ""
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
                     }
                 },
-                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "summary": "Not really an endpoint at all, but specifies request_body.",
                 "tags": [
                     "hedgehog"
                 ]
