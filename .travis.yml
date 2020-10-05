@@ -12,9 +12,9 @@ matrix:
     - python: 3.5
       env: TOXENV=django22-drf39 AFTER_SUCCESS=codecov
     - python: 3.5
-      env: TOXENV=django22-drflatest
+      env: TOXENV=django22-drf311
     - python: 3.8
-      env: TOXENV=django22-drflatest
+      env: TOXENV=django22-drf311
     # Test quality in just Python 3.5.
     - python: 3.5
       env:

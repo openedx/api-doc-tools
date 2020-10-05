@@ -3,7 +3,60 @@
     "consumes": [
         "application/json"
     ],
-    "definitions": {},
+    "definitions": {
+        "Hedgehog": {
+            "properties": {
+                "fav_food": {
+                    "enum": [
+                        "critters",
+                        "crawlies",
+                        "strawberries"
+                    ],
+                    "title": "Fav food",
+                    "type": "string"
+                },
+                "is_college_graduate": {
+                    "default": false,
+                    "title": "Is college graduate",
+                    "type": "boolean"
+                },
+                "key": {
+                    "format": "slug",
+                    "minLength": 1,
+                    "pattern": "^[-a-zA-Z0-9_]+$",
+                    "title": "Key",
+                    "type": "string"
+                },
+                "name": {
+                    "minLength": 1,
+                    "title": "Name",
+                    "type": "string"
+                },
+                "uuid": {
+                    "format": "uuid",
+                    "title": "Uuid",
+                    "type": "string"
+                },
+                "weight_grams": {
+                    "title": "Weight grams",
+                    "type": "integer"
+                },
+                "weight_ounces": {
+                    "readOnly": true,
+                    "title": "Weight ounces",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "uuid",
+                "key",
+                "name",
+                "weight_grams",
+                "fav_food"
+            ],
+            "type": "object"
+        }
+    },
     "host": "testserver",
     "info": {
         "contact": {
@@ -15,6 +68,20 @@
     },
     "paths": {
         "/info": {
+            "delete": {
+                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "operationId": "info_delete",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "tags": [
+                    "info"
+                ]
+            },
             "get": {
                 "description": "Returns a object with keys and values describing the API.\n\nArgs:\n    request: a Request.",
                 "operationId": "info_list",
@@ -31,15 +98,27 @@
             },
             "parameters": [],
             "put": {
-                "description": "This is to show the difference in treatment.  This is a second\nparagraph which will be included in the docs.",
+                "description": "This is to show the body parameter can be used.\n\nArgs:\n    request: a Request.",
                 "operationId": "info_update",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": ""
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Hedgehog"
+                        }
                     }
                 },
-                "summary": "Not really an endpoint at all, but has no @schema decorator.",
+                "summary": "Not really an endpoint at all, but specifies body parameter.",
                 "tags": [
                     "info"
                 ]

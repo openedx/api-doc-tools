@@ -165,12 +165,27 @@ class HedgehogInfoView(GenericAPIView):
         """
         raise EndpointNotImplemented()
 
-    def put(self, request):
+    def delete(self, request):
         """
         Not really an endpoint at all, but has no @schema decorator.
 
         This is to show the difference in treatment.  This is a second
         paragraph which will be included in the docs.
+
+        Args:
+            request: a Request.
+
+        """
+        raise EndpointNotImplemented()
+
+    @schema(
+        body=HedgehogSerializer
+    )
+    def put(self, request):
+        """
+        Not really an endpoint at all, but specifies body parameter.
+
+        This is to show the body parameter can be used.
 
         Args:
             request: a Request.

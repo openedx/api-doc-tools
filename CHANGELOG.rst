@@ -14,6 +14,12 @@ Change Log
 Unreleased
 ----------
 
+1.3.3 --- 2020-10-05
+____________________
+
+* Adding option to include a body parameter in requests.
+* Travis build uses djangorestframework<3.12 as drf-yasg is currently incompatible with 3.12.
+
 1.3.2 --- 2020-09-23
 ____________________
 
