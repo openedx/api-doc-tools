@@ -112,8 +112,8 @@ class HedgehogViewSet(ModelViewSet):
                 hog for hog in self.get_queryset()
                 if hog.key == hedgehog_key
             )
-        except StopIteration:
-            raise NotFound()
+        except StopIteration as error:
+            raise NotFound() from error
         return hedgehog
 
     def perform_create(self, serializer):

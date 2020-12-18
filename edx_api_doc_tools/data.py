@@ -70,10 +70,10 @@ def parameter(name, in_, param_type, description=None):
     """
     try:
         openapi_type = _PARAM_TYPE_MAP[param_type]
-    except KeyError:
+    except KeyError as error:
         raise ValueError(
             'param_type must be a member of the set {}'.format(PARAM_TYPES)
-        )
+        ) from error
     return openapi.Parameter(
         name,
         in_,

@@ -126,7 +126,7 @@ class AppConfigTests(SimpleTestCase):
     original_app_ready_fn = EdxApiDocToolsConfig.ready
 
     def setUp(self):
-        super(AppConfigTests, self).setUp()
+        super().setUp()
         self.called_app_ready = False
 
     def test_app_ready_fails_without_yasg(self):
