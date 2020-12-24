@@ -54,7 +54,7 @@ class DocViewTests(SimpleTestCase):
         actual_schema = response.json()
         with open(self.path_of_actual_schema, 'w') as f:
             json.dump(actual_schema, f, indent=4, sort_keys=True)
-        with open(self.path_of_expected_schema, 'r') as schema_file:
+        with open(self.path_of_expected_schema) as schema_file:
             expected_schema = json.load(schema_file)
         assert actual_schema == expected_schema, (
             "Generated schema (dumped to {}) "
@@ -126,7 +126,7 @@ class AppConfigTests(SimpleTestCase):
     original_app_ready_fn = EdxApiDocToolsConfig.ready
 
     def setUp(self):
-        super(AppConfigTests, self).setUp()
+        super().setUp()
         self.called_app_ready = False
 
     def test_app_ready_fails_without_yasg(self):
@@ -175,7 +175,7 @@ class DocViewPatternTests(SimpleTestCase):
         actual_schema = response.json()
         with open(self.path_of_actual_schema, 'w') as f:
             json.dump(actual_schema, f, indent=4, sort_keys=True)
-        with open(self.path_of_expected_schema, 'r') as schema_file:
+        with open(self.path_of_expected_schema) as schema_file:
             expected_schema = json.load(schema_file)
         assert actual_schema == expected_schema, (
             "Generated schema (dumped to {}) "
