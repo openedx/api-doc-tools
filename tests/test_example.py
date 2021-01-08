@@ -39,7 +39,7 @@ class HedgehogViewTest(SimpleTestCase):
         Make a `method` request to `path` in the hedgehog API with (optional) `data`.
         """
         request_method = getattr(self.client, method.lower())
-        args = ['/api/hedgehog/v0/{}'.format(path)]
+        args = [f'/api/hedgehog/v0/{path}']
         if data:
             args.append(json.dumps(data))
         return request_method(*args, content_type='application/json')

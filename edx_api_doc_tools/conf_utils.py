@@ -169,7 +169,7 @@ class ApiSchemaGenerator(OpenAPISchemaGenerator):
         """
         Return dict of endpoints to be displayed.
         """
-        endpoints = super(ApiSchemaGenerator, self).get_endpoints(request)
+        endpoints = super().get_endpoints(request)
         subpoints = {p: v for p, v in endpoints.items() if p.startswith("/api/")}
         return subpoints
 

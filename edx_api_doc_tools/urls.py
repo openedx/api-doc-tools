@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 URLs for edx_api_doc_tools.
 """
