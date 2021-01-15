@@ -23,7 +23,7 @@ djangorestframework==3.12.2
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.20.0
+drf-yasg==1.17.1
     # via -r requirements/base.in
 idna==2.10
     # via requests
@@ -46,6 +46,8 @@ requests==2.25.1
 ruamel.yaml.clib==0.2.2
     # via ruamel.yaml
 ruamel.yaml==0.16.12
+    # via drf-yasg
+six==1.15.0
     # via drf-yasg
 sqlparse==0.4.1
     # via django

@@ -44,10 +44,6 @@ click==7.1.2
     #   pip-tools
 codecov==2.1.11
     # via -r requirements/travis.txt
-colorama==0.4.4
-    # via
-    #   -r requirements/quality.txt
-    #   twine
 coreapi==2.3.3
     # via
     #   -r requirements/quality.txt
@@ -63,7 +59,7 @@ coverage==5.3.1
     #   -r requirements/travis.txt
     #   codecov
     #   pytest-cov
-diff-cover==4.1.0
+diff-cover==4.1.1
     # via -r requirements/dev.in
 distlib==0.3.1
     # via
@@ -83,7 +79,7 @@ docutils==0.16
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-drf-yasg==1.20.0
+drf-yasg==1.17.1
     # via -r requirements/quality.txt
 edx-i18n-tools==0.5.3
     # via -r requirements/dev.in
@@ -99,7 +95,21 @@ idna==2.10
     #   -r requirements/quality.txt
     #   -r requirements/travis.txt
     #   requests
-inflect==5.0.2
+importlib-metadata==2.1.1
+    # via
+    #   -r requirements/quality.txt
+    #   -r requirements/travis.txt
+    #   inflect
+    #   path
+    #   pluggy
+    #   pytest
+    #   tox
+    #   virtualenv
+importlib-resources==3.2.1
+    # via
+    #   -r requirements/travis.txt
+    #   virtualenv
+inflect==3.0.2
     # via jinja2-pluralize
 inflection==0.5.1
     # via
@@ -109,7 +119,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.7.0
+isort==4.3.21
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -125,10 +135,6 @@ jinja2==2.11.2
     #   coreschema
     #   diff-cover
     #   jinja2-pluralize
-keyring==21.8.0
-    # via
-    #   -r requirements/quality.txt
-    #   twine
 lazy-object-proxy==1.4.3
     # via
     #   -r requirements/quality.txt
@@ -151,8 +157,12 @@ packaging==20.8
     #   tox
 path.py==12.5.0
     # via edx-i18n-tools
-path==15.0.1
+path==13.1.0
     # via path.py
+pathlib2==2.3.5
+    # via
+    #   -r requirements/quality.txt
+    #   pytest
 pip-tools==5.5.0
     # via -r requirements/pip-tools.txt
 pkginfo==1.6.1
@@ -178,7 +188,7 @@ pycodestyle==2.6.0
     # via -r requirements/quality.txt
 pydocstyle==5.1.1
     # via -r requirements/quality.txt
-pygments==2.7.3
+pygments==2.7.4
     # via
     #   -r requirements/quality.txt
     #   diff-cover
@@ -212,7 +222,7 @@ pytest-cov==2.10.1
     # via -r requirements/quality.txt
 pytest-django==4.1.0
     # via -r requirements/quality.txt
-pytest==6.2.1
+pytest==6.1.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -239,10 +249,6 @@ requests==2.25.1
     #   coreapi
     #   requests-toolbelt
     #   twine
-rfc3986==1.4.0
-    # via
-    #   -r requirements/quality.txt
-    #   twine
 ruamel.yaml.clib==0.2.2
     # via
     #   -r requirements/quality.txt
@@ -257,8 +263,10 @@ six==1.15.0
     #   -r requirements/travis.txt
     #   astroid
     #   bleach
+    #   drf-yasg
     #   edx-i18n-tools
     #   edx-lint
+    #   pathlib2
     #   readme-renderer
     #   tox
     #   virtualenv
@@ -279,16 +287,20 @@ toml==0.10.2
     #   tox
 tox-battery==0.6.1
     # via -r requirements/dev.in
-tox==3.20.1
+tox==3.21.1
     # via
     #   -r requirements/travis.txt
     #   tox-battery
-tqdm==4.55.1
+tqdm==4.56.0
     # via
     #   -r requirements/quality.txt
     #   twine
-twine==3.3.0
+twine==1.15.0
     # via -r requirements/quality.txt
+typed-ast==1.4.2
+    # via
+    #   -r requirements/quality.txt
+    #   astroid
 uritemplate==3.0.1
     # via
     #   -r requirements/quality.txt
@@ -299,7 +311,7 @@ urllib3==1.26.2
     #   -r requirements/quality.txt
     #   -r requirements/travis.txt
     #   requests
-virtualenv==20.2.2
+virtualenv==20.3.1
     # via
     #   -r requirements/travis.txt
     #   tox
@@ -311,6 +323,12 @@ wrapt==1.12.1
     # via
     #   -r requirements/quality.txt
     #   astroid
+zipp==1.2.0
+    # via
+    #   -r requirements/quality.txt
+    #   -r requirements/travis.txt
+    #   importlib-metadata
+    #   importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

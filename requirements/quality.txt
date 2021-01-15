@@ -28,8 +28,6 @@ click==7.1.2
     # via
     #   click-log
     #   edx-lint
-colorama==0.4.4
-    # via twine
 coreapi==2.3.3
     # via
     #   -r requirements/test.txt
@@ -54,7 +52,7 @@ djangorestframework==3.12.2
     #   drf-yasg
 docutils==0.16
     # via readme-renderer
-drf-yasg==1.20.0
+drf-yasg==1.17.1
     # via -r requirements/test.txt
 edx-lint==1.6
     # via -r requirements/quality.in
@@ -62,6 +60,11 @@ idna==2.10
     # via
     #   -r requirements/test.txt
     #   requests
+importlib-metadata==2.1.1
+    # via
+    #   -r requirements/test.txt
+    #   pluggy
+    #   pytest
 inflection==0.5.1
     # via
     #   -r requirements/test.txt
@@ -70,7 +73,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.7.0
+isort==4.3.21
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -82,8 +85,6 @@ jinja2==2.11.2
     # via
     #   -r requirements/test.txt
     #   coreschema
-keyring==21.8.0
-    # via twine
 lazy-object-proxy==1.4.3
     # via astroid
 markupsafe==1.1.1
@@ -97,6 +98,10 @@ packaging==20.8
     #   -r requirements/test.txt
     #   bleach
     #   drf-yasg
+    #   pytest
+pathlib2==2.3.5
+    # via
+    #   -r requirements/test.txt
     #   pytest
 pkginfo==1.6.1
     # via twine
@@ -112,7 +117,7 @@ pycodestyle==2.6.0
     # via -r requirements/quality.in
 pydocstyle==5.1.1
     # via -r requirements/quality.in
-pygments==2.7.3
+pygments==2.7.4
     # via readme-renderer
 pylint-celery==0.3
     # via edx-lint
@@ -136,7 +141,7 @@ pytest-cov==2.10.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
-pytest==6.2.1
+pytest==6.1.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -155,8 +160,6 @@ requests==2.25.1
     #   coreapi
     #   requests-toolbelt
     #   twine
-rfc3986==1.4.0
-    # via twine
 ruamel.yaml.clib==0.2.2
     # via
     #   -r requirements/test.txt
@@ -167,9 +170,12 @@ ruamel.yaml==0.16.12
     #   drf-yasg
 six==1.15.0
     # via
+    #   -r requirements/test.txt
     #   astroid
     #   bleach
+    #   drf-yasg
     #   edx-lint
+    #   pathlib2
     #   readme-renderer
 snowballstemmer==2.0.0
     # via pydocstyle
@@ -182,10 +188,12 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-tqdm==4.55.1
+tqdm==4.56.0
     # via twine
-twine==3.3.0
+twine==1.15.0
     # via -r requirements/quality.in
+typed-ast==1.4.2
+    # via astroid
 uritemplate==3.0.1
     # via
     #   -r requirements/test.txt
@@ -199,6 +207,10 @@ webencodings==0.5.1
     # via bleach
 wrapt==1.12.1
     # via astroid
+zipp==1.2.0
+    # via
+    #   -r requirements/test.txt
+    #   importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
