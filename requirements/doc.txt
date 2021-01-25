@@ -12,7 +12,7 @@ attrs==20.3.0
     #   pytest
 babel==2.9.0
     # via sphinx
-bleach==3.2.1
+bleach==3.2.2
     # via readme-renderer
 certifi==2020.12.5
     # via
@@ -57,7 +57,7 @@ docutils==0.16
     #   sphinx
 drf-yasg==1.20.0
     # via -r requirements/test.txt
-edx-sphinx-theme==1.6.0
+edx-sphinx-theme==1.6.1
     # via -r requirements/doc.in
 idna==2.10
     # via
@@ -82,7 +82,7 @@ jinja2==2.11.2
     #   -r requirements/test.txt
     #   coreschema
     #   sphinx
-keyring==21.8.0
+keyring==22.0.0
     # via twine
 markupsafe==1.1.1
     # via
@@ -97,7 +97,7 @@ packaging==20.8
     #   sphinx
 pbr==5.5.1
     # via stevedore
-pkginfo==1.6.1
+pkginfo==1.7.0
     # via twine
 pluggy==0.13.1
     # via
@@ -107,7 +107,7 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pygments==2.7.3
+pygments==2.7.4
     # via
     #   doc8
     #   readme-renderer
@@ -116,11 +116,11 @@ pyparsing==2.4.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest-cov==2.10.1
+pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
-pytest==6.2.1
+pytest==6.2.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -161,7 +161,7 @@ six==1.15.0
     #   doc8
     #   edx-sphinx-theme
     #   readme-renderer
-snowballstemmer==2.0.0
+snowballstemmer==2.1.0
     # via sphinx
 sphinx==3.4.3
     # via
@@ -189,7 +189,7 @@ toml==0.10.2
     # via
     #   -r requirements/test.txt
     #   pytest
-tqdm==4.55.1
+tqdm==4.56.0
     # via twine
 twine==3.3.0
     # via -r requirements/doc.in
