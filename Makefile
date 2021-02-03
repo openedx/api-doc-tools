@@ -75,7 +75,7 @@ isort_check:
 
 pylint:
 	echo '"""This file exists only to satisify pylint; it is not committed."""' > tests/__init__.py
-	pylint $(CHECKABLE_PYTHON)
+	pylint --django-settings-module=test_settings $(CHECKABLE_PYTHON)
 	rm tests/__init__.py
 
 quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
