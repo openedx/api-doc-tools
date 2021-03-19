@@ -10,17 +10,19 @@ astroid==2.4.2
     #   pylint-celery
 attrs==20.3.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest
 bleach==3.2.1
     # via readme-renderer
 certifi==2020.12.5
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   requests
+cffi==1.14.5
+    # via cryptography
 chardet==4.0.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   requests
 click-log==0.3.2
     # via edx-lint
@@ -32,55 +34,58 @@ colorama==0.4.4
     # via twine
 coreapi==2.3.3
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
 coreschema==0.0.4
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   coreapi
     #   drf-yasg
 coverage==5.3.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest-cov
-django==2.2.17
+cryptography==3.4.6
+    # via secretstorage
+django==2.2.18
     # via
-    #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
 djangorestframework==3.12.2
-    # via
-    #   -r requirements/test.txt
-    #   drf-yasg
+    # via drf-yasg
 docutils==0.16
     # via readme-renderer
 drf-yasg==1.20.0
-    # via -r requirements/test.txt
+    # via -r test.txt
 edx-lint==1.6
-    # via -r requirements/quality.in
+    # via -r quality.in
 idna==2.10
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   requests
 inflection==0.5.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
 iniconfig==1.1.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest
 isort==5.7.0
     # via
-    #   -r requirements/quality.in
+    #   -r quality.in
     #   pylint
 itypes==1.2.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   coreapi
+jeepney==0.6.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==2.11.2
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   coreschema
 keyring==21.8.0
     # via twine
@@ -88,13 +93,13 @@ lazy-object-proxy==1.4.3
     # via astroid
 markupsafe==1.1.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   jinja2
 mccabe==0.6.1
     # via pylint
 packaging==20.8
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   bleach
     #   drf-yasg
     #   pytest
@@ -102,16 +107,18 @@ pkginfo==1.6.1
     # via twine
 pluggy==0.13.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest
 py==1.10.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest
 pycodestyle==2.6.0
-    # via -r requirements/quality.in
+    # via -r quality.in
+pycparser==2.20
+    # via cffi
 pydocstyle==5.1.1
-    # via -r requirements/quality.in
+    # via -r quality.in
 pygments==2.7.3
     # via readme-renderer
 pylint-celery==0.3
@@ -130,20 +137,20 @@ pylint==2.6.0
     #   pylint-plugin-utils
 pyparsing==2.4.7
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   packaging
 pytest-cov==2.10.1
-    # via -r requirements/test.txt
+    # via -r test.txt
 pytest-django==4.1.0
-    # via -r requirements/test.txt
+    # via -r test.txt
 pytest==6.2.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest-cov
     #   pytest-django
 pytz==2020.5
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   django
 readme-renderer==28.0
     # via twine
@@ -151,20 +158,20 @@ requests-toolbelt==0.9.1
     # via twine
 requests==2.25.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   coreapi
     #   requests-toolbelt
     #   twine
 rfc3986==1.4.0
     # via twine
 ruamel.yaml.clib==0.2.2
-    # via
-    #   -r requirements/test.txt
-    #   ruamel.yaml
+    # via -r test.txt
 ruamel.yaml==0.16.12
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
+secretstorage==3.3.1
+    # via keyring
 six==1.15.0
     # via
     #   astroid
@@ -175,25 +182,25 @@ snowballstemmer==2.0.0
     # via pydocstyle
 sqlparse==0.4.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   django
 toml==0.10.2
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pylint
     #   pytest
 tqdm==4.55.1
     # via twine
 twine==3.3.0
-    # via -r requirements/quality.in
+    # via -r quality.in
 uritemplate==3.0.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   coreapi
     #   drf-yasg
 urllib3==1.26.2
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   requests
 webencodings==0.5.1
     # via bleach
