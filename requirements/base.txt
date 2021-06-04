@@ -14,17 +14,17 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==2.2.17
+django==2.2.21
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   djangorestframework
     #   drf-yasg
 djangorestframework==3.12.2
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   drf-yasg
 drf-yasg==1.20.0
-    # via -r requirements/base.in
+    # via -r base.in
 idna==2.10
     # via requests
 inflection==0.5.1
@@ -43,8 +43,6 @@ pytz==2020.5
     # via django
 requests==2.25.1
     # via coreapi
-ruamel.yaml.clib==0.2.2
-    # via ruamel.yaml
 ruamel.yaml==0.16.12
     # via drf-yasg
 sqlparse==0.4.1
