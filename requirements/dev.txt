@@ -17,7 +17,7 @@ attrs==20.3.0
     # via
     #   -r quality.txt
     #   pytest
-bleach==3.2.1
+bleach==3.3.0
     # via
     #   -r quality.txt
     #   readme-renderer
