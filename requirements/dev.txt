@@ -260,8 +260,6 @@ rfc3986==1.4.0
     # via
     #   -r quality.txt
     #   twine
-ruamel.yaml.clib==0.2.2
-    # via -r quality.txt
 ruamel.yaml==0.16.12
     # via
     #   -r quality.txt
@@ -313,7 +311,7 @@ uritemplate==3.0.1
     #   -r quality.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.2
+urllib3==1.26.5
     # via
     #   -r quality.txt
     #   -r travis.txt

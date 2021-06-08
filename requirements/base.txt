@@ -51,5 +51,5 @@ uritemplate==3.0.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.2
+urllib3==1.26.5
     # via requests
