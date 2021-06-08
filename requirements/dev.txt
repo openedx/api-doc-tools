@@ -195,7 +195,7 @@ pycparser==2.20
     #   cffi
 pydocstyle==5.1.1
     # via -r quality.txt
-pygments==2.7.3
+pygments==2.7.4
     # via
     #   -r quality.txt
     #   diff-cover
