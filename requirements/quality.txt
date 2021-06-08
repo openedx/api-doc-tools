@@ -12,7 +12,7 @@ attrs==20.3.0
     # via
     #   -r test.txt
     #   pytest
-bleach==3.2.1
+bleach==3.3.0
     # via readme-renderer
 certifi==2020.12.5
     # via
