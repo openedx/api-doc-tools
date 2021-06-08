@@ -119,7 +119,7 @@ pycparser==2.20
     # via cffi
 pydocstyle==5.1.1
     # via -r quality.in
-pygments==2.7.3
+pygments==2.7.4
     # via readme-renderer
 pylint-celery==0.3
     # via edx-lint

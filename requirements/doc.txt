@@ -114,7 +114,7 @@ py==1.10.0
     #   pytest
 pycparser==2.20
     # via cffi
-pygments==2.7.3
+pygments==2.7.4
     # via
     #   doc8
     #   readme-renderer
