@@ -238,7 +238,7 @@ pytz==2020.5
     # via
     #   -r quality.txt
     #   django
-pyyaml==5.3.1
+pyyaml==5.4
     # via edx-i18n-tools
 readme-renderer==28.0
     # via
