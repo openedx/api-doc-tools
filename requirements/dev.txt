@@ -77,7 +77,7 @@ distlib==0.3.1
     # via
     #   -r travis.txt
     #   virtualenv
-django==2.2.21
+django==2.2.22
     # via
     #   -r quality.txt
     #   djangorestframework

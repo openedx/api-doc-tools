@@ -14,7 +14,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==2.2.21
+django==2.2.22
     # via
     #   -r base.in
     #   djangorestframework

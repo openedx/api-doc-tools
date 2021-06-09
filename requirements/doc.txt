@@ -42,7 +42,7 @@ coverage==5.3.1
     #   pytest-cov
 cryptography==3.4.7
     # via secretstorage
-django==2.2.21
+django==2.2.22
     # via
     #   djangorestframework
     #   drf-yasg
