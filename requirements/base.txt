@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-certifi==2020.12.5
+certifi==2021.5.30
     # via requests
 chardet==4.0.0
     # via requests
@@ -14,36 +14,39 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==2.2.21
+django==2.2.24
     # via
-    #   -r base.in
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -r requirements/base.in
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.12.2
+djangorestframework==3.12.4
     # via
-    #   -r base.in
+    #   -r requirements/base.in
     #   drf-yasg
 drf-yasg==1.20.0
-    # via -r base.in
+    # via -r requirements/base.in
 idna==2.10
     # via requests
 inflection==0.5.1
     # via drf-yasg
 itypes==1.2.0
     # via coreapi
-jinja2==2.11.2
+jinja2==3.0.1
     # via coreschema
-markupsafe==1.1.1
+markupsafe==2.0.1
     # via jinja2
-packaging==20.8
+packaging==20.9
     # via drf-yasg
 pyparsing==2.4.7
     # via packaging
-pytz==2020.5
+pytz==2021.1
     # via django
 requests==2.25.1
     # via coreapi
-ruamel.yaml==0.16.12
+ruamel.yaml.clib==0.2.2
+    # via ruamel.yaml
+ruamel.yaml==0.17.7
     # via drf-yasg
 sqlparse==0.4.1
     # via django
@@ -51,5 +54,5 @@ uritemplate==3.0.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.2
+urllib3==1.26.5
     # via requests
