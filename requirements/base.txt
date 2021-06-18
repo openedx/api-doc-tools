@@ -46,7 +46,7 @@ requests==2.25.1
     # via coreapi
 ruamel.yaml.clib==0.2.2
     # via ruamel.yaml
-ruamel.yaml==0.17.7
+ruamel.yaml==0.17.9
     # via drf-yasg
 sqlparse==0.4.1
     # via django
