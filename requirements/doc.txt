@@ -18,8 +18,6 @@ certifi==2021.5.30
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==1.14.5
-    # via cryptography
 chardet==4.0.0
     # via
     #   -r requirements/test.txt
@@ -40,11 +38,10 @@ coverage==5.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==3.4.7
-    # via secretstorage
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c requirements/constraints.txt
     #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
@@ -87,10 +84,6 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
-jeepney==0.6.0
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.0.1
     # via
     #   -r requirements/test.txt
@@ -121,8 +114,6 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pycparser==2.20
-    # via cffi
 pygments==2.9.0
     # via
     #   doc8
@@ -171,8 +162,6 @@ ruamel.yaml==0.17.9
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-secretstorage==3.3.1
-    # via keyring
 six==1.16.0
     # via
     #   bleach
