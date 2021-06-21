@@ -167,7 +167,7 @@ ruamel.yaml.clib==0.2.2
     # via
     #   -r requirements/test.txt
     #   ruamel.yaml
-ruamel.yaml==0.17.7
+ruamel.yaml==0.17.9
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -208,7 +208,7 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pytest
     #   pytest-cov
-tqdm==4.61.0
+tqdm==4.61.1
     # via twine
 twine==3.4.1
     # via -r requirements/doc.in
