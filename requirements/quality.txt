@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.5.6
+astroid==2.6.2
     # via
     #   pylint
     #   pylint-celery
@@ -61,10 +61,8 @@ djangorestframework==3.12.4
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-docutils==0.16
-    # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
-    #   readme-renderer
+docutils==0.17.1
+    # via readme-renderer
 drf-yasg==1.20.0
     # via -r requirements/test.txt
 edx-lint==5.0.0
@@ -73,7 +71,7 @@ idna==2.10
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==4.5.0
+importlib-metadata==4.6.0
     # via
     #   keyring
     #   twine
@@ -138,7 +136,7 @@ pydocstyle==6.1.1
     # via -r requirements/quality.in
 pygments==2.9.0
     # via readme-renderer
-pylint==2.8.3
+pylint==2.9.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -225,7 +223,7 @@ uritemplate==3.0.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.5
+urllib3==1.26.6
     # via
     #   -r requirements/test.txt
     #   requests
