@@ -70,7 +70,7 @@ idna==2.10
     #   requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
     # via
     #   keyring
     #   twine
@@ -101,7 +101,7 @@ markupsafe==2.0.1
     # via
     #   -r requirements/test.txt
     #   jinja2
-packaging==20.9
+packaging==21.0
     # via
     #   -r requirements/test.txt
     #   bleach
@@ -166,7 +166,7 @@ ruamel.yaml==0.17.10
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-ruamel.yaml.clib==0.2.4
+ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/test.txt
     #   ruamel.yaml
@@ -180,7 +180,7 @@ six==1.16.0
     #   readme-renderer
 snowballstemmer==2.1.0
     # via sphinx
-sphinx==4.0.2
+sphinx==4.0.3
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -207,7 +207,7 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pytest
     #   pytest-cov
-tqdm==4.61.1
+tqdm==4.61.2
     # via twine
 twine==3.4.1
     # via -r requirements/doc.in
@@ -222,7 +222,7 @@ urllib3==1.26.6
     #   requests
 webencodings==0.5.1
     # via bleach
-zipp==3.4.1
+zipp==3.5.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:

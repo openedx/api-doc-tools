@@ -77,7 +77,7 @@ cryptography==3.4.7
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==5.4.0
+diff-cover==6.0.0
     # via -r requirements/dev.in
 distlib==0.3.2
     # via
@@ -115,7 +115,7 @@ idna==2.10
     #   -r requirements/quality.txt
     #   -r requirements/travis.txt
     #   requests
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -168,7 +168,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-packaging==20.9
+packaging==21.0
     # via
     #   -r requirements/quality.txt
     #   -r requirements/travis.txt
@@ -293,7 +293,7 @@ ruamel.yaml==0.17.10
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-ruamel.yaml.clib==0.2.4
+ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/quality.txt
     #   ruamel.yaml
@@ -343,7 +343,7 @@ tox==3.23.1
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/dev.in
-tqdm==4.61.1
+tqdm==4.61.2
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -375,7 +375,7 @@ wrapt==1.12.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.4.1
+zipp==3.5.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
