@@ -71,7 +71,7 @@ idna==2.10
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
     # via
     #   keyring
     #   twine
@@ -110,7 +110,7 @@ markupsafe==2.0.1
     #   jinja2
 mccabe==0.6.1
     # via pylint
-packaging==20.9
+packaging==21.0
     # via
     #   -r requirements/test.txt
     #   bleach
@@ -187,7 +187,7 @@ ruamel.yaml==0.17.10
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-ruamel.yaml.clib==0.2.4
+ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/test.txt
     #   ruamel.yaml
@@ -214,7 +214,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   pytest-cov
-tqdm==4.61.1
+tqdm==4.61.2
     # via twine
 twine==3.4.1
     # via -r requirements/quality.in
@@ -231,5 +231,5 @@ webencodings==0.5.1
     # via bleach
 wrapt==1.12.1
     # via astroid
-zipp==3.4.1
+zipp==3.5.0
     # via importlib-metadata
