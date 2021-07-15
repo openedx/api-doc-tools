@@ -12,15 +12,15 @@ attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-bleach==3.3.0
+bleach==3.3.1
     # via readme-renderer
 certifi==2021.5.30
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==1.14.5
+cffi==1.14.6
     # via cryptography
-chardet==4.0.0
+charset-normalizer==2.0.2
     # via
     #   -r requirements/test.txt
     #   requests
@@ -67,7 +67,7 @@ drf-yasg==1.20.0
     # via -r requirements/test.txt
 edx-lint==5.0.0
     # via -r requirements/quality.in
-idna==2.10
+idna==3.2
     # via
     #   -r requirements/test.txt
     #   requests
@@ -83,7 +83,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.9.1
+isort==5.9.2
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -91,7 +91,7 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
-jeepney==0.6.0
+jeepney==0.7.0
     # via
     #   keyring
     #   secretstorage
@@ -118,7 +118,7 @@ packaging==21.0
     #   pytest
 pbr==5.6.0
     # via stevedore
-pkginfo==1.7.0
+pkginfo==1.7.1
     # via twine
 pluggy==0.13.1
     # via
@@ -173,7 +173,7 @@ pyyaml==5.4.1
     # via code-annotations
 readme-renderer==29.0
     # via twine
-requests==2.25.1
+requests==2.26.0
     # via
     #   -r requirements/test.txt
     #   coreapi
