@@ -14,7 +14,12 @@ Change Log
 Unreleased
 ----------
 
-1.4.2 --- 2021-12-08
+1.4.3 --- 2021-07-15
+--------------------
+
+* Removed Django constraints from base.in
+
+1.4.2 --- 2021-01-08
 --------------------
 
 * Dropped python3.5 support.
