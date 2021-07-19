@@ -15,7 +15,7 @@ jobs:
       matrix:
         os: [ubuntu-20.04]
         python-version: ['3.8']
-        toxenv: [py38-django22-drflatest, py38-django30-drflatest, py38-django31-drflatest, quality]
+        toxenv: [py38-django22-drflatest, py38-django30-drflatest, py38-django31-drflatest, py38-django32-drflatest,quality]
 
     steps:
     - uses: actions/checkout@v2
