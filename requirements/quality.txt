@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.6.2
+astroid==2.6.5
     # via
     #   pylint
     #   pylint-celery
@@ -20,7 +20,7 @@ certifi==2021.5.30
     #   requests
 cffi==1.14.6
     # via cryptography
-charset-normalizer==2.0.2
+charset-normalizer==2.0.3
     # via
     #   -r requirements/test.txt
     #   requests
@@ -136,7 +136,7 @@ pydocstyle==6.1.1
     # via -r requirements/quality.in
 pygments==2.9.0
     # via readme-renderer
-pylint==2.9.3
+pylint==2.9.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -216,7 +216,7 @@ toml==0.10.2
     #   pytest-cov
 tqdm==4.61.2
     # via twine
-twine==3.4.1
+twine==3.4.2
     # via -r requirements/quality.in
 uritemplate==3.0.1
     # via
@@ -233,3 +233,6 @@ wrapt==1.12.1
     # via astroid
 zipp==3.5.0
     # via importlib-metadata
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
