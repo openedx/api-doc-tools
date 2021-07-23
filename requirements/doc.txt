@@ -20,9 +20,7 @@ certifi==2021.5.30
     #   requests
 cffi==1.14.6
     # via cryptography
-chardet==4.0.0
-    # via doc8
-charset-normalizer==2.0.2
+charset-normalizer==2.0.3
     # via
     #   -r requirements/test.txt
     #   requests
@@ -53,7 +51,7 @@ djangorestframework==3.12.4
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-doc8==0.8.1
+doc8==0.9.0
     # via -r requirements/doc.in
 docutils==0.17.1
     # via
@@ -176,7 +174,6 @@ secretstorage==3.3.1
 six==1.16.0
     # via
     #   bleach
-    #   doc8
     #   edx-sphinx-theme
     #   readme-renderer
 snowballstemmer==2.1.0
@@ -210,7 +207,7 @@ toml==0.10.2
     #   pytest-cov
 tqdm==4.61.2
     # via twine
-twine==3.4.1
+twine==3.4.2
     # via -r requirements/doc.in
 uritemplate==3.0.1
     # via
