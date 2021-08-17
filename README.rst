@@ -1,7 +1,7 @@
 edX API Documentation Tools
 ===========================
 
-|pypi| |travis| |codecov| |readthedocs| |pyversions| |license|
+|pypi| |CI| |codecov| |readthedocs| |pyversions| |license|
 
 A toolkit for documenting REST APIs that are created with `DRF`_.
 
@@ -80,9 +80,9 @@ Have a question about this repository, or about the Open edX project in general?
 .. |pypi| image:: https://img.shields.io/pypi/v/edx-api-doc-tools.svg
     :target: https://pypi.python.org/pypi/edx-api-doc-tools/
     :alt: PyPI
-.. |travis| image:: https://travis-ci.com/edx/api-doc-tools.svg?branch=master
-    :target: https://travis-ci.com/edx/api-doc-tools
-    :alt: Travis
+.. |CI| image:: https://github.com/edx/api-doc-tools/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/edx/api-doc-tools/actions?query=workflow%3A%22Python+CI%22
+    :alt: CI
 .. |codecov| image:: http://codecov.io/github/edx/api-doc-tools/coverage.svg?branch=master
     :target: http://codecov.io/github/edx/api-doc-tools?branch=master
     :alt: Codecov

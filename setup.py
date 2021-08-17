@@ -19,7 +19,7 @@ def get_version(*file_paths):
     Extract the version string from the file at the given relative path fragments.
     """
     filename = os.path.join(os.path.dirname(__file__), *file_paths)
-    version_file = open(filename).read()
+    version_file = open(filename,  encoding='utf-8').read()
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
                               version_file, re.M)
     if version_match:
@@ -37,7 +37,7 @@ def load_requirements(*requirements_paths):
     requirements = set()
     for path in requirements_paths:
         requirements.update(
-            line.split('#')[0].strip() for line in open(path).readlines()
+            line.split('#')[0].strip() for line in open(path,  encoding='utf-8').readlines()
             if is_requirement(line.strip())
         )
     return list(requirements)
@@ -61,8 +61,8 @@ if sys.argv[-1] == 'tag':
     os.system("git push --tags")
     sys.exit()
 
-README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
+README = open(os.path.join(os.path.dirname(__file__), 'README.rst'),  encoding='utf-8').read()
+CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst'),  encoding='utf-8').read()
 
 setup(
     name='edx-api-doc-tools',
