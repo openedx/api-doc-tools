@@ -85,7 +85,7 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
-jeepney==0.7.0
+jeepney==0.7.1
     # via
     #   keyring
     #   secretstorage
@@ -178,7 +178,7 @@ six==1.16.0
     #   readme-renderer
 snowballstemmer==2.1.0
     # via sphinx
-sphinx==4.1.1
+sphinx==4.1.2
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
