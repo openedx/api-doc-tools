@@ -42,6 +42,9 @@ docs: ## generate and show Sphinx HTML documentation, including API docs
 pip-tools:
 	pip install -qr requirements/pip-tools.txt
 
+pip:
+	pip install -qr requirements/pip.txt
+
 upgrade-pip-tools: pip-tools
 	pip-compile --upgrade requirements/pip-tools.in
 
@@ -49,11 +52,12 @@ upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: upgrade-pip-tools ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	# Make sure to compile files after any other files they include!
 	make pip-tools  # Reinstall pip-tools in case it was upgraded.
+	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
 	pip-compile --upgrade requirements/base.in
 	pip-compile --upgrade requirements/test.in
 	pip-compile --upgrade requirements/doc.in
 	pip-compile --upgrade requirements/quality.in
-	pip-compile --upgrade requirements/travis.in
+	pip-compile --upgrade requirements/ci.in
 	pip-compile --upgrade requirements/dev.in
 	# Delete django, drf pins from test.txt so that tox can control
 	# Django version.
@@ -81,7 +85,8 @@ pylint:
 quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
 	make selfcheck
 
-requirements: pip-tools ## install development environment requirements
+requirements: pip ## install development environment requirements
+	pip-tools
 	pip-sync requirements/dev.txt requirements/private.*
 
 test: clean ## run tests in the current virtualenv

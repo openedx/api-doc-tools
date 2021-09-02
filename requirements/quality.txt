@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.6.5
+astroid==2.7.2
     # via
     #   pylint
     #   pylint-celery
@@ -12,15 +12,13 @@ attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-bleach==3.3.1
+bleach==4.0.0
     # via readme-renderer
 certifi==2021.5.30
     # via
     #   -r requirements/test.txt
     #   requests
-cffi==1.14.6
-    # via cryptography
-charset-normalizer==2.0.3
+charset-normalizer==2.0.4
     # via
     #   -r requirements/test.txt
     #   requests
@@ -48,8 +46,6 @@ coverage==5.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==3.4.7
-    # via secretstorage
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -71,7 +67,7 @@ idna==3.2
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==4.6.1
+importlib-metadata==4.6.4
     # via
     #   keyring
     #   twine
@@ -83,7 +79,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.9.2
+isort==5.9.3
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -91,16 +87,12 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
-jeepney==0.7.1
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.0.1
     # via
     #   -r requirements/test.txt
     #   code-annotations
     #   coreschema
-keyring==23.0.1
+keyring==23.1.0
     # via twine
 lazy-object-proxy==1.6.0
     # via astroid
@@ -120,6 +112,8 @@ pbr==5.6.0
     # via stevedore
 pkginfo==1.7.1
     # via twine
+platformdirs==2.2.0
+    # via pylint
 pluggy==0.13.1
     # via
     #   -r requirements/test.txt
@@ -130,13 +124,11 @@ py==1.10.0
     #   pytest
 pycodestyle==2.7.0
     # via -r requirements/quality.in
-pycparser==2.20
-    # via cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pygments==2.9.0
+pygments==2.10.0
     # via readme-renderer
-pylint==2.9.6
+pylint==2.10.2
     # via
     #   edx-lint
     #   pylint-celery
@@ -183,7 +175,7 @@ requests-toolbelt==0.9.1
     # via twine
 rfc3986==1.5.0
     # via twine
-ruamel.yaml==0.17.10
+ruamel.yaml==0.17.13
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -191,8 +183,6 @@ ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/test.txt
     #   ruamel.yaml
-secretstorage==3.3.1
-    # via keyring
 six==1.16.0
     # via
     #   bleach
@@ -204,7 +194,7 @@ sqlparse==0.4.1
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==3.3.0
+stevedore==3.4.0
     # via code-annotations
 text-unidecode==1.3
     # via python-slugify
@@ -214,7 +204,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   pytest-cov
-tqdm==4.61.2
+tqdm==4.62.2
     # via twine
 twine==3.4.2
     # via -r requirements/quality.in

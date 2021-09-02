@@ -52,9 +52,9 @@ class DocViewTests(SimpleTestCase):
         response = self.client.get('/swagger.json')
         assert response.status_code == 200
         actual_schema = response.json()
-        with open(self.path_of_actual_schema, 'w') as f:
+        with open(self.path_of_actual_schema, 'w',  encoding='utf-8') as f:
             json.dump(actual_schema, f, indent=4, sort_keys=True)
-        with open(self.path_of_expected_schema) as schema_file:
+        with open(self.path_of_expected_schema,  encoding='utf-8') as schema_file:
             expected_schema = json.load(schema_file)
         assert actual_schema == expected_schema, (
             "Generated schema (dumped to {}) "
@@ -173,9 +173,9 @@ class DocViewPatternTests(SimpleTestCase):
         response = self.client.get('/swagger.json')
         assert response.status_code == 200
         actual_schema = response.json()
-        with open(self.path_of_actual_schema, 'w') as f:
+        with open(self.path_of_actual_schema, 'w',  encoding='utf-8') as f:
             json.dump(actual_schema, f, indent=4, sort_keys=True)
-        with open(self.path_of_expected_schema) as schema_file:
+        with open(self.path_of_expected_schema,  encoding='utf-8') as schema_file:
             expected_schema = json.load(schema_file)
         assert actual_schema == expected_schema, (
             "Generated schema (dumped to {}) "
