@@ -10,7 +10,7 @@ certifi==2021.5.30
     # via
     #   -r requirements/base.txt
     #   requests
-charset-normalizer==2.0.4
+charset-normalizer==2.0.5
     # via
     #   -r requirements/base.txt
     #   requests
@@ -62,7 +62,7 @@ packaging==21.0
     #   -r requirements/base.txt
     #   drf-yasg
     #   pytest
-pluggy==0.13.1
+pluggy==1.0.0
     # via pytest
 py==1.10.0
     # via pytest
@@ -70,7 +70,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/base.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   pytest-cov
     #   pytest-django
@@ -86,7 +86,7 @@ requests==2.26.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-ruamel.yaml==0.17.13
+ruamel.yaml==0.17.16
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -94,7 +94,7 @@ ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/base.txt
     #   ruamel.yaml
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
