@@ -6,7 +6,9 @@ Adding edx-api-doc-tools to your project
 First, add ``edx-api-doc-tools`` to your requirements and install it into your
 environment.
 
-Next, add the following to your list of installed apps in Django settings::
+Next, add the following to your list of installed apps in Django settings:
+
+.. code-block:: python
 
     INSTALLED_APPS = (
         ... # your other installed apps
@@ -14,11 +16,14 @@ Next, add the following to your list of installed apps in Django settings::
         'edx_api_doc_tools',
     )
 
-Then, in ``urls.py``::
+Then, in ``urls.py``:
+
+.. code-block:: python
 
     ...
     from edx_api_doc_tools import make_api_info, make_docs_urls
     ...
+
     api_info = make_api_info(title="Registrar API", version="v2")
     urlpatterns += make_docs_urls(api_info)
 
@@ -28,11 +33,14 @@ Your should now be able to load the Swagger UI in a browser at
 only generated for views under the root path ``/api``.  Generation for other
 views is possible but requires some extra configuration.
 
-Finally, you can enrich the generated documentation::
+Finally, you can enrich the generated documentation:
+
+.. code-block:: python
 
     ...
     from edx_api_doc_tools import parameter, schema
     ...
+
     class MyView(APIView):
 
         @schema(
@@ -53,4 +61,3 @@ Finally, you can enrich the generated documentation::
             This docstring will be used in the OpenAPI spec, and *supports Markdown!*
             """
             ...
-

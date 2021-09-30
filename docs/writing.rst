@@ -26,7 +26,9 @@ docstring is the description.  Everything is in Markdown format.
 Additional arguments to the :func:`.schema` decorator provide details of the
 parameters and responses.
 
-For example::
+For example:
+
+.. code-block:: python
 
     ...
     from edx_api_doc_tools import parameter, schema
@@ -62,7 +64,9 @@ a :func:`.schema_for` decorator on your derived class.
 Its first argument is the method name it applies to, and the second argument is
 a docstring to use for that method.  The rest of the arguments are the same as
 for :func:`.schema`.  You can use as many :func:`.schema_for` decorators on a
-class as you need::
+class as you need:
+
+.. code-block:: python
 
     @schema_for(
         "list",
