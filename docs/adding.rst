@@ -10,8 +10,8 @@ Next, add the following to your list of installed apps in Django settings::
 
     INSTALLED_APPS = (
         ... # your other installed apps
-        drf_yasg,
-        edx_api_doc_tools,
+        'drf_yasg',
+        'edx_api_doc_tools',
     )
 
 Then, in ``urls.py``::
