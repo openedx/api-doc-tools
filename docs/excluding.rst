@@ -18,7 +18,9 @@ exclude multiple endpoints at once.
 If you wish to exclude *all* endpoints for View or Viewset, decorate it with
 ``exclude_schema_for_all``.
 
-For example::
+For example:
+
+.. code-block:: python
 
     ...
     from edx_api_doc_tools import exclude_schema, exclude_schema_for, exclude_schema_for_all
@@ -90,7 +92,9 @@ For example::
 Additionally, api-docs can be generated only for specified URL patterns. This also
 allows documentation for endpoints outside of the ``/api/`` path.
 
-The following code will result in generated documentation only for the ``/test/hedgehog/v1/info`` endpoint::
+The following code will result in generated documentation only for the ``/test/hedgehog/v1/info`` endpoint:
+
+.. code-block:: python
 
     urlpatterns = []
 
