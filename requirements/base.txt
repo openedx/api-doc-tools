@@ -6,7 +6,7 @@
 #
 certifi==2021.5.30
     # via requests
-charset-normalizer==2.0.4
+charset-normalizer==2.0.6
     # via requests
 coreapi==2.3.3
     # via drf-yasg
@@ -44,15 +44,15 @@ pytz==2021.1
     # via django
 requests==2.26.0
     # via coreapi
-ruamel.yaml==0.17.13
+ruamel.yaml==0.17.16
     # via drf-yasg
 ruamel.yaml.clib==0.2.6
     # via ruamel.yaml
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via django
 uritemplate==3.0.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.6
+urllib3==1.26.7
     # via requests

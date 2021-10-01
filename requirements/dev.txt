@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.7.2
+astroid==2.8.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -17,7 +17,7 @@ backports.entry-points-selectable==1.1.0
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-bleach==4.0.0
+bleach==4.1.0
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
@@ -26,9 +26,13 @@ certifi==2021.5.30
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
+cffi==1.14.6
+    # via
+    #   -r requirements/quality.txt
+    #   cryptography
 chardet==4.0.0
     # via diff-cover
-charset-normalizer==2.0.4
+charset-normalizer==2.0.6
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -70,9 +74,13 @@ coverage==5.5
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-diff-cover==6.3.4
+cryptography==35.0.0
+    # via
+    #   -r requirements/quality.txt
+    #   secretstorage
+diff-cover==6.4.1
     # via -r requirements/dev.in
-distlib==0.3.2
+distlib==0.3.3
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -83,7 +91,6 @@ django==2.2.24
     #   djangorestframework
     #   drf-yasg
     #   edx-i18n-tools
-    #   edx-lint
 djangorestframework==3.12.4
     # via
     #   -r requirements/quality.txt
@@ -96,9 +103,9 @@ drf-yasg==1.20.0
     # via -r requirements/quality.txt
 edx-i18n-tools==0.7.0
     # via -r requirements/dev.in
-edx-lint==5.0.0
+edx-lint==5.2.0
     # via -r requirements/quality.txt
-filelock==3.0.12
+filelock==3.2.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -108,7 +115,7 @@ idna==3.2
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==4.6.4
+importlib-metadata==4.8.1
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -131,6 +138,11 @@ itypes==1.2.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
+jeepney==0.7.1
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
+    #   secretstorage
 jinja2==3.0.1
     # via
     #   -r requirements/quality.txt
@@ -140,7 +152,7 @@ jinja2==3.0.1
     #   jinja2-pluralize
 jinja2-pluralize==0.3.0
     # via diff-cover
-keyring==23.1.0
+keyring==23.2.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -174,19 +186,19 @@ pep517==0.11.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.2.0
+pip-tools==6.3.0
     # via -r requirements/pip-tools.txt
 pkginfo==1.7.1
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==2.2.0
+platformdirs==2.4.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
     #   virtualenv
-pluggy==0.13.1
+pluggy==1.0.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -203,6 +215,10 @@ py==1.10.0
     #   tox
 pycodestyle==2.7.0
     # via -r requirements/quality.txt
+pycparser==2.20
+    # via
+    #   -r requirements/quality.txt
+    #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pygments==2.10.0
@@ -210,7 +226,7 @@ pygments==2.10.0
     #   -r requirements/quality.txt
     #   diff-cover
     #   readme-renderer
-pylint==2.10.2
+pylint==2.11.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -235,7 +251,7 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -257,7 +273,7 @@ pyyaml==5.4.1
     #   -r requirements/quality.txt
     #   code-annotations
     #   edx-i18n-tools
-readme-renderer==29.0
+readme-renderer==30.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -277,7 +293,7 @@ rfc3986==1.5.0
     # via
     #   -r requirements/quality.txt
     #   twine
-ruamel.yaml==0.17.13
+ruamel.yaml==0.17.16
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -285,6 +301,10 @@ ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/quality.txt
     #   ruamel.yaml
+secretstorage==3.3.1
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
 six==1.16.0
     # via
     #   -r requirements/ci.txt
@@ -292,14 +312,13 @@ six==1.16.0
     #   bleach
     #   edx-i18n-tools
     #   edx-lint
-    #   readme-renderer
     #   tox
     #   virtualenv
 snowballstemmer==2.1.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/quality.txt
     #   django
@@ -323,29 +342,34 @@ tomli==1.2.1
     # via
     #   -r requirements/pip-tools.txt
     #   pep517
-tox==3.24.3
+tox==3.24.4
     # via
     #   -r requirements/ci.txt
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/dev.in
-tqdm==4.62.2
+tqdm==4.62.3
     # via
     #   -r requirements/quality.txt
     #   twine
 twine==3.4.2
     # via -r requirements/quality.txt
+typing-extensions==3.10.0.2
+    # via
+    #   -r requirements/quality.txt
+    #   astroid
+    #   pylint
 uritemplate==3.0.1
     # via
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.6
+urllib3==1.26.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-virtualenv==20.7.2
+virtualenv==20.8.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -361,7 +385,7 @@ wrapt==1.12.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.5.0
+zipp==3.6.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
