@@ -85,8 +85,7 @@ pylint:
 quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
 	make selfcheck
 
-requirements: pip ## install development environment requirements
-	pip-tools
+requirements: pip-tools ## install development environment requirements
 	pip-sync requirements/dev.txt requirements/private.*
 
 test: clean ## run tests in the current virtualenv
