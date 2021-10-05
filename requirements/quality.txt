@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.7.2
+astroid==2.8.0
     # via
     #   pylint
     #   pylint-celery
@@ -12,13 +12,15 @@ attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-bleach==4.0.0
+bleach==4.1.0
     # via readme-renderer
 certifi==2021.5.30
     # via
     #   -r requirements/test.txt
     #   requests
-charset-normalizer==2.0.4
+cffi==1.14.6
+    # via cryptography
+charset-normalizer==2.0.6
     # via
     #   -r requirements/test.txt
     #   requests
@@ -46,13 +48,14 @@ coverage==5.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==35.0.0
+    # via secretstorage
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
-    #   edx-lint
 djangorestframework==3.12.4
     # via
     #   -r requirements/test.txt
@@ -61,13 +64,13 @@ docutils==0.17.1
     # via readme-renderer
 drf-yasg==1.20.0
     # via -r requirements/test.txt
-edx-lint==5.0.0
+edx-lint==5.2.0
     # via -r requirements/quality.in
 idna==3.2
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==4.6.4
+importlib-metadata==4.8.1
     # via
     #   keyring
     #   twine
@@ -87,12 +90,16 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
+jeepney==0.7.1
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.0.1
     # via
     #   -r requirements/test.txt
     #   code-annotations
     #   coreschema
-keyring==23.1.0
+keyring==23.2.1
     # via twine
 lazy-object-proxy==1.6.0
     # via astroid
@@ -112,9 +119,9 @@ pbr==5.6.0
     # via stevedore
 pkginfo==1.7.1
     # via twine
-platformdirs==2.2.0
+platformdirs==2.4.0
     # via pylint
-pluggy==0.13.1
+pluggy==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -124,11 +131,13 @@ py==1.10.0
     #   pytest
 pycodestyle==2.7.0
     # via -r requirements/quality.in
+pycparser==2.20
+    # via cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.in
 pygments==2.10.0
     # via readme-renderer
-pylint==2.10.2
+pylint==2.11.1
     # via
     #   edx-lint
     #   pylint-celery
@@ -146,7 +155,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -163,7 +172,7 @@ pytz==2021.1
     #   django
 pyyaml==5.4.1
     # via code-annotations
-readme-renderer==29.0
+readme-renderer==30.0
     # via twine
 requests==2.26.0
     # via
@@ -175,7 +184,7 @@ requests-toolbelt==0.9.1
     # via twine
 rfc3986==1.5.0
     # via twine
-ruamel.yaml==0.17.13
+ruamel.yaml==0.17.16
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -183,14 +192,15 @@ ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/test.txt
     #   ruamel.yaml
+secretstorage==3.3.1
+    # via keyring
 six==1.16.0
     # via
     #   bleach
     #   edx-lint
-    #   readme-renderer
 snowballstemmer==2.1.0
     # via pydocstyle
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/test.txt
     #   django
@@ -204,16 +214,20 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   pytest-cov
-tqdm==4.62.2
+tqdm==4.62.3
     # via twine
 twine==3.4.2
     # via -r requirements/quality.in
+typing-extensions==3.10.0.2
+    # via
+    #   astroid
+    #   pylint
 uritemplate==3.0.1
     # via
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.6
+urllib3==1.26.7
     # via
     #   -r requirements/test.txt
     #   requests
@@ -221,7 +235,7 @@ webencodings==0.5.1
     # via bleach
 wrapt==1.12.1
     # via astroid
-zipp==3.5.0
+zipp==3.6.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
