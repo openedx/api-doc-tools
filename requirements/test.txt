@@ -6,11 +6,11 @@
 #
 attrs==21.2.0
     # via pytest
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   -r requirements/base.txt
     #   requests
-charset-normalizer==2.0.6
+charset-normalizer==2.0.7
     # via
     #   -r requirements/base.txt
     #   requests
@@ -23,7 +23,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.0.1
+coverage[toml]==6.0.2
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -35,7 +35,7 @@ coverage[toml]==6.0.1
     #   drf-yasg
 drf-yasg==1.20.0
     # via -r requirements/base.txt
-idna==3.2
+idna==3.3
     # via
     #   -r requirements/base.txt
     #   requests
@@ -102,7 +102,7 @@ toml==0.10.2
     # via pytest
 tomli==1.2.1
     # via coverage
-uritemplate==3.0.1
+uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   coreapi

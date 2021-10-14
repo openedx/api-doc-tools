@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.8.0
+astroid==2.8.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -21,23 +21,23 @@ bleach==4.1.0
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-cffi==1.14.6
+cffi==1.15.0
     # via
     #   -r requirements/quality.txt
     #   cryptography
 chardet==4.0.0
     # via diff-cover
-charset-normalizer==2.0.6
+charset-normalizer==2.0.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-click==8.0.1
+click==8.0.3
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -68,7 +68,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.0.1
+coverage[toml]==6.0.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -110,7 +110,7 @@ filelock==3.3.0
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-idna==3.2
+idna==3.3
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -186,7 +186,7 @@ pep517==0.11.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.3.0
+pip-tools==6.4.0
     # via -r requirements/pip-tools.txt
 pkginfo==1.7.1
     # via
@@ -213,7 +213,7 @@ py==1.10.0
     #   -r requirements/quality.txt
     #   pytest
     #   tox
-pycodestyle==2.7.0
+pycodestyle==2.8.0
     # via -r requirements/quality.txt
 pycparser==2.20
     # via
@@ -268,7 +268,7 @@ pytz==2021.3
     # via
     #   -r requirements/quality.txt
     #   django
-pyyaml==5.4.1
+pyyaml==6.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -359,7 +359,7 @@ typing-extensions==3.10.0.2
     #   -r requirements/quality.txt
     #   astroid
     #   pylint
-uritemplate==3.0.1
+uritemplate==4.1.1
     # via
     #   -r requirements/quality.txt
     #   coreapi
