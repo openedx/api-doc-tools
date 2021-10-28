@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.8.3
+astroid==2.8.4
     # via
     #   pylint
     #   pylint-celery
@@ -60,11 +60,11 @@ djangorestframework==3.12.4
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-docutils==0.17.1
+docutils==0.18
     # via readme-renderer
 drf-yasg==1.20.0
     # via -r requirements/test.txt
-edx-lint==5.2.0
+edx-lint==5.2.1
     # via -r requirements/quality.in
 idna==3.3
     # via
@@ -151,7 +151,7 @@ pylint-plugin-utils==0.6
     # via
     #   pylint-celery
     #   pylint-django
-pyparsing==2.4.7
+pyparsing==3.0.3
     # via
     #   -r requirements/test.txt
     #   packaging
@@ -213,7 +213,7 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-tomli==1.2.1
+tomli==1.2.2
     # via
     #   -r requirements/test.txt
     #   coverage
