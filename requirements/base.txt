@@ -38,7 +38,7 @@ markupsafe==2.0.1
     # via jinja2
 packaging==21.0
     # via drf-yasg
-pyparsing==2.4.7
+pyparsing==3.0.3
     # via packaging
 pytz==2021.3
     # via django
