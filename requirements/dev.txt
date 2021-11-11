@@ -13,7 +13,7 @@ attrs==21.2.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-backports.entry-points-selectable==1.1.0
+backports.entry-points-selectable==1.1.1
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -68,7 +68,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.0.2
+coverage[toml]==6.1.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -105,7 +105,7 @@ edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
 edx-lint==5.2.1
     # via -r requirements/quality.txt
-filelock==3.3.1
+filelock==3.3.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -115,7 +115,7 @@ idna==3.3
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==4.8.1
+importlib-metadata==4.8.2
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -130,7 +130,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.9.3
+isort==5.10.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -143,7 +143,7 @@ jeepney==0.7.1
     #   -r requirements/quality.txt
     #   keyring
     #   secretstorage
-jinja2==3.0.2
+jinja2==3.0.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -168,7 +168,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-packaging==21.0
+packaging==21.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -178,7 +178,7 @@ packaging==21.0
     #   tox
 path==16.2.0
     # via edx-i18n-tools
-pbr==5.6.0
+pbr==5.7.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -207,7 +207,7 @@ pluggy==1.0.0
     #   tox
 polib==1.1.1
     # via edx-i18n-tools
-py==1.10.0
+py==1.11.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -215,7 +215,7 @@ py==1.10.0
     #   tox
 pycodestyle==2.8.0
     # via -r requirements/quality.txt
-pycparser==2.20
+pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
@@ -246,7 +246,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.3
+pyparsing==2.4.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -293,7 +293,7 @@ rfc3986==1.5.0
     # via
     #   -r requirements/quality.txt
     #   twine
-ruamel.yaml==0.17.16
+ruamel.yaml==0.17.17
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -352,7 +352,7 @@ tqdm==4.62.3
     # via
     #   -r requirements/quality.txt
     #   twine
-twine==3.4.2
+twine==3.6.0
     # via -r requirements/quality.txt
 typing-extensions==3.10.0.2
     # via
@@ -369,7 +369,7 @@ urllib3==1.26.7
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-virtualenv==20.9.0
+virtualenv==20.10.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -381,7 +381,7 @@ wheel==0.37.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-wrapt==1.13.2
+wrapt==1.13.3
     # via
     #   -r requirements/quality.txt
     #   astroid
