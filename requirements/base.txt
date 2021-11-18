@@ -4,6 +4,8 @@
 #
 #    make upgrade
 #
+asgiref==3.4.1
+    # via django
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.7
@@ -14,7 +16,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==2.2.24
+django==3.2.9
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -36,9 +38,9 @@ jinja2==3.0.3
     # via coreschema
 markupsafe==2.0.1
     # via jinja2
-packaging==21.2
+packaging==21.3
     # via drf-yasg
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via packaging
 pytz==2021.3
     # via django
