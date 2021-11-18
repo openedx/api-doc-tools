@@ -6,6 +6,10 @@
 #
 alabaster==0.7.12
     # via sphinx
+asgiref==3.4.1
+    # via
+    #   -r requirements/test.txt
+    #   django
 attrs==21.2.0
     # via
     #   -r requirements/test.txt
@@ -41,7 +45,7 @@ coverage[toml]==6.1.2
     #   pytest-cov
 cryptography==35.0.0
     # via secretstorage
-django==2.2.24
+django==3.2.9
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -100,7 +104,7 @@ markupsafe==2.0.1
     # via
     #   -r requirements/test.txt
     #   jinja2
-packaging==21.2
+packaging==21.3
     # via
     #   -r requirements/test.txt
     #   bleach
@@ -126,7 +130,7 @@ pygments==2.10.0
     #   doc8
     #   readme-renderer
     #   sphinx
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via
     #   -r requirements/test.txt
     #   packaging
@@ -175,7 +179,7 @@ six==1.16.0
     # via
     #   bleach
     #   edx-sphinx-theme
-snowballstemmer==2.1.0
+snowballstemmer==2.2.0
     # via sphinx
 sphinx==4.3.0
     # via

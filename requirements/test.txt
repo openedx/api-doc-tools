@@ -4,6 +4,10 @@
 #
 #    make upgrade
 #
+asgiref==3.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
 attrs==21.2.0
     # via pytest
 certifi==2021.10.8
@@ -57,7 +61,7 @@ markupsafe==2.0.1
     # via
     #   -r requirements/base.txt
     #   jinja2
-packaging==21.2
+packaging==21.3
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -66,7 +70,7 @@ pluggy==1.0.0
     # via pytest
 py==1.11.0
     # via pytest
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via
     #   -r requirements/base.txt
     #   packaging
