@@ -24,7 +24,7 @@ certifi==2021.10.8
     #   requests
 cffi==1.15.0
     # via cryptography
-charset-normalizer==2.0.7
+charset-normalizer==2.0.8
     # via
     #   -r requirements/test.txt
     #   requests
@@ -43,7 +43,7 @@ coverage[toml]==6.1.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==35.0.0
+cryptography==36.0.0
     # via secretstorage
 django==3.2.9
     # via
@@ -98,7 +98,7 @@ jinja2==3.0.3
     #   -r requirements/test.txt
     #   coreschema
     #   sphinx
-keyring==23.2.1
+keyring==23.3.0
     # via twine
 markupsafe==2.0.1
     # via
@@ -111,9 +111,9 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   sphinx
-pbr==5.7.0
+pbr==5.8.0
     # via stevedore
-pkginfo==1.7.1
+pkginfo==1.8.1
     # via twine
 pluggy==1.0.0
     # via
