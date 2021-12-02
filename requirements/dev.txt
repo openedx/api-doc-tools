@@ -8,7 +8,7 @@ asgiref==3.4.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.8.6
+astroid==2.9.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -72,7 +72,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.1.2
+coverage[toml]==6.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -156,7 +156,7 @@ jinja2==3.0.3
     #   jinja2-pluralize
 jinja2-pluralize==0.3.0
     # via diff-cover
-keyring==23.3.0
+keyring==23.4.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -192,7 +192,7 @@ pep517==0.12.0
     #   pip-tools
 pip-tools==6.4.0
     # via -r requirements/pip-tools.txt
-pkginfo==1.8.1
+pkginfo==1.8.2
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -230,7 +230,7 @@ pygments==2.10.0
     #   -r requirements/quality.txt
     #   diff-cover
     #   readme-renderer
-pylint==2.11.1
+pylint==2.12.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -262,7 +262,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/quality.txt
-pytest-django==4.4.0
+pytest-django==4.5.0
     # via -r requirements/quality.txt
 python-slugify==5.0.2
     # via
@@ -356,9 +356,9 @@ tqdm==4.62.3
     # via
     #   -r requirements/quality.txt
     #   twine
-twine==3.6.0
+twine==3.7.0
     # via -r requirements/quality.txt
-typing-extensions==4.0.0
+typing-extensions==4.0.1
     # via
     #   -r requirements/quality.txt
     #   astroid
