@@ -14,7 +14,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/base.txt
     #   requests
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
     # via
     #   -r requirements/base.txt
     #   requests
@@ -80,7 +80,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/test.in
-pytest-django==4.5.0
+pytest-django==4.5.2
     # via -r requirements/test.in
 pytz==2021.3
     # via

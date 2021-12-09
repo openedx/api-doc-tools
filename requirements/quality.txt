@@ -24,7 +24,7 @@ certifi==2021.10.8
     #   requests
 cffi==1.15.0
     # via cryptography
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
     # via
     #   -r requirements/test.txt
     #   requests
@@ -54,7 +54,7 @@ coverage[toml]==6.2
     #   pytest-cov
 cryptography==36.0.0
     # via secretstorage
-django==3.2.9
+django==3.2.10
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -141,7 +141,7 @@ pydocstyle==6.1.1
     # via -r requirements/quality.in
 pygments==2.10.0
     # via readme-renderer
-pylint==2.12.1
+pylint==2.12.2
     # via
     #   edx-lint
     #   pylint-celery
@@ -166,7 +166,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/test.txt
-pytest-django==4.5.0
+pytest-django==4.5.2
     # via -r requirements/test.txt
 python-slugify==5.0.2
     # via code-annotations
@@ -223,7 +223,7 @@ tomli==1.2.2
     #   coverage
 tqdm==4.62.3
     # via twine
-twine==3.7.0
+twine==3.7.1
     # via -r requirements/quality.in
 typing-extensions==4.0.1
     # via
