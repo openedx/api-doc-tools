@@ -43,7 +43,7 @@ coverage[toml]==6.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==36.0.0
+cryptography==36.0.1
     # via secretstorage
 django==3.2.10
     # via
@@ -51,7 +51,7 @@ django==3.2.10
     #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.12.4
+djangorestframework==3.13.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -148,7 +148,8 @@ pytz==2021.3
     #   -r requirements/test.txt
     #   babel
     #   django
-readme-renderer==30.0
+    #   djangorestframework
+readme-renderer==32.0
     # via
     #   -r requirements/doc.in
     #   twine
@@ -207,7 +208,7 @@ toml==0.10.2
     # via
     #   -r requirements/test.txt
     #   pytest
-tomli==1.2.2
+tomli==2.0.0
     # via
     #   -r requirements/test.txt
     #   coverage

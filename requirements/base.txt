@@ -22,7 +22,7 @@ django==3.2.10
     #   -r requirements/base.in
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.12.4
+djangorestframework==3.13.1
     # via
     #   -r requirements/base.in
     #   drf-yasg
@@ -43,7 +43,9 @@ packaging==21.3
 pyparsing==3.0.6
     # via packaging
 pytz==2021.3
-    # via django
+    # via
+    #   django
+    #   djangorestframework
 requests==2.26.0
     # via coreapi
 ruamel.yaml==0.17.17
