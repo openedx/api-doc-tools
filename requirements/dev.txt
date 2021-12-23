@@ -30,10 +30,6 @@ certifi==2021.10.8
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-cffi==1.15.0
-    # via
-    #   -r requirements/quality.txt
-    #   cryptography
 chardet==4.0.0
     # via diff-cover
 charset-normalizer==2.0.9
@@ -78,10 +74,6 @@ coverage[toml]==6.2
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==36.0.1
-    # via
-    #   -r requirements/quality.txt
-    #   secretstorage
 diff-cover==6.4.4
     # via -r requirements/dev.in
 distlib==0.3.4
@@ -140,11 +132,6 @@ itypes==1.2.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
-jeepney==0.7.1
-    # via
-    #   -r requirements/quality.txt
-    #   keyring
-    #   secretstorage
 jinja2==3.0.3
     # via
     #   -r requirements/quality.txt
@@ -214,10 +201,6 @@ py==1.11.0
     #   tox
 pycodestyle==2.8.0
     # via -r requirements/quality.txt
-pycparser==2.21
-    # via
-    #   -r requirements/quality.txt
-    #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pygments==2.10.0
@@ -301,10 +284,6 @@ ruamel.yaml.clib==0.2.6
     # via
     #   -r requirements/quality.txt
     #   ruamel.yaml
-secretstorage==3.3.1
-    # via
-    #   -r requirements/quality.txt
-    #   keyring
 six==1.16.0
     # via
     #   -r requirements/ci.txt
