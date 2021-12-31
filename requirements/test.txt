@@ -8,7 +8,7 @@ asgiref==3.4.1
     # via
     #   -r requirements/base.txt
     #   django
-attrs==21.2.0
+attrs==21.4.0
     # via pytest
 certifi==2021.10.8
     # via
@@ -91,7 +91,7 @@ requests==2.26.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-ruamel.yaml==0.17.17
+ruamel.yaml==0.17.19
     # via
     #   -r requirements/base.txt
     #   drf-yasg
