@@ -8,7 +8,7 @@ asgiref==3.4.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.9.0
+astroid==2.9.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -32,7 +32,7 @@ cffi==1.15.0
     #   cryptography
 chardet==4.0.0
     # via diff-cover
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -84,7 +84,7 @@ distlib==0.3.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.10
+django==3.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -147,7 +147,7 @@ jinja2==3.0.3
     #   code-annotations
     #   coreschema
     #   diff-cover
-keyring==23.4.0
+keyring==23.5.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -216,7 +216,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pygments==2.10.0
+pygments==2.11.1
     # via
     #   -r requirements/quality.txt
     #   diff-cover
@@ -232,7 +232,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.4.4
+pylint-django==2.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -273,7 +273,7 @@ readme-renderer==32.0
     # via
     #   -r requirements/quality.txt
     #   twine
-requests==2.26.0
+requests==2.27.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -289,7 +289,7 @@ rfc3986==1.5.0
     # via
     #   -r requirements/quality.txt
     #   twine
-ruamel.yaml==0.17.19
+ruamel.yaml==0.17.20
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -365,7 +365,7 @@ urllib3==1.26.7
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-virtualenv==20.11.2
+virtualenv==20.13.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -381,7 +381,7 @@ wrapt==1.13.3
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.6.0
+zipp==3.7.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
