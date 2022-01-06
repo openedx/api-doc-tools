@@ -8,7 +8,7 @@ asgiref==3.4.1
     # via django
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via requests
 coreapi==2.3.3
     # via drf-yasg
@@ -16,7 +16,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==3.2.10
+django==3.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -46,9 +46,9 @@ pytz==2021.3
     # via
     #   django
     #   djangorestframework
-requests==2.26.0
+requests==2.27.1
     # via coreapi
-ruamel.yaml==0.17.19
+ruamel.yaml==0.17.20
     # via drf-yasg
 ruamel.yaml.clib==0.2.6
     # via ruamel.yaml
