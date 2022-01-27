@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via django
 certifi==2021.10.8
     # via requests
@@ -40,7 +40,7 @@ markupsafe==2.0.1
     # via jinja2
 packaging==21.3
     # via drf-yasg
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via packaging
 pytz==2021.3
     # via
