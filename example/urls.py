@@ -1,8 +1,7 @@
 """
 REST API URLs for reading and writing to the edX Hedgehog Database.
 """
-
-from django.conf.urls import url
+from django.urls import path
 from rest_framework.routers import SimpleRouter
 
 from edx_api_doc_tools import make_api_info, make_docs_urls
@@ -22,8 +21,8 @@ ROUTER.register(
 urlpatterns += ROUTER.urls
 
 urlpatterns += [
-    url(r'/api/hedgehog/v0/info', HedgehogInfoView.as_view()),
-    url(r'/api/hedgehog/v0/undoc-view', HedgehogUndocumentedView.as_view()),
+    path('/api/hedgehog/v0/info', HedgehogInfoView.as_view()),
+    path('/api/hedgehog/v0/undoc-view', HedgehogUndocumentedView.as_view()),
 ]
 
 urlpatterns += make_docs_urls(
