@@ -5,7 +5,7 @@ External users: import these from __init__.
 """
 
 from django.conf import settings
-from django.conf.urls import url
+from django.urls import path, re_path
 from django.views.generic.base import RedirectView
 from drf_yasg import openapi
 from drf_yasg.generators import OpenAPISchemaGenerator
@@ -86,21 +86,17 @@ def get_docs_urls(docs_data_view, docs_ui_view):
         urlpatterns += get_docs_urls(custom_doc_data_view, custom_doc_ui_view)
     """
     return [
-        url(
+        re_path(
             r'^swagger(?P<format>\.json|\.yaml)$',
             docs_data_view,
             name='apidocs-data',
         ),
-        url(
-            r'^api-docs/$',
-            docs_ui_view,
-            name='apidocs-ui',
-        ),
-        url(
-            r'^swagger/$',
-            RedirectView.as_view(pattern_name='apidocs-ui', permanent=False),
-            name='apidocs-ui-swagger',
-        ),
+        path('api-docs/', docs_ui_view,
+             name='apidocs-ui',
+             ),
+        path('swagger/', RedirectView.as_view(pattern_name='apidocs-ui', permanent=False),
+             name='apidocs-ui-swagger',
+             ),
     ]
 
 
@@ -165,6 +161,7 @@ class ApiSchemaGenerator(OpenAPISchemaGenerator):
     Only includes endpoints in the ``/api/*`` url tree, and sets the path prefix
     appropriately.
     """
+
     def get_endpoints(self, request):
         """
         Return dict of endpoints to be displayed.
