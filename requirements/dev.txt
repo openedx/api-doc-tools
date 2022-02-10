@@ -49,7 +49,7 @@ click-log==0.3.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-code-annotations==1.2.0
+code-annotations==1.3.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -173,7 +173,7 @@ packaging==21.3
     #   tox
 path==16.3.0
     # via edx-i18n-tools
-pbr==5.8.0
+pbr==5.8.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -181,13 +181,13 @@ pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.4.0
+pip-tools==6.5.1
     # via -r requirements/pip-tools.txt
 pkginfo==1.8.2
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==2.4.1
+platformdirs==2.5.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -246,7 +246,7 @@ pyparsing==3.0.7
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   packaging
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -289,14 +289,14 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-ruamel.yaml==0.17.20
+ruamel-yaml==0.17.20
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-ruamel.yaml.clib==0.2.6
+ruamel-yaml-clib==0.2.6
     # via
     #   -r requirements/quality.txt
-    #   ruamel.yaml
+    #   ruamel-yaml
 secretstorage==3.3.1
     # via
     #   -r requirements/quality.txt
@@ -330,14 +330,14 @@ toml==0.10.2
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
-    #   pytest
     #   tox
-tomli==2.0.0
+tomli==2.0.1
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   coverage
     #   pep517
+    #   pytest
 tox==3.24.5
     # via
     #   -r requirements/ci.txt
@@ -366,7 +366,7 @@ urllib3==1.26.8
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.13.0
+virtualenv==20.13.1
     # via
     #   -r requirements/ci.txt
     #   tox
