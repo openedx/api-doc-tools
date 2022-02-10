@@ -48,10 +48,10 @@ pytz==2021.3
     #   djangorestframework
 requests==2.27.1
     # via coreapi
-ruamel.yaml==0.17.20
+ruamel-yaml==0.17.20
     # via drf-yasg
-ruamel.yaml.clib==0.2.6
-    # via ruamel.yaml
+ruamel-yaml-clib==0.2.6
+    # via ruamel-yaml
 sqlparse==0.4.2
     # via django
 uritemplate==4.1.1
