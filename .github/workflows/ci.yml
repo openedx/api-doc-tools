@@ -5,7 +5,7 @@ on:
     branches: [master]
   pull_request:
     branches:
-    - '**'
+      - "**"
 
 jobs:
   run_tests:
@@ -14,32 +14,39 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-20.04]
-        python-version: ['3.8']
-        toxenv: [py38-django22-drflatest, py38-django30-drflatest, py38-django31-drflatest, py38-django32-drflatest,quality]
+        python-version: ["3.8"]
+        toxenv:
+          [
+            py38-django32-drf312,
+            py38-django32-drflatest,
+            py38-django40-drf312,
+            py38-django40-drflatest,
+            quality,
+          ]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: setup python
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+      - uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Install pip
-      run: pip install -r requirements/pip.txt
+      - name: Install pip
+        run: pip install -r requirements/pip.txt
 
-    - name: Install Dependencies
-      run: |
-        pip install -r requirements/ci.txt
-        pip install -r requirements/quality.txt
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements/ci.txt
+          pip install -r requirements/quality.txt
 
-    - name: Run Tests
-      env:
-        TOXENV: ${{ matrix.toxenv }}
-      run: tox
+      - name: Run Tests
+        env:
+          TOXENV: ${{ matrix.toxenv }}
+        run: tox
 
-    - name: Run Coverage
-      if: matrix.python-version == '3.8' && matrix.toxenv=='django22-drflatest'
-      uses: codecov/codecov-action@v1
-      with:
-        flags: unittests
-        fail_ci_if_error: true
+      - name: Run Coverage
+        if: matrix.python-version == '3.8' && matrix.toxenv=='py38-django32-drflatest'
+        uses: codecov/codecov-action@v2
+        with:
+          flags: unittests
+          fail_ci_if_error: true
