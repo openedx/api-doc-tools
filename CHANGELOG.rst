@@ -14,6 +14,12 @@ Change Log
 Unreleased
 ----------
 
+1.6.0 --- 2022-02-11
+--------------------
+
+* Dropped support for django 2.2, 3.0, 3.1
+* Added support for Django 4.0
+
 1.5.0 --- 2021-07-19
 --------------------
 

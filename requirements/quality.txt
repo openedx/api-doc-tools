@@ -74,7 +74,7 @@ idna==3.3
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==4.10.1
+importlib-metadata==4.11.0
     # via
     #   keyring
     #   twine
