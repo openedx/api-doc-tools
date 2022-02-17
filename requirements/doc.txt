@@ -24,7 +24,7 @@ certifi==2021.10.8
     #   requests
 cffi==1.15.0
     # via cryptography
-charset-normalizer==2.0.11
+charset-normalizer==2.0.12
     # via
     #   -r requirements/test.txt
     #   requests
@@ -73,7 +73,7 @@ idna==3.3
     #   requests
 imagesize==1.3.0
     # via sphinx
-importlib-metadata==4.11.0
+importlib-metadata==4.11.1
     # via
     #   keyring
     #   sphinx
@@ -135,7 +135,7 @@ pyparsing==3.0.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==7.0.0
+pytest==7.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -167,7 +167,7 @@ restructuredtext-lint==1.3.2
     # via doc8
 rfc3986==2.0.0
     # via twine
-ruamel-yaml==0.17.20
+ruamel-yaml==0.17.21
     # via
     #   -r requirements/test.txt
     #   drf-yasg
