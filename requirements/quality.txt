@@ -28,7 +28,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/test.txt
     #   requests
-click==8.0.3
+click==8.0.4
     # via
     #   click-log
     #   code-annotations
@@ -48,7 +48,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.3.1
+coverage[toml]==6.3.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -107,7 +107,7 @@ keyring==23.5.0
     # via twine
 lazy-object-proxy==1.7.1
     # via astroid
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via
     #   -r requirements/test.txt
     #   jinja2
@@ -123,7 +123,7 @@ pbr==5.8.1
     # via stevedore
 pkginfo==1.8.2
     # via twine
-platformdirs==2.5.0
+platformdirs==2.5.1
     # via pylint
 pluggy==1.0.0
     # via
@@ -149,7 +149,7 @@ pylint==2.12.2
     #   pylint-plugin-utils
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.5.1
+pylint-django==2.5.2
     # via edx-lint
 pylint-plugin-utils==0.7
     # via
@@ -168,7 +168,7 @@ pytest-cov==3.0.0
     # via -r requirements/test.txt
 pytest-django==4.5.2
     # via -r requirements/test.txt
-python-slugify==6.0.1
+python-slugify==6.1.0
     # via code-annotations
 pytz==2021.3
     # via

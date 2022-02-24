@@ -27,7 +27,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.3.1
+coverage[toml]==6.3.2
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -57,7 +57,7 @@ jinja2==3.0.3
     # via
     #   -r requirements/base.txt
     #   coreschema
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via
     #   -r requirements/base.txt
     #   jinja2
