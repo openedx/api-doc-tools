@@ -115,7 +115,7 @@ idna==3.3
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==4.11.1
+importlib-metadata==4.11.2
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -171,7 +171,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   tox
-path==16.3.0
+path==16.4.0
     # via edx-i18n-tools
 pbr==5.8.1
     # via
@@ -255,7 +255,7 @@ pytest-cov==3.0.0
     # via -r requirements/quality.txt
 pytest-django==4.5.2
     # via -r requirements/quality.txt
-python-slugify==6.1.0
+python-slugify==6.1.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -344,7 +344,7 @@ tox==3.24.5
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/dev.in
-tqdm==4.62.3
+tqdm==4.63.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -366,7 +366,7 @@ urllib3==1.26.8
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.13.1
+virtualenv==20.13.2
     # via
     #   -r requirements/ci.txt
     #   tox
