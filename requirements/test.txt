@@ -57,7 +57,7 @@ jinja2==3.0.3
     # via
     #   -r requirements/base.txt
     #   coreschema
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -74,7 +74,7 @@ pyparsing==3.0.7
     # via
     #   -r requirements/base.txt
     #   packaging
-pytest==7.0.1
+pytest==7.1.0
     # via
     #   pytest-cov
     #   pytest-django
@@ -112,7 +112,7 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   -r requirements/base.txt
     #   requests
