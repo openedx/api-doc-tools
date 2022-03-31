@@ -55,7 +55,7 @@ djangorestframework==3.13.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-doc8==0.10.1
+doc8==0.11.0
     # via -r requirements/doc.in
 docutils==0.17.1
     # via
@@ -94,7 +94,7 @@ jeepney==0.7.1
     # via
     #   keyring
     #   secretstorage
-jinja2==3.0.3
+jinja2==3.1.1
     # via
     #   -r requirements/test.txt
     #   coreschema
@@ -183,7 +183,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==4.4.0
+sphinx==4.5.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
