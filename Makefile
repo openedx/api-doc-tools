@@ -116,7 +116,7 @@ detect_changed_source_translations:
 	cd edx_api_doc_tools && i18n_tool changed
 
 pull_translations: ## pull translations from Transifex
-	tx pull -af --mode reviewed
+	tx pull -a -f --mode reviewed
 
 push_translations: ## push source translation files (.po) from Transifex
 	tx push -s
