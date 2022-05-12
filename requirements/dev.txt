@@ -8,7 +8,7 @@ asgiref==3.5.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.11.4
+astroid==2.11.5
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -176,7 +176,7 @@ packaging==21.3
     #   tox
 path==16.4.0
     # via edx-i18n-tools
-pbr==5.8.1
+pbr==5.9.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -245,7 +245,7 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -293,7 +293,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==12.3.0
+rich==12.4.1
     # via
     #   -r requirements/quality.txt
     #   twine

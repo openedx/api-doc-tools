@@ -111,7 +111,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   sphinx
-pbr==5.8.1
+pbr==5.9.0
     # via stevedore
 pkginfo==1.8.2
     # via twine
@@ -131,7 +131,7 @@ pygments==2.12.0
     #   readme-renderer
     #   rich
     #   sphinx
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via
     #   -r requirements/test.txt
     #   packaging
@@ -167,7 +167,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==12.3.0
+rich==12.4.1
     # via twine
 ruamel-yaml==0.17.21
     # via
