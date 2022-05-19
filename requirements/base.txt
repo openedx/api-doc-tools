@@ -4,9 +4,9 @@
 #
 #    make upgrade
 #
-asgiref==3.5.1
+asgiref==3.5.2
     # via django
-certifi==2021.10.8
+certifi==2022.5.18
     # via requests
 charset-normalizer==2.0.12
     # via requests

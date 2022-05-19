@@ -4,13 +4,13 @@
 #
 #    make upgrade
 #
-asgiref==3.5.1
+asgiref==3.5.2
     # via
     #   -r requirements/base.txt
     #   django
 attrs==21.4.0
     # via pytest
-certifi==2021.10.8
+certifi==2022.5.18
     # via
     #   -r requirements/base.txt
     #   requests
@@ -27,7 +27,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.3.2
+coverage[toml]==6.3.3
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
