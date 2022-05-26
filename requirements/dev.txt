@@ -21,7 +21,7 @@ bleach==5.0.0
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-certifi==2022.5.18
+certifi==2022.5.18.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -68,7 +68,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.3.3
+coverage[toml]==6.4
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -80,7 +80,7 @@ cryptography==37.0.2
     #   secretstorage
 diff-cover==6.5.0
     # via -r requirements/dev.in
-dill==0.3.4
+dill==0.3.5.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -119,7 +119,7 @@ idna==3.3
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==4.11.3
+importlib-metadata==4.11.4
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -151,7 +151,7 @@ jinja2==3.1.2
     #   code-annotations
     #   coreschema
     #   diff-cover
-keyring==23.5.0
+keyring==23.5.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -184,7 +184,7 @@ pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.6.1
+pip-tools==6.6.2
     # via -r requirements/pip-tools.txt
 pkginfo==1.8.2
     # via
@@ -293,7 +293,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==12.4.1
+rich==12.4.4
     # via
     #   -r requirements/quality.txt
     #   twine
