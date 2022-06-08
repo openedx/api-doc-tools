@@ -49,10 +49,13 @@ upgrade-pip-tools: pip-tools
 	pip-compile --upgrade requirements/pip-tools.in
 
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: upgrade-pip-tools ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+upgrade:  ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	# Make sure to compile files after any other files they include!
-	make pip-tools  # Reinstall pip-tools in case it was upgraded.
+	pip install -qr requirements/pip-tools.txt
+	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
 	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
+	pip install -qr requirements/pip-tools.txt
+	pip install -qr requirements/pip.txt
 	pip-compile --upgrade requirements/base.in
 	pip-compile --upgrade requirements/test.in
 	pip-compile --upgrade requirements/doc.in

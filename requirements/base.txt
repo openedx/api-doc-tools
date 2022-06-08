@@ -46,7 +46,7 @@ pytz==2022.1
     # via
     #   django
     #   djangorestframework
-requests==2.27.1
+requests==2.28.0
     # via coreapi
 ruamel-yaml==0.17.21
     # via drf-yasg
