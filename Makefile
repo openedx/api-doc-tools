@@ -72,7 +72,7 @@ style:
 	pydocstyle $(CHECKABLE_PYTHON)
 
 isort:  # sort all imports.
-	isort --recursive $(CHECKABLE_PYTHON)
+	isort $(CHECKABLE_PYTHON)
 
 isort_check:
 	isort --check-only --diff --recursive $(CHECKABLE_PYTHON)
