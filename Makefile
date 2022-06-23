@@ -78,7 +78,7 @@ isort:  # sort all imports.
 	isort --recursive $(CHECKABLE_PYTHON)
 
 isort_check:
-	isort --check-only --diff --recursive $(CHECKABLE_PYTHON)
+	isort --check-only --diff $(CHECKABLE_PYTHON)
 
 pylint:
 	echo '"""This file exists only to satisify pylint; it is not committed."""' > tests/__init__.py
