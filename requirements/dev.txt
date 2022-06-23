@@ -21,11 +21,15 @@ bleach==5.0.0
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
+cffi==1.15.0
+    # via
+    #   -r requirements/quality.txt
+    #   cryptography
 chardet==4.0.0
     # via diff-cover
 charset-normalizer==2.0.12
@@ -70,7 +74,11 @@ coverage[toml]==6.4.1
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-diff-cover==6.5.0
+cryptography==37.0.2
+    # via
+    #   -r requirements/quality.txt
+    #   secretstorage
+diff-cover==6.5.1
     # via -r requirements/dev.in
 dill==0.3.5.1
     # via
@@ -132,6 +140,11 @@ itypes==1.2.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
+jeepney==0.8.0
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
+    #   secretstorage
 jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
@@ -200,6 +213,10 @@ py==1.11.0
     #   tox
 pycodestyle==2.8.0
     # via -r requirements/quality.txt
+pycparser==2.21
+    # via
+    #   -r requirements/quality.txt
+    #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pygments==2.12.0
@@ -208,7 +225,7 @@ pygments==2.12.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.14.1
+pylint==2.14.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -288,6 +305,10 @@ ruamel-yaml-clib==0.2.6
     # via
     #   -r requirements/quality.txt
     #   ruamel-yaml
+secretstorage==3.3.2
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
 six==1.16.0
     # via
     #   -r requirements/ci.txt

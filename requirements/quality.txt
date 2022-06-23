@@ -18,10 +18,12 @@ attrs==21.4.0
     #   pytest
 bleach==5.0.0
     # via readme-renderer
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via
     #   -r requirements/test.txt
     #   requests
+cffi==1.15.0
+    # via cryptography
 charset-normalizer==2.0.12
     # via
     #   -r requirements/test.txt
@@ -50,6 +52,8 @@ coverage[toml]==6.4.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==37.0.2
+    # via secretstorage
 dill==0.3.5.1
     # via pylint
 django==3.2.13
@@ -92,6 +96,10 @@ itypes==1.2.0
     # via
     #   -r requirements/test.txt
     #   coreapi
+jeepney==0.8.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.2
     # via
     #   -r requirements/test.txt
@@ -128,13 +136,15 @@ py==1.11.0
     #   pytest
 pycodestyle==2.8.0
     # via -r requirements/quality.in
+pycparser==2.21
+    # via cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.in
 pygments==2.12.0
     # via
     #   readme-renderer
     #   rich
-pylint==2.14.1
+pylint==2.14.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -192,6 +202,8 @@ ruamel-yaml-clib==0.2.6
     # via
     #   -r requirements/test.txt
     #   ruamel-yaml
+secretstorage==3.3.2
+    # via keyring
 six==1.16.0
     # via
     #   bleach
