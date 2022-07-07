@@ -30,7 +30,7 @@ certifi==2022.6.15
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-cffi==1.15.0
+cffi==1.15.1
     # via
     #   -r requirements/quality.txt
     #   cryptography
@@ -78,7 +78,7 @@ coverage[toml]==6.4.1
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==37.0.2
+cryptography==37.0.4
     # via
     #   -r requirements/quality.txt
     #   secretstorage
@@ -92,7 +92,7 @@ distlib==0.3.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.13
+django==3.2.14
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -103,7 +103,7 @@ djangorestframework==3.13.1
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-docutils==0.18.1
+docutils==0.19
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
@@ -190,7 +190,7 @@ pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pip-tools==6.7.0
+pip-tools==6.8.0
     # via -r requirements/pip-tools.txt
 pkginfo==1.8.3
     # via
@@ -353,7 +353,7 @@ tomli==2.0.1
     #   pep517
     #   pylint
     #   pytest
-tomlkit==0.11.0
+tomlkit==0.11.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -365,7 +365,7 @@ tox-battery==0.6.1
     # via -r requirements/dev.in
 twine==4.0.1
     # via -r requirements/quality.txt
-typing-extensions==4.2.0
+typing-extensions==4.3.0
     # via
     #   -r requirements/quality.txt
     #   astroid
