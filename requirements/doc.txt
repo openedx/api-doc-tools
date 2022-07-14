@@ -39,7 +39,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.4.1
+coverage[toml]==6.4.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -167,7 +167,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==12.4.4
+rich==12.5.1
     # via twine
 ruamel-yaml==0.17.21
     # via
@@ -205,7 +205,7 @@ sqlparse==0.4.2
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==3.5.0
+stevedore==4.0.0
     # via doc8
 tomli==2.0.1
     # via
@@ -221,12 +221,12 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.9
+urllib3==1.26.10
     # via
     #   -r requirements/test.txt
     #   requests
     #   twine
 webencodings==0.5.1
     # via bleach
-zipp==3.8.0
+zipp==3.8.1
     # via importlib-metadata
