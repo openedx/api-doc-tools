@@ -8,7 +8,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.11.6
+astroid==2.11.7
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -72,7 +72,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.4.1
+coverage[toml]==6.4.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -300,7 +300,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==12.4.4
+rich==12.5.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -332,7 +332,7 @@ sqlparse==0.4.2
     # via
     #   -r requirements/quality.txt
     #   django
-stevedore==3.5.0
+stevedore==4.0.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -376,7 +376,7 @@ uritemplate==4.1.1
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.9
+urllib3==1.26.10
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -398,7 +398,7 @@ wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.8.0
+zipp==3.8.1
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
