@@ -63,7 +63,7 @@ docutils==0.18.1
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-drf-yasg==1.20.0
+drf-yasg==1.21.3
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
@@ -99,7 +99,7 @@ jinja2==3.1.2
     #   -r requirements/test.txt
     #   coreschema
     #   sphinx
-keyring==23.6.0
+keyring==23.7.0
     # via twine
 markupsafe==2.1.1
     # via
@@ -150,6 +150,7 @@ pytz==2022.1
     #   babel
     #   django
     #   djangorestframework
+    #   drf-yasg
 readme-renderer==35.0
     # via
     #   -r requirements/doc.in
