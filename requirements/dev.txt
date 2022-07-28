@@ -324,7 +324,6 @@ six==1.16.0
     #   bleach
     #   edx-lint
     #   tox
-    #   virtualenv
 snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
@@ -377,13 +376,13 @@ uritemplate==4.1.1
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.10
+urllib3==1.26.11
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.15.1
+virtualenv==20.16.2
     # via
     #   -r requirements/ci.txt
     #   tox
