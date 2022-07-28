@@ -55,9 +55,9 @@ djangorestframework==3.13.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-doc8==0.11.2
+doc8==1.0.0
     # via -r requirements/doc.in
-docutils==0.18.1
+docutils==0.19
     # via
     #   doc8
     #   readme-renderer
@@ -186,7 +186,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.2
+sphinx==5.1.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -212,6 +212,7 @@ tomli==2.0.1
     # via
     #   -r requirements/test.txt
     #   coverage
+    #   doc8
     #   pytest
 twine==4.0.1
     # via -r requirements/doc.in
@@ -222,7 +223,7 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.10
+urllib3==1.26.11
     # via
     #   -r requirements/test.txt
     #   requests
