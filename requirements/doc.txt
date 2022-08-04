@@ -10,7 +10,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/test.txt
     #   django
-attrs==21.4.0
+attrs==22.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -45,7 +45,7 @@ coverage[toml]==6.4.2
     #   pytest-cov
 cryptography==37.0.4
     # via secretstorage
-django==3.2.14
+django==3.2.15
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
