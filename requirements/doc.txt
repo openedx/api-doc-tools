@@ -39,7 +39,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.4.2
+coverage[toml]==6.4.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -99,7 +99,7 @@ jinja2==3.1.2
     #   -r requirements/test.txt
     #   coreschema
     #   sphinx
-keyring==23.7.0
+keyring==23.8.2
     # via twine
 markupsafe==2.1.1
     # via
@@ -151,7 +151,7 @@ pytz==2022.1
     #   django
     #   djangorestframework
     #   drf-yasg
-readme-renderer==35.0
+readme-renderer==36.0
     # via
     #   -r requirements/doc.in
     #   twine
