@@ -24,7 +24,7 @@ certifi==2022.6.15
     #   requests
 cffi==1.15.1
     # via cryptography
-charset-normalizer==2.1.0
+charset-normalizer==2.1.1
     # via
     #   -r requirements/test.txt
     #   requests
@@ -151,7 +151,7 @@ pytz==2022.2.1
     #   django
     #   djangorestframework
     #   drf-yasg
-readme-renderer==36.0
+readme-renderer==37.0
     # via
     #   -r requirements/doc.in
     #   twine
@@ -223,7 +223,7 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.11
+urllib3==1.26.12
     # via
     #   -r requirements/test.txt
     #   requests
