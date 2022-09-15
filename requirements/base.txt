@@ -6,7 +6,7 @@
 #
 asgiref==3.5.2
     # via django
-certifi==2022.6.15
+certifi==2022.9.14
     # via requests
 charset-normalizer==2.1.1
     # via requests
@@ -28,7 +28,7 @@ djangorestframework==3.13.1
     #   drf-yasg
 drf-yasg==1.21.3
     # via -r requirements/base.in
-idna==3.3
+idna==3.4
     # via requests
 inflection==0.5.1
     # via drf-yasg

@@ -18,7 +18,7 @@ attrs==22.1.0
     #   pytest
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.6.15
+certifi==2022.9.14
     # via
     #   -r requirements/test.txt
     #   requests
@@ -70,9 +70,9 @@ docutils==0.19
     # via readme-renderer
 drf-yasg==1.21.3
     # via -r requirements/test.txt
-edx-lint==5.2.4
+edx-lint==5.2.5
     # via -r requirements/quality.in
-idna==3.3
+idna==3.4
     # via
     #   -r requirements/test.txt
     #   requests
