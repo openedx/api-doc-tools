@@ -6,7 +6,7 @@
 #
 asgiref==3.5.2
     # via django
-certifi==2022.9.14
+certifi==2022.9.24
     # via requests
 charset-normalizer==2.1.1
     # via requests
@@ -22,11 +22,11 @@ django==3.2.15
     #   -r requirements/base.in
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via -r requirements/base.in
 idna==3.4
     # via requests
@@ -53,7 +53,7 @@ ruamel-yaml==0.17.21
     # via drf-yasg
 ruamel-yaml-clib==0.2.6
     # via ruamel-yaml
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via django
 uritemplate==4.1.1
     # via
