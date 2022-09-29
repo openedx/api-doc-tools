@@ -25,7 +25,7 @@ build==0.8.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-certifi==2022.9.14
+certifi==2022.9.24
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -99,7 +99,7 @@ django==3.2.15
     #   djangorestframework
     #   drf-yasg
     #   edx-i18n-tools
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -107,7 +107,7 @@ docutils==0.19
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via -r requirements/quality.txt
 edx-i18n-tools==0.9.1
     # via -r requirements/dev.in
@@ -144,7 +144,7 @@ itypes==1.2.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
-jaraco-classes==3.2.2
+jaraco-classes==3.2.3
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -188,7 +188,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   tox
-path==16.4.0
+path==16.5.0
     # via edx-i18n-tools
 pbr==5.10.0
     # via
@@ -270,7 +270,7 @@ pytest==7.1.3
     #   -r requirements/quality.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==3.0.0
+pytest-cov==4.0.0
     # via -r requirements/quality.txt
 pytest-django==4.5.2
     # via -r requirements/quality.txt
@@ -289,7 +289,7 @@ pyyaml==6.0
     #   -r requirements/quality.txt
     #   code-annotations
     #   edx-i18n-tools
-readme-renderer==37.1
+readme-renderer==37.2
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -336,7 +336,7 @@ snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/quality.txt
     #   django
@@ -359,7 +359,7 @@ tomli==2.0.1
     #   pylint
     #   pytest
     #   tox
-tomlkit==0.11.4
+tomlkit==0.11.5
     # via
     #   -r requirements/quality.txt
     #   pylint
