@@ -16,7 +16,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==3.2.15
+django==3.2.16
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -42,7 +42,7 @@ packaging==21.3
     # via drf-yasg
 pyparsing==3.0.9
     # via packaging
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   django
     #   djangorestframework
