@@ -42,7 +42,7 @@ packaging==21.3
     # via drf-yasg
 pyparsing==3.0.9
     # via packaging
-pytz==2022.5
+pytz==2022.6
     # via
     #   django
     #   djangorestframework
@@ -51,7 +51,7 @@ requests==2.28.1
     # via coreapi
 ruamel-yaml==0.17.21
     # via drf-yasg
-ruamel-yaml-clib==0.2.6
+ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 sqlparse==0.4.3
     # via django
