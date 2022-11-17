@@ -39,7 +39,7 @@ coverage[toml]==6.5.0
     #   drf-yasg
 drf-yasg==1.21.4
     # via -r requirements/base.txt
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via pytest
 idna==3.4
     # via
