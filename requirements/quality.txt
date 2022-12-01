@@ -52,7 +52,7 @@ coverage[toml]==6.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==38.0.3
+cryptography==38.0.4
     # via secretstorage
 dill==0.3.6
     # via pylint
@@ -80,7 +80,7 @@ idna==3.4
     # via
     #   -r requirements/test.txt
     #   requests
-importlib-metadata==5.0.0
+importlib-metadata==5.1.0
     # via
     #   keyring
     #   twine
@@ -130,7 +130,7 @@ packaging==21.3
     #   pytest
 pbr==5.11.0
     # via stevedore
-pkginfo==1.8.3
+pkginfo==1.9.2
     # via twine
 platformdirs==2.5.4
     # via pylint
@@ -148,7 +148,7 @@ pygments==2.13.0
     # via
     #   readme-renderer
     #   rich
-pylint==2.15.6
+pylint==2.15.7
     # via
     #   edx-lint
     #   pylint-celery
@@ -231,7 +231,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.11.6
     # via pylint
-twine==4.0.1
+twine==4.0.2
     # via -r requirements/quality.in
 typing-extensions==4.4.0
     # via
@@ -252,5 +252,5 @@ webencodings==0.5.1
     # via bleach
 wrapt==1.14.1
     # via astroid
-zipp==3.10.0
+zipp==3.11.0
     # via importlib-metadata
