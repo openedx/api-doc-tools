@@ -78,11 +78,11 @@ coverage[toml]==6.5.0
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==38.0.3
+cryptography==38.0.4
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==7.0.2
+diff-cover==7.2.0
     # via -r requirements/dev.in
 dill==0.3.6
     # via
@@ -127,7 +127,7 @@ idna==3.4
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==5.0.0
+importlib-metadata==5.1.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -192,7 +192,7 @@ packaging==21.3
     #   drf-yasg
     #   pytest
     #   tox
-path==16.5.0
+path==16.6.0
     # via edx-i18n-tools
 pbr==5.11.0
     # via
@@ -204,7 +204,7 @@ pep517==0.13.0
     #   build
 pip-tools==6.10.0
     # via -r requirements/pip-tools.txt
-pkginfo==1.8.3
+pkginfo==1.9.2
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -241,7 +241,7 @@ pygments==2.13.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.15.6
+pylint==2.15.7
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -371,7 +371,7 @@ tox==3.27.1
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/dev.in
-twine==4.0.1
+twine==4.0.2
     # via -r requirements/quality.txt
 typing-extensions==4.4.0
     # via
@@ -390,7 +390,7 @@ urllib3==1.26.13
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.16.7
+virtualenv==20.17.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -406,7 +406,7 @@ wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.10.0
+zipp==3.11.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
