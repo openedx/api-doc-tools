@@ -6,11 +6,11 @@
 #
 alabaster==0.7.12
     # via sphinx
-asgiref==3.5.2
+asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-attrs==22.1.0
+attrs==22.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -39,7 +39,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.5.0
+coverage[toml]==7.0.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -77,11 +77,13 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==5.1.0
+importlib-metadata==5.2.0
     # via
     #   keyring
     #   sphinx
     #   twine
+importlib-resources==5.10.1
+    # via keyring
 inflection==0.5.1
     # via
     #   -r requirements/test.txt
@@ -105,7 +107,7 @@ jinja2==3.1.2
     #   -r requirements/test.txt
     #   coreschema
     #   sphinx
-keyring==23.11.0
+keyring==23.13.1
     # via twine
 markupsafe==2.1.1
     # via
@@ -144,7 +146,7 @@ pytest-cov==4.0.0
     # via -r requirements/test.txt
 pytest-django==4.5.2
     # via -r requirements/test.txt
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements/test.txt
     #   babel
@@ -231,4 +233,6 @@ urllib3==1.26.13
 webencodings==0.5.1
     # via bleach
 zipp==3.11.0
-    # via importlib-metadata
+    # via
+    #   importlib-metadata
+    #   importlib-resources
