@@ -39,7 +39,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.0.0
+coverage[toml]==7.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -55,7 +55,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-doc8==1.0.0
+doc8==1.1.1
     # via -r requirements/doc.in
 docutils==0.19
     # via
@@ -67,7 +67,7 @@ drf-yasg==1.21.4
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -82,7 +82,7 @@ importlib-metadata==5.2.0
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.10.1
+importlib-resources==5.10.2
     # via keyring
 inflection==0.5.1
     # via
