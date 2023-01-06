@@ -27,7 +27,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.0.0
+coverage[toml]==7.0.3
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -39,7 +39,7 @@ coverage[toml]==7.0.0
     #   drf-yasg
 drf-yasg==1.21.4
     # via -r requirements/base.txt
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via pytest
 idna==3.4
     # via
