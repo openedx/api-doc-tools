@@ -8,7 +8,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.12.13
+astroid==2.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -21,7 +21,7 @@ bleach==5.0.1
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-build==0.9.0
+build==0.10.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
@@ -72,7 +72,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.0.3
+coverage[toml]==7.0.5
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -140,7 +140,7 @@ inflection==0.5.1
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-iniconfig==1.1.1
+iniconfig==2.0.0
     # via
     #   -r requirements/quality.txt
     #   pytest
@@ -187,7 +187,7 @@ more-itertools==9.0.0
     # via
     #   -r requirements/quality.txt
     #   jaraco-classes
-packaging==22.0
+packaging==23.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
@@ -198,17 +198,13 @@ packaging==22.0
     #   tox
 path==16.6.0
     # via edx-i18n-tools
-pbr==5.11.0
+pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pep517==0.13.0
-    # via
-    #   -r requirements/pip-tools.txt
-    #   build
 pip-tools==6.12.1
     # via -r requirements/pip-tools.txt
-pkginfo==1.9.3
+pkginfo==1.9.6
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -237,7 +233,7 @@ pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
-pydocstyle==6.2.2
+pydocstyle==6.2.3
     # via -r requirements/quality.txt
 pygments==2.14.0
     # via
@@ -245,7 +241,7 @@ pygments==2.14.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.15.9
+pylint==2.15.10
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -265,6 +261,10 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
+pyproject-hooks==1.0.0
+    # via
+    #   -r requirements/pip-tools.txt
+    #   build
 pytest==7.2.0
     # via
     #   -r requirements/quality.txt
@@ -309,7 +309,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.0.0
+rich==13.0.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -355,8 +355,8 @@ tomli==2.0.1
     #   -r requirements/quality.txt
     #   build
     #   coverage
-    #   pep517
     #   pylint
+    #   pyproject-hooks
     #   pytest
     #   tox
 tomlkit==0.11.6
@@ -383,7 +383,7 @@ uritemplate==4.1.1
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.13
+urllib3==1.26.14
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt

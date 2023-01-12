@@ -8,7 +8,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.12.13
+astroid==2.13.2
     # via
     #   pylint
     #   pylint-celery
@@ -48,7 +48,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.0.3
+coverage[toml]==7.0.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -90,7 +90,7 @@ inflection==0.5.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-iniconfig==1.1.1
+iniconfig==2.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -125,14 +125,14 @@ mccabe==0.7.0
     # via pylint
 more-itertools==9.0.0
     # via jaraco-classes
-packaging==22.0
+packaging==23.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
     #   pytest
-pbr==5.11.0
+pbr==5.11.1
     # via stevedore
-pkginfo==1.9.3
+pkginfo==1.9.6
     # via twine
 platformdirs==2.6.2
     # via pylint
@@ -144,13 +144,13 @@ pycodestyle==2.10.0
     # via -r requirements/quality.in
 pycparser==2.21
     # via cffi
-pydocstyle==6.2.2
+pydocstyle==6.2.3
     # via -r requirements/quality.in
 pygments==2.14.0
     # via
     #   readme-renderer
     #   rich
-pylint==2.15.9
+pylint==2.15.10
     # via
     #   edx-lint
     #   pylint-celery
@@ -195,7 +195,7 @@ requests-toolbelt==0.10.1
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.0.0
+rich==13.0.1
     # via twine
 ruamel-yaml==0.17.21
     # via
@@ -241,7 +241,7 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.13
+urllib3==1.26.14
     # via
     #   -r requirements/test.txt
     #   requests
