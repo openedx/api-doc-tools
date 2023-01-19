@@ -36,7 +36,7 @@ cffi==1.15.1
     #   cryptography
 chardet==5.1.0
     # via diff-cover
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -82,7 +82,7 @@ cryptography==39.0.0
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==7.3.0
+diff-cover==7.3.2
     # via -r requirements/dev.in
 dill==0.3.6
     # via
@@ -175,7 +175,7 @@ lazy-object-proxy==1.9.0
     # via
     #   -r requirements/quality.txt
     #   astroid
-markupsafe==2.1.1
+markupsafe==2.1.2
     # via
     #   -r requirements/quality.txt
     #   jinja2
@@ -233,7 +233,7 @@ pycparser==2.21
     # via
     #   -r requirements/quality.txt
     #   cffi
-pydocstyle==6.2.3
+pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.14.0
     # via
@@ -265,7 +265,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.2.0
+pytest==7.2.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -278,7 +278,7 @@ python-slugify==7.0.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2022.7
+pytz==2022.7.1
     # via
     #   -r requirements/quality.txt
     #   django
@@ -293,7 +293,7 @@ readme-renderer==37.3
     # via
     #   -r requirements/quality.txt
     #   twine
-requests==2.28.1
+requests==2.28.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -309,7 +309,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.0.1
+rich==13.1.0
     # via
     #   -r requirements/quality.txt
     #   twine

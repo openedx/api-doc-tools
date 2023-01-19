@@ -14,7 +14,7 @@ certifi==2022.12.7
     # via
     #   -r requirements/base.txt
     #   requests
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
     # via
     #   -r requirements/base.txt
     #   requests
@@ -59,7 +59,7 @@ jinja2==3.1.2
     # via
     #   -r requirements/base.txt
     #   coreschema
-markupsafe==2.1.1
+markupsafe==2.1.2
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -70,7 +70,7 @@ packaging==23.0
     #   pytest
 pluggy==1.0.0
     # via pytest
-pytest==7.2.0
+pytest==7.2.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -78,13 +78,13 @@ pytest-cov==4.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2022.7
+pytz==2022.7.1
     # via
     #   -r requirements/base.txt
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.28.1
+requests==2.28.2
     # via
     #   -r requirements/base.txt
     #   coreapi

@@ -24,7 +24,7 @@ certifi==2022.12.7
     #   requests
 cffi==1.15.1
     # via cryptography
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
     # via
     #   -r requirements/test.txt
     #   requests
@@ -117,7 +117,7 @@ keyring==23.13.1
     # via twine
 lazy-object-proxy==1.9.0
     # via astroid
-markupsafe==2.1.1
+markupsafe==2.1.2
     # via
     #   -r requirements/test.txt
     #   jinja2
@@ -144,7 +144,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.in
 pycparser==2.21
     # via cffi
-pydocstyle==6.2.3
+pydocstyle==6.3.0
     # via -r requirements/quality.in
 pygments==2.14.0
     # via
@@ -164,7 +164,7 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-pytest==7.2.0
+pytest==7.2.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -175,7 +175,7 @@ pytest-django==4.5.2
     # via -r requirements/test.txt
 python-slugify==7.0.0
     # via code-annotations
-pytz==2022.7
+pytz==2022.7.1
     # via
     #   -r requirements/test.txt
     #   django
@@ -185,7 +185,7 @@ pyyaml==6.0
     # via code-annotations
 readme-renderer==37.3
     # via twine
-requests==2.28.1
+requests==2.28.2
     # via
     #   -r requirements/test.txt
     #   coreapi
@@ -195,7 +195,7 @@ requests-toolbelt==0.10.1
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.0.1
+rich==13.1.0
     # via twine
 ruamel-yaml==0.17.21
     # via
