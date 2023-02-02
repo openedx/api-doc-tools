@@ -8,7 +8,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.13.3
+astroid==2.14.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -88,7 +88,7 @@ distlib==0.3.6
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.16
+django==3.2.17
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -140,7 +140,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.11.4
+isort==5.12.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -206,7 +206,7 @@ pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==6.12.1
+pip-tools==6.12.2
     # via -r requirements/pip-tools.txt
 pkginfo==1.9.6
     # via
@@ -245,7 +245,7 @@ pygments==2.14.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.15.10
+pylint==2.16.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -278,7 +278,7 @@ pytest-cov==4.0.0
     # via -r requirements/quality.txt
 pytest-django==4.5.2
     # via -r requirements/quality.txt
-python-slugify==7.0.0
+python-slugify==8.0.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -313,7 +313,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.2.0
+rich==13.3.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -409,7 +409,7 @@ wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.11.0
+zipp==3.12.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
