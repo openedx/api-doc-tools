@@ -74,7 +74,7 @@ coverage[toml]==7.1.0
     #   -r requirements/quality.txt
     #   codecov
     #   pytest-cov
-cryptography==39.0.0
+cryptography==39.0.1
     # via
     #   -r requirements/quality.txt
     #   secretstorage
@@ -212,7 +212,7 @@ pkginfo==1.9.6
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==2.6.2
+platformdirs==3.0.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -245,7 +245,7 @@ pygments==2.14.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.16.0
+pylint==2.16.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -393,7 +393,7 @@ urllib3==1.26.14
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.17.1
+virtualenv==20.19.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -409,7 +409,7 @@ wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.12.0
+zipp==3.12.1
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
