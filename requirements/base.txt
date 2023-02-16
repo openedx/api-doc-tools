@@ -16,7 +16,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==3.2.17
+django==3.2.18
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -26,7 +26,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.4
+drf-yasg==1.21.5
     # via -r requirements/base.in
 idna==3.4
     # via requests
