@@ -46,7 +46,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.1.0
+coverage[toml]==7.2.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -82,7 +82,7 @@ importlib-metadata==6.0.0
     # via
     #   keyring
     #   twine
-importlib-resources==5.10.2
+importlib-resources==5.12.0
     # via keyring
 inflection==0.5.1
     # via
@@ -115,7 +115,7 @@ keyring==23.13.1
     # via twine
 lazy-object-proxy==1.9.0
     # via astroid
-markdown-it-py==2.1.0
+markdown-it-py==2.2.0
     # via rich
 markupsafe==2.1.2
     # via
@@ -252,7 +252,7 @@ webencodings==0.5.1
     # via bleach
 wrapt==1.14.1
     # via astroid
-zipp==3.13.0
+zipp==3.14.0
     # via
     #   importlib-metadata
     #   importlib-resources
