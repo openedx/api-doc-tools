@@ -68,7 +68,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.1.0
+coverage[toml]==7.2.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -78,7 +78,7 @@ cryptography==39.0.1
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==7.4.0
+diff-cover==7.5.0
     # via -r requirements/dev.in
 dill==0.3.6
     # via
@@ -128,7 +128,7 @@ importlib-metadata==6.0.0
     #   -r requirements/quality.txt
     #   keyring
     #   twine
-importlib-resources==5.10.2
+importlib-resources==5.12.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -171,7 +171,7 @@ lazy-object-proxy==1.9.0
     # via
     #   -r requirements/quality.txt
     #   astroid
-markdown-it-py==2.1.0
+markdown-it-py==2.2.0
     # via
     #   -r requirements/quality.txt
     #   rich
@@ -409,7 +409,7 @@ wrapt==1.14.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.13.0
+zipp==3.14.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
