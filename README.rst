@@ -53,7 +53,7 @@ Contributions are very welcome.  Please read `How To Contribute`__ for details.
 Even though they were written with `edx-platform` in mind, the guidelines
 should be followed for all Open edX projects.
 
-__ https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst
+__ https://github.com/openedx/edx-platform/blob/master/CONTRIBUTING.rst
 
 The pull request description template should be automatically applied if you
 are creating a pull request from GitHub. Otherwise you can find it at
@@ -80,8 +80,8 @@ Have a question about this repository, or about the Open edX project in general?
 .. |pypi| image:: https://img.shields.io/pypi/v/edx-api-doc-tools.svg
     :target: https://pypi.python.org/pypi/edx-api-doc-tools/
     :alt: PyPI
-.. |CI| image:: https://github.com/edx/api-doc-tools/workflows/Python%20CI/badge.svg?branch=master
-    :target: https://github.com/edx/api-doc-tools/actions?query=workflow%3A%22Python+CI%22
+.. |CI| image:: https://github.com/openedx/api-doc-tools/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/openedx/api-doc-tools/actions?query=workflow%3A%22Python+CI%22
     :alt: CI
 .. |codecov| image:: http://codecov.io/github/edx/api-doc-tools/coverage.svg?branch=master
     :target: http://codecov.io/github/edx/api-doc-tools?branch=master
@@ -93,5 +93,5 @@ Have a question about this repository, or about the Open edX project in general?
     :target: https://pypi.python.org/pypi/edx-api-doc-tools/
     :alt: Supported
 .. |license| image:: https://img.shields.io/github/license/edx/api-doc-tools.svg
-    :target: https://github.com/edx/api-doc-tools/blob/master/LICENSE.txt
+    :target: https://github.com/openedx/api-doc-tools/blob/master/LICENSE.txt
     :alt: License

@@ -112,7 +112,7 @@ setup(
     long_description_content_type="text/x-rst",
     author='edX',
     author_email='oscm@edx.org',
-    url='https://github.com/edx/api-doc-tools',
+    url='https://github.com/openedx/api-doc-tools',
     packages=[
         'edx_api_doc_tools',
     ],
