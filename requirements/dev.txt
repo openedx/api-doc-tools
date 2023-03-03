@@ -68,7 +68,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.0
+coverage[toml]==7.2.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -187,7 +187,7 @@ mdurl==0.1.2
     # via
     #   -r requirements/quality.txt
     #   markdown-it-py
-more-itertools==9.0.0
+more-itertools==9.1.0
     # via
     #   -r requirements/quality.txt
     #   jaraco-classes
@@ -206,7 +206,7 @@ pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==6.12.2
+pip-tools==6.12.3
     # via -r requirements/pip-tools.txt
 pkginfo==1.9.6
     # via
@@ -225,7 +225,7 @@ pluggy==1.0.0
     #   diff-cover
     #   pytest
     #   tox
-polib==1.1.1
+polib==1.2.0
     # via edx-i18n-tools
 py==1.11.0
     # via
@@ -278,7 +278,7 @@ pytest-cov==4.0.0
     # via -r requirements/quality.txt
 pytest-django==4.5.2
     # via -r requirements/quality.txt
-python-slugify==8.0.0
+python-slugify==8.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -393,7 +393,7 @@ urllib3==1.26.14
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.19.0
+virtualenv==20.20.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -405,11 +405,11 @@ wheel==0.38.4
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-wrapt==1.14.1
+wrapt==1.15.0
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.14.0
+zipp==3.15.0
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
