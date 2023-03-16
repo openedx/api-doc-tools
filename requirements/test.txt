@@ -39,7 +39,7 @@ coverage[toml]==7.2.1
     #   drf-yasg
 drf-yasg==1.21.5
     # via -r requirements/base.txt
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via pytest
 idna==3.4
     # via
@@ -109,7 +109,7 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.14
+urllib3==1.26.15
     # via
     #   -r requirements/base.txt
     #   requests
