@@ -24,6 +24,8 @@ certifi==2022.12.7
     # via
     #   -r requirements/test.txt
     #   requests
+cffi==1.15.1
+    # via cryptography
 charset-normalizer==3.1.0
     # via
     #   -r requirements/test.txt
@@ -41,6 +43,8 @@ coverage[toml]==7.2.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==40.0.2
+    # via secretstorage
 django==3.2.18
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -72,7 +76,7 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.3.0
+importlib-metadata==6.5.0
     # via
     #   keyring
     #   sphinx
@@ -93,6 +97,10 @@ itypes==1.2.0
     #   coreapi
 jaraco-classes==3.2.3
     # via keyring
+jeepney==0.8.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.2
     # via
     #   -r requirements/test.txt
@@ -125,9 +133,11 @@ pluggy==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
+pycparser==2.21
+    # via cffi
 pydata-sphinx-theme==0.13.3
     # via sphinx-book-theme
-pygments==2.15.0
+pygments==2.15.1
     # via
     #   accessible-pygments
     #   doc8
@@ -135,7 +145,7 @@ pygments==2.15.0
     #   readme-renderer
     #   rich
     #   sphinx
-pytest==7.3.0
+pytest==7.3.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -178,11 +188,13 @@ ruamel-yaml-clib==0.2.7
     # via
     #   -r requirements/test.txt
     #   ruamel-yaml
+secretstorage==3.3.3
+    # via keyring
 six==1.16.0
     # via bleach
 snowballstemmer==2.2.0
     # via sphinx
-soupsieve==2.4
+soupsieve==2.4.1
     # via beautifulsoup4
 sphinx==5.3.0
     # via
@@ -204,7 +216,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django
