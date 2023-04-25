@@ -51,7 +51,7 @@ ruamel-yaml==0.17.21
     # via drf-yasg
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via django
 uritemplate==4.1.1
     # via

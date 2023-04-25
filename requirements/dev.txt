@@ -8,7 +8,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.15.2
+astroid==2.15.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -25,6 +25,10 @@ certifi==2022.12.7
     # via
     #   -r requirements/quality.txt
     #   requests
+cffi==1.15.1
+    # via
+    #   -r requirements/quality.txt
+    #   cryptography
 chardet==5.1.0
     # via diff-cover
 charset-normalizer==3.1.0
@@ -60,6 +64,10 @@ coverage[toml]==7.2.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
+cryptography==40.0.2
+    # via
+    #   -r requirements/quality.txt
+    #   secretstorage
 diff-cover==7.5.0
     # via -r requirements/dev.in
 dill==0.3.6
@@ -95,7 +103,7 @@ exceptiongroup==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-filelock==3.11.0
+filelock==3.12.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -104,7 +112,7 @@ idna==3.4
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==6.3.0
+importlib-metadata==6.5.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -133,6 +141,11 @@ jaraco-classes==3.2.3
     # via
     #   -r requirements/quality.txt
     #   keyring
+jeepney==0.8.0
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
+    #   secretstorage
 jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
@@ -209,9 +222,13 @@ py==1.11.0
     #   tox
 pycodestyle==2.10.0
     # via -r requirements/quality.txt
+pycparser==2.21
+    # via
+    #   -r requirements/quality.txt
+    #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pygments==2.15.0
+pygments==2.15.1
     # via
     #   -r requirements/quality.txt
     #   diff-cover
@@ -241,7 +258,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.3.0
+pytest==7.3.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -295,6 +312,10 @@ ruamel-yaml-clib==0.2.7
     # via
     #   -r requirements/quality.txt
     #   ruamel-yaml
+secretstorage==3.3.3
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
 six==1.16.0
     # via
     #   -r requirements/ci.txt
@@ -306,7 +327,7 @@ snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/quality.txt
     #   django
@@ -358,7 +379,7 @@ urllib3==1.26.15
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.21.0
+virtualenv==20.22.0
     # via
     #   -r requirements/ci.txt
     #   tox
