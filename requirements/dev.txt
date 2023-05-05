@@ -60,7 +60,7 @@ coreschema==0.0.4
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.3
+coverage[toml]==7.2.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -78,7 +78,7 @@ distlib==0.3.6
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.18
+django==3.2.19
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -201,7 +201,7 @@ pkginfo==1.9.6
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==3.4.0
+platformdirs==3.5.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -292,7 +292,7 @@ requests==2.29.0
     #   coreapi
     #   requests-toolbelt
     #   twine
-requests-toolbelt==0.10.1
+requests-toolbelt==1.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -300,11 +300,11 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.3.4
+rich==13.3.5
     # via
     #   -r requirements/quality.txt
     #   twine
-ruamel-yaml==0.17.21
+ruamel-yaml==0.17.22
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -379,7 +379,7 @@ urllib3==1.26.15
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.22.0
+virtualenv==20.23.0
     # via
     #   -r requirements/ci.txt
     #   tox
