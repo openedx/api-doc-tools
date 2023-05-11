@@ -14,7 +14,7 @@ astroid==2.15.4
     #   pylint-celery
 bleach==6.0.0
     # via readme-renderer
-certifi==2022.12.7
+certifi==2023.5.7
     # via
     #   -r requirements/test.txt
     #   requests
@@ -60,7 +60,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-docutils==0.19
+docutils==0.20
     # via readme-renderer
 drf-yasg==1.21.5
     # via -r requirements/test.txt
@@ -148,7 +148,7 @@ pygments==2.15.1
     # via
     #   readme-renderer
     #   rich
-pylint==2.17.3
+pylint==2.17.4
     # via
     #   edx-lint
     #   pylint-celery
@@ -183,7 +183,7 @@ pyyaml==6.0
     # via code-annotations
 readme-renderer==37.3
     # via twine
-requests==2.29.0
+requests==2.30.0
     # via
     #   -r requirements/test.txt
     #   coreapi
@@ -195,7 +195,7 @@ rfc3986==2.0.0
     # via twine
 rich==13.3.5
     # via twine
-ruamel-yaml==0.17.22
+ruamel-yaml==0.17.26
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -239,7 +239,7 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.15
+urllib3==2.0.2
     # via
     #   -r requirements/test.txt
     #   requests

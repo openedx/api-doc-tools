@@ -21,7 +21,7 @@ build==0.10.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-certifi==2022.12.7
+certifi==2023.5.7
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -89,7 +89,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-docutils==0.19
+docutils==0.20
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
@@ -234,7 +234,7 @@ pygments==2.15.1
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.17.3
+pylint==2.17.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -286,7 +286,7 @@ readme-renderer==37.3
     # via
     #   -r requirements/quality.txt
     #   twine
-requests==2.29.0
+requests==2.30.0
     # via
     #   -r requirements/quality.txt
     #   coreapi
@@ -304,7 +304,7 @@ rich==13.3.5
     # via
     #   -r requirements/quality.txt
     #   twine
-ruamel-yaml==0.17.22
+ruamel-yaml==0.17.26
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -374,7 +374,7 @@ uritemplate==4.1.1
     #   -r requirements/quality.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.15
+urllib3==2.0.2
     # via
     #   -r requirements/quality.txt
     #   requests
