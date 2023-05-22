@@ -41,7 +41,7 @@ def make_docs_urls(api_info, api_url_patterns=None):
 def make_api_info(
         title="Open edX APIs",
         version="v1",
-        email="oscm@edx.org",
+        email="oscm@openedx.org",
         description="APIs for access to Open edX information",
 ):
     """
