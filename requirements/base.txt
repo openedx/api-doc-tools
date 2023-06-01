@@ -4,9 +4,9 @@
 #
 #    make upgrade
 #
-asgiref==3.6.0
+asgiref==3.7.2
     # via django
-certifi==2022.12.7
+certifi==2023.5.7
     # via requests
 charset-normalizer==3.1.0
     # via requests
@@ -45,17 +45,19 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.29.0
+requests==2.31.0
     # via coreapi
-ruamel-yaml==0.17.22
+ruamel-yaml==0.17.31
     # via drf-yasg
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 sqlparse==0.4.4
     # via django
+typing-extensions==4.6.2
+    # via asgiref
 uritemplate==4.1.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.15
+urllib3==2.0.2
     # via requests
