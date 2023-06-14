@@ -110,8 +110,8 @@ setup(
     description="Tools for writing and generating API documentation for edX REST APIs",
     long_description=README + '\n\n' + CHANGELOG,
     long_description_content_type="text/x-rst",
-    author='edX',
-    author_email='oscm@edx.org',
+    author='Open edX Project',
+    author_email='oscm@openedx.org',
     url='https://github.com/openedx/api-doc-tools',
     packages=[
         'edx_api_doc_tools',
