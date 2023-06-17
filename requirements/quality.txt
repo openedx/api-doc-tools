@@ -15,11 +15,15 @@ astroid==2.15.5
 bleach==6.0.0
     # via readme-renderer
 certifi==2023.5.7
-    # via requests
+    # via
+    #   -r requirements/test.txt
+    #   requests
 cffi==1.15.1
     # via cryptography
 charset-normalizer==3.1.0
-    # via requests
+    # via
+    #   -r requirements/test.txt
+    #   requests
 click==8.1.3
     # via
     #   click-log
@@ -29,6 +33,12 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.3.0
     # via edx-lint
+coreapi==2.3.3
+    # via -r requirements/test.txt
+coreschema==0.0.4
+    # via
+    #   -r requirements/test.txt
+    #   coreapi
 coverage[toml]==7.2.7
     # via
     #   -r requirements/test.txt
@@ -58,7 +68,9 @@ exceptiongroup==1.1.1
     #   -r requirements/test.txt
     #   pytest
 idna==3.4
-    # via requests
+    # via
+    #   -r requirements/test.txt
+    #   requests
 importlib-metadata==6.6.0
     # via
     #   keyring
@@ -77,6 +89,10 @@ isort==5.12.0
     # via
     #   -r requirements/quality.in
     #   pylint
+itypes==1.2.0
+    # via
+    #   -r requirements/test.txt
+    #   coreapi
 jaraco-classes==3.2.3
     # via keyring
 jeepney==0.8.0
@@ -84,7 +100,10 @@ jeepney==0.8.0
     #   keyring
     #   secretstorage
 jinja2==3.1.2
-    # via code-annotations
+    # via
+    #   -r requirements/test.txt
+    #   code-annotations
+    #   coreschema
 keyring==23.13.1
     # via twine
 lazy-object-proxy==1.9.0
@@ -92,7 +111,9 @@ lazy-object-proxy==1.9.0
 markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.3
-    # via jinja2
+    # via
+    #   -r requirements/test.txt
+    #   jinja2
 mccabe==0.7.0
     # via pylint
 mdurl==0.1.2
@@ -164,6 +185,8 @@ readme-renderer==37.3
     # via twine
 requests==2.31.0
     # via
+    #   -r requirements/test.txt
+    #   coreapi
     #   requests-toolbelt
     #   twine
 requests-toolbelt==1.0.0
@@ -208,9 +231,11 @@ typing-extensions==4.6.3
 uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
+    #   coreapi
     #   drf-yasg
 urllib3==2.0.3
     # via
+    #   -r requirements/test.txt
     #   requests
     #   twine
 webencodings==0.5.1

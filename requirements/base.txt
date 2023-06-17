@@ -6,6 +6,16 @@
 #
 asgiref==3.7.2
     # via django
+certifi==2023.5.7
+    # via requests
+charset-normalizer==3.1.0
+    # via requests
+coreapi==2.3.3
+    # via -r requirements/base.in
+coreschema==0.0.4
+    # via
+    #   -r requirements/base.in
+    #   coreapi
 django==3.2.19
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -18,8 +28,16 @@ djangorestframework==3.14.0
     #   drf-yasg
 drf-yasg==1.21.6
     # via -r requirements/base.in
+idna==3.4
+    # via requests
 inflection==0.5.1
     # via drf-yasg
+itypes==1.2.0
+    # via coreapi
+jinja2==3.1.2
+    # via coreschema
+markupsafe==2.1.3
+    # via jinja2
 packaging==23.1
     # via drf-yasg
 pytz==2023.3
@@ -29,9 +47,15 @@ pytz==2023.3
     #   drf-yasg
 pyyaml==6.0
     # via drf-yasg
+requests==2.31.0
+    # via coreapi
 sqlparse==0.4.4
     # via django
 typing-extensions==4.6.3
     # via asgiref
 uritemplate==4.1.1
-    # via drf-yasg
+    # via
+    #   coreapi
+    #   drf-yasg
+urllib3==2.0.3
+    # via requests
