@@ -64,7 +64,7 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-drf-yasg==1.21.5
+drf-yasg[coreapi]==1.21.6
     # via -r requirements/test.txt
 exceptiongroup==1.1.1
     # via
@@ -76,7 +76,7 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.6.0
+importlib-metadata==6.7.0
     # via
     #   keyring
     #   sphinx
@@ -129,7 +129,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-pluggy==1.0.0
+pluggy==1.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -161,6 +161,10 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
+pyyaml==6.0
+    # via
+    #   -r requirements/test.txt
+    #   drf-yasg
 readme-renderer==37.3
     # via
     #   -r requirements/doc.in
@@ -180,14 +184,6 @@ rfc3986==2.0.0
     # via twine
 rich==13.4.2
     # via twine
-ruamel-yaml==0.17.31
-    # via
-    #   -r requirements/test.txt
-    #   drf-yasg
-ruamel-yaml-clib==0.2.7
-    # via
-    #   -r requirements/test.txt
-    #   ruamel-yaml
 secretstorage==3.3.3
     # via keyring
 six==1.16.0

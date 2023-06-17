@@ -14,8 +14,12 @@ Change Log
 Unreleased
 ----------
 
+1.6.1 --- 2023-06-19
+--------------------
+
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
+* drf-yasg has some breaking changes. Fixed those.
 
 1.6.0 --- 2022-02-11
 --------------------
