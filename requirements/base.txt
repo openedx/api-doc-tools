@@ -11,11 +11,11 @@ certifi==2023.5.7
 charset-normalizer==3.1.0
     # via requests
 coreapi==2.3.3
-    # via -r requirements/base.in
+    # via drf-yasg
 coreschema==0.0.4
     # via
-    #   -r requirements/base.in
     #   coreapi
+    #   drf-yasg
 django==3.2.19
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -26,7 +26,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg[coreapi]==1.21.6
     # via -r requirements/base.in
 idna==3.4
     # via requests
