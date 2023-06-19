@@ -4,4 +4,5 @@
 Django
 djangorestframework>=3.2.0
 drf-yasg
-drf-yasg[coreapi]                             # drf-yasg in 1.21.6 dropped this. https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
+coreapi                 # drf-yasg in 1.21.6 dropped this. https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
+coreschema              # drf-yasg in 1.21.6 dropped this. https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
