@@ -17,11 +17,14 @@ charset-normalizer==3.1.0
     #   -r requirements/base.txt
     #   requests
 coreapi==2.3.3
-    # via -r requirements/base.txt
+    # via
+    #   -r requirements/base.txt
+    #   drf-yasg
 coreschema==0.0.4
     # via
     #   -r requirements/base.txt
     #   coreapi
+    #   drf-yasg
 coverage[toml]==7.2.7
     # via pytest-cov
     # via
@@ -32,7 +35,7 @@ coverage[toml]==7.2.7
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg[coreapi]==1.21.6
     # via -r requirements/base.txt
 exceptiongroup==1.1.1
     # via pytest
