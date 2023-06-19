@@ -1,8 +1,8 @@
 # Core requirements for using this application
 -c constraints.txt
 
-coreapi                             # drf-yasg in 1.21.6 dropped this. https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
-coreschema                          # drf-yasg in 1.21.6 dropped this.  https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
+drf-yasg[coreapi]                             # drf-yasg in 1.21.6 dropped this. https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
+drf-yasg[coreschema]                          # drf-yasg in 1.21.6 dropped this.  https://drf-yasg.readthedocs.io/en/stable/changelog.html#id1
 Django
 djangorestframework>=3.2.0
 drf-yasg
