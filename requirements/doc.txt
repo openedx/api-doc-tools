@@ -21,24 +21,11 @@ beautifulsoup4==4.12.2
 bleach==6.0.0
     # via readme-renderer
 certifi==2023.5.7
-    # via
-    #   -r requirements/test.txt
-    #   requests
+    # via requests
 cffi==1.15.1
     # via cryptography
 charset-normalizer==3.1.0
-    # via
-    #   -r requirements/test.txt
-    #   requests
-coreapi==2.3.3
-    # via
-    #   -r requirements/test.txt
-    #   drf-yasg
-coreschema==0.0.4
-    # via
-    #   -r requirements/test.txt
-    #   coreapi
-    #   drf-yasg
+    # via requests
 coverage[toml]==7.2.7
     # via
     #   -r requirements/test.txt
@@ -64,19 +51,17 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-drf-yasg==1.21.5
+drf-yasg==1.21.6
     # via -r requirements/test.txt
 exceptiongroup==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
 idna==3.4
-    # via
-    #   -r requirements/test.txt
-    #   requests
+    # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.6.0
+importlib-metadata==6.7.0
     # via
     #   keyring
     #   sphinx
@@ -91,10 +76,6 @@ iniconfig==2.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-itypes==1.2.0
-    # via
-    #   -r requirements/test.txt
-    #   coreapi
 jaraco-classes==3.2.3
     # via keyring
 jeepney==0.8.0
@@ -102,18 +83,13 @@ jeepney==0.8.0
     #   keyring
     #   secretstorage
 jinja2==3.1.2
-    # via
-    #   -r requirements/test.txt
-    #   coreschema
-    #   sphinx
-keyring==23.13.1
+    # via sphinx
+keyring==24.0.1
     # via twine
 markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.3
-    # via
-    #   -r requirements/test.txt
-    #   jinja2
+    # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
 more-itertools==9.1.0
@@ -129,7 +105,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-pluggy==1.0.0
+pluggy==1.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -161,14 +137,16 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-readme-renderer==37.3
+pyyaml==6.0
+    # via
+    #   -r requirements/test.txt
+    #   drf-yasg
+readme-renderer==40.0
     # via
     #   -r requirements/doc.in
     #   twine
 requests==2.31.0
     # via
-    #   -r requirements/test.txt
-    #   coreapi
     #   requests-toolbelt
     #   sphinx
     #   twine
@@ -180,14 +158,6 @@ rfc3986==2.0.0
     # via twine
 rich==13.4.2
     # via twine
-ruamel-yaml==0.17.31
-    # via
-    #   -r requirements/test.txt
-    #   drf-yasg
-ruamel-yaml-clib==0.2.7
-    # via
-    #   -r requirements/test.txt
-    #   ruamel-yaml
 secretstorage==3.3.3
     # via keyring
 six==1.16.0
@@ -196,9 +166,8 @@ snowballstemmer==2.2.0
     # via sphinx
 soupsieve==2.4.1
     # via beautifulsoup4
-sphinx==5.3.0
+sphinx==6.2.1
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
@@ -239,11 +208,9 @@ typing-extensions==4.6.3
 uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
-    #   coreapi
     #   drf-yasg
 urllib3==2.0.3
     # via
-    #   -r requirements/test.txt
     #   requests
     #   twine
 webencodings==0.5.1
