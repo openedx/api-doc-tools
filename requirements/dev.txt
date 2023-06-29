@@ -138,7 +138,7 @@ jinja2==3.1.2
     #   -r requirements/quality.txt
     #   code-annotations
     #   diff-cover
-keyring==24.0.1
+keyring==24.2.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -187,7 +187,7 @@ pkginfo==1.9.6
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==3.7.0
+platformdirs==3.8.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -244,7 +244,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -341,7 +341,7 @@ tox-battery==0.6.1
     # via -r requirements/dev.in
 twine==4.0.2
     # via -r requirements/quality.txt
-typing-extensions==4.6.3
+typing-extensions==4.7.0
     # via
     #   -r requirements/quality.txt
     #   asgiref

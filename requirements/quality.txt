@@ -85,7 +85,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.2
     # via code-annotations
-keyring==24.0.1
+keyring==24.2.0
     # via twine
 lazy-object-proxy==1.9.0
     # via astroid
@@ -108,7 +108,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==3.7.0
+platformdirs==3.8.0
     # via pylint
 pluggy==1.2.0
     # via
@@ -138,7 +138,7 @@ pylint-plugin-utils==0.8.2
     # via
     #   pylint-celery
     #   pylint-django
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -198,7 +198,7 @@ tomlkit==0.11.8
     # via pylint
 twine==4.0.2
     # via -r requirements/quality.in
-typing-extensions==4.6.3
+typing-extensions==4.7.0
     # via
     #   -r requirements/test.txt
     #   asgiref
