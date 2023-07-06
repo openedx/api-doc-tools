@@ -32,7 +32,7 @@ coverage[toml]==7.2.7
     #   pytest-cov
 cryptography==41.0.1
     # via secretstorage
-django==3.2.19
+django==3.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -53,7 +53,7 @@ docutils==0.19
     #   sphinx
 drf-yasg==1.21.6
     # via -r requirements/test.txt
-exceptiongroup==1.1.1
+exceptiongroup==1.1.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -199,7 +199,7 @@ tomli==2.0.1
     #   pytest
 twine==4.0.2
     # via -r requirements/doc.in
-typing-extensions==4.7.0
+typing-extensions==4.7.1
     # via
     #   -r requirements/test.txt
     #   asgiref

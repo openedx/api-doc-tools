@@ -37,7 +37,7 @@ cryptography==41.0.1
     # via secretstorage
 dill==0.3.6
     # via pylint
-django==3.2.19
+django==3.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -53,7 +53,7 @@ drf-yasg==1.21.6
     # via -r requirements/test.txt
 edx-lint==5.3.4
     # via -r requirements/quality.in
-exceptiongroup==1.1.1
+exceptiongroup==1.1.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -198,7 +198,7 @@ tomlkit==0.11.8
     # via pylint
 twine==4.0.2
     # via -r requirements/quality.in
-typing-extensions==4.7.0
+typing-extensions==4.7.1
     # via
     #   -r requirements/test.txt
     #   asgiref
