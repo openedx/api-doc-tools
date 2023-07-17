@@ -19,8 +19,7 @@ jobs:
           [
             py38-django32-drf312,
             py38-django32-drflatest,
-            py38-django40-drf312,
-            py38-django40-drflatest,
+            py38-django42-drflatest,
             quality,
           ]
 
@@ -45,7 +44,7 @@ jobs:
         run: tox
 
       - name: Run Coverage
-        if: matrix.python-version == '3.8' && matrix.toxenv=='py38-django32-drflatest'
+        if: matrix.python-version == '3.8' && matrix.toxenv=='py38-django42-drflatest'
         uses: codecov/codecov-action@v3
         with:
           flags: unittests
