@@ -137,7 +137,7 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==6.0
+pyyaml==6.0.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -209,13 +209,13 @@ uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-urllib3==2.0.3
+urllib3==2.0.4
     # via
     #   requests
     #   twine
 webencodings==0.5.1
     # via bleach
-zipp==3.16.1
+zipp==3.16.2
     # via
     #   importlib-metadata
     #   importlib-resources

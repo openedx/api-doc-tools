@@ -35,7 +35,7 @@ charset-normalizer==3.2.0
     # via
     #   -r requirements/quality.txt
     #   requests
-click==8.1.4
+click==8.1.6
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -59,13 +59,13 @@ cryptography==41.0.2
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==7.6.1
+diff-cover==7.7.0
     # via -r requirements/dev.in
 dill==0.3.6
     # via
     #   -r requirements/quality.txt
     #   pylint
-distlib==0.3.6
+distlib==0.3.7
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -181,13 +181,13 @@ pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==6.14.0
+pip-tools==7.1.0
     # via -r requirements/pip-tools.txt
 pkginfo==1.9.6
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==3.8.1
+platformdirs==3.9.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -263,7 +263,7 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==6.0
+pyyaml==6.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -353,12 +353,12 @@ uritemplate==4.1.1
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-urllib3==2.0.3
+urllib3==2.0.4
     # via
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.23.1
+virtualenv==20.24.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -374,7 +374,7 @@ wrapt==1.15.0
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==3.16.1
+zipp==3.16.2
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata

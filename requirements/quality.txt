@@ -20,7 +20,7 @@ cffi==1.15.1
     # via cryptography
 charset-normalizer==3.2.0
     # via requests
-click==8.1.4
+click==8.1.6
     # via
     #   click-log
     #   code-annotations
@@ -108,7 +108,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==3.8.1
+platformdirs==3.9.1
     # via pylint
 pluggy==1.2.0
     # via
@@ -155,7 +155,7 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==6.0
+pyyaml==6.0.1
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -209,7 +209,7 @@ uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-urllib3==2.0.3
+urllib3==2.0.4
     # via
     #   requests
     #   twine
@@ -217,7 +217,7 @@ webencodings==0.5.1
     # via bleach
 wrapt==1.15.0
     # via astroid
-zipp==3.16.1
+zipp==3.16.2
     # via
     #   importlib-metadata
     #   importlib-resources
