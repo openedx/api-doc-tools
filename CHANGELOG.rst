@@ -14,6 +14,9 @@ Change Log
 Unreleased
 ----------
 
+1.7.0 --- 2023-07-23
+--------------------
+
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 * Add support for Django 4.2
