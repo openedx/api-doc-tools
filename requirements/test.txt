@@ -18,7 +18,7 @@ coverage[toml]==7.2.7
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg==1.21.7
     # via -r requirements/base.txt
 exceptiongroup==1.1.2
     # via pytest
@@ -49,7 +49,7 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==6.0
+pyyaml==6.0.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg

@@ -16,7 +16,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg==1.21.7
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
@@ -27,7 +27,7 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==6.0
+pyyaml==6.0.1
     # via drf-yasg
 sqlparse==0.4.4
     # via django
