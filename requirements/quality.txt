@@ -33,7 +33,7 @@ coverage[toml]==7.2.7
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==41.0.2
+cryptography==41.0.3
     # via secretstorage
 dill==0.3.7
     # via pylint
@@ -108,13 +108,13 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==3.9.1
+platformdirs==3.10.0
     # via pylint
 pluggy==1.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pycodestyle==2.10.0
+pycodestyle==2.11.0
     # via -r requirements/quality.in
 pycparser==2.21
     # via cffi
@@ -170,7 +170,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.4.2
+rich==13.5.2
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -194,7 +194,7 @@ tomli==2.0.1
     #   coverage
     #   pylint
     #   pytest
-tomlkit==0.11.8
+tomlkit==0.12.1
     # via pylint
 twine==4.0.2
     # via -r requirements/quality.in
