@@ -6,7 +6,7 @@
 #
 asgiref==3.7.2
     # via django
-django==3.2.20
+django==3.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -22,7 +22,7 @@ inflection==0.5.1
     # via drf-yasg
 packaging==23.1
     # via drf-yasg
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   django
     #   djangorestframework

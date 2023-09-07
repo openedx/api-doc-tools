@@ -26,13 +26,13 @@ cffi==1.15.1
     # via cryptography
 charset-normalizer==3.2.0
     # via requests
-coverage[toml]==7.3.0
+coverage[toml]==7.3.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
 cryptography==41.0.3
     # via secretstorage
-django==3.2.20
+django==3.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -121,7 +121,7 @@ pygments==2.16.1
     #   readme-renderer
     #   rich
     #   sphinx
-pytest==7.4.0
+pytest==7.4.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -130,7 +130,7 @@ pytest-cov==4.1.0
     # via -r requirements/test.txt
 pytest-django==4.5.2
     # via -r requirements/test.txt
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements/test.txt
     #   babel
@@ -164,7 +164,7 @@ six==1.16.0
     # via bleach
 snowballstemmer==2.2.0
     # via sphinx
-soupsieve==2.4.1
+soupsieve==2.5
     # via beautifulsoup4
 sphinx==6.2.1
     # via
