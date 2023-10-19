@@ -27,6 +27,7 @@ charset-normalizer==3.3.0
 coverage[toml]==7.3.2
     # via
     #   -r requirements/test.txt
+    #   coverage
     #   pytest-cov
 cryptography==41.0.4
     # via secretstorage
@@ -207,7 +208,7 @@ uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-urllib3==2.0.6
+urllib3==2.0.7
     # via
     #   requests
     #   twine
