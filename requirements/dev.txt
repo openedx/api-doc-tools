@@ -27,7 +27,7 @@ cffi==1.16.0
     #   cryptography
 chardet==5.2.0
     # via diff-cover
-charset-normalizer==3.3.1
+charset-normalizer==3.3.2
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -52,11 +52,11 @@ coverage[toml]==7.3.2
     #   -r requirements/quality.txt
     #   coverage
     #   pytest-cov
-cryptography==41.0.4
+cryptography==41.0.5
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==8.0.0
+diff-cover==8.0.1
     # via -r requirements/dev.in
 dill==0.3.7
     # via
@@ -66,7 +66,7 @@ distlib==0.3.7
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.22
+django==3.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -91,7 +91,7 @@ exceptiongroup==1.1.3
     # via
     #   -r requirements/quality.txt
     #   pytest
-filelock==3.12.4
+filelock==3.13.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -107,7 +107,7 @@ importlib-metadata==6.8.0
     #   build
     #   keyring
     #   twine
-importlib-resources==6.1.0
+importlib-resources==6.1.1
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -137,7 +137,7 @@ jinja2==3.1.2
     #   -r requirements/quality.txt
     #   code-annotations
     #   diff-cover
-keyring==24.2.0
+keyring==24.3.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -178,7 +178,7 @@ packaging==23.2
     #   tox
 path==16.7.1
     # via edx-i18n-tools
-pbr==5.11.1
+pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -190,6 +190,7 @@ pkginfo==1.9.6
     #   twine
 platformdirs==3.11.0
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
@@ -245,14 +246,14 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.2
+pytest==7.4.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
     #   pytest-django
 pytest-cov==4.1.0
     # via -r requirements/quality.txt
-pytest-django==4.5.2
+pytest-django==4.7.0
     # via -r requirements/quality.txt
 python-slugify==8.0.1
     # via
@@ -287,7 +288,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.6.0
+rich==13.7.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -329,13 +330,12 @@ tomli==2.0.1
     #   pyproject-hooks
     #   pytest
     #   tox
-tomlkit==0.12.1
+tomlkit==0.12.3
     # via
     #   -r requirements/quality.txt
     #   pylint
 tox==3.28.0
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -c requirements/constraints.txt
     #   -r requirements/ci.txt
     #   tox-battery
@@ -354,7 +354,7 @@ uritemplate==4.1.1
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-urllib3==2.0.7
+urllib3==2.1.0
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -363,7 +363,7 @@ virtualenv==20.24.6
     # via
     #   -r requirements/ci.txt
     #   tox
-wheel==0.41.2
+wheel==0.41.3
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
