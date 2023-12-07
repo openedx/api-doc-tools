@@ -17,7 +17,7 @@ build==1.0.3
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-certifi==2023.7.22
+certifi==2023.11.17
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -52,7 +52,7 @@ coverage[toml]==7.3.2
     #   -r requirements/quality.txt
     #   coverage
     #   pytest-cov
-cryptography==41.0.5
+cryptography==41.0.7
     # via
     #   -r requirements/quality.txt
     #   secretstorage
@@ -87,7 +87,7 @@ edx-i18n-tools==1.3.0
     # via -r requirements/dev.in
 edx-lint==5.3.6
     # via -r requirements/quality.txt
-exceptiongroup==1.1.3
+exceptiongroup==1.2.0
     # via
     #   -r requirements/quality.txt
     #   pytest
@@ -96,11 +96,11 @@ filelock==3.13.1
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-idna==3.4
+idna==3.6
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==6.8.0
+importlib-metadata==7.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -176,7 +176,7 @@ packaging==23.2
     #   drf-yasg
     #   pytest
     #   tox
-path==16.7.1
+path==16.9.0
     # via edx-i18n-tools
 pbr==6.0.0
     # via
@@ -188,9 +188,8 @@ pkginfo==1.9.6
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==3.11.0
+platformdirs==4.1.0
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
@@ -216,7 +215,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pygments==2.16.1
+pygments==2.17.2
     # via
     #   -r requirements/quality.txt
     #   diff-cover
@@ -359,11 +358,11 @@ urllib3==2.1.0
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.24.6
+virtualenv==20.25.0
     # via
     #   -r requirements/ci.txt
     #   tox
-wheel==0.41.3
+wheel==0.42.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
