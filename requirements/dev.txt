@@ -8,7 +8,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==3.0.1
+astroid==3.0.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -25,6 +25,10 @@ certifi==2023.11.17
     # via
     #   -r requirements/quality.txt
     #   requests
+cffi==1.16.0
+    # via
+    #   -r requirements/quality.txt
+    #   cryptography
 chardet==5.2.0
     # via
     #   -r requirements/ci.txt
@@ -59,13 +63,17 @@ coverage[toml]==7.3.2
     #   -r requirements/quality.txt
     #   coverage
     #   pytest-cov
+cryptography==41.0.7
+    # via
+    #   -r requirements/quality.txt
+    #   secretstorage
 diff-cover==8.0.1
     # via -r requirements/dev.in
 dill==0.3.7
     # via
     #   -r requirements/quality.txt
     #   pylint
-distlib==0.3.7
+distlib==0.3.8
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -122,7 +130,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.12.0
+isort==5.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -130,6 +138,11 @@ jaraco-classes==3.3.0
     # via
     #   -r requirements/quality.txt
     #   keyring
+jeepney==0.8.0
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
+    #   secretstorage
 jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
@@ -205,6 +218,10 @@ polib==1.2.0
     # via edx-i18n-tools
 pycodestyle==2.11.1
     # via -r requirements/quality.txt
+pycparser==2.21
+    # via
+    #   -r requirements/quality.txt
+    #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.17.2
@@ -213,7 +230,7 @@ pygments==2.17.2
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==3.0.2
+pylint==3.0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -287,6 +304,10 @@ rich==13.7.0
     # via
     #   -r requirements/quality.txt
     #   twine
+secretstorage==3.3.3
+    # via
+    #   -r requirements/quality.txt
+    #   keyring
 six==1.16.0
     # via
     #   -r requirements/quality.txt
@@ -328,7 +349,7 @@ tox==4.11.4
     # via -r requirements/ci.txt
 twine==4.0.2
     # via -r requirements/quality.txt
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via
     #   -r requirements/quality.txt
     #   asgiref
