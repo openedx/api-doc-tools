@@ -7,6 +7,9 @@ on:
     branches:
       - "**"
 
+permissions:
+  contents: read
+
 jobs:
   run_tests:
     name: Tests
@@ -24,7 +27,14 @@ jobs:
           ]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v3
+        with:
+          fail-on-severity: moderate
+
       - name: setup python
         uses: actions/setup-python@v5
         with:
