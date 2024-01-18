@@ -58,7 +58,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.3.2
+coverage[toml]==7.4.0
     # via
     #   -r requirements/quality.txt
     #   coverage
@@ -67,7 +67,7 @@ cryptography==41.0.7
     # via
     #   -r requirements/quality.txt
     #   secretstorage
-diff-cover==8.0.1
+diff-cover==8.0.2
     # via -r requirements/dev.in
 dill==0.3.7
     # via
@@ -111,7 +111,7 @@ idna==3.6
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==7.0.0
+importlib-metadata==7.0.1
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -143,7 +143,7 @@ jeepney==0.8.0
     #   -r requirements/quality.txt
     #   keyring
     #   secretstorage
-jinja2==3.1.2
+jinja2==3.1.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -152,7 +152,7 @@ keyring==24.3.0
     # via
     #   -r requirements/quality.txt
     #   twine
-lxml==4.9.3
+lxml==5.1.0
     # via edx-i18n-tools
 markdown-it-py==3.0.0
     # via
@@ -170,7 +170,7 @@ mdurl==0.1.2
     # via
     #   -r requirements/quality.txt
     #   markdown-it-py
-more-itertools==10.1.0
+more-itertools==10.2.0
     # via
     #   -r requirements/quality.txt
     #   jaraco-classes
@@ -258,7 +258,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.3
+pytest==7.4.4
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -345,7 +345,7 @@ tomlkit==0.12.3
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.11.4
+tox==4.12.1
     # via -r requirements/ci.txt
 twine==4.0.2
     # via -r requirements/quality.txt
