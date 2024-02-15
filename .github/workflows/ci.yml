@@ -45,7 +45,7 @@ jobs:
 
       - name: Run Coverage
         if: matrix.python-version == '3.8' && matrix.toxenv=='py38-django42-drflatest'
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           flags: unittests
           fail_ci_if_error: true
