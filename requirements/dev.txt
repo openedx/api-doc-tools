@@ -58,12 +58,11 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.4.1
+coverage[toml]==7.4.2
     # via
     #   -r requirements/quality.txt
-    #   coverage
     #   pytest-cov
-cryptography==42.0.2
+cryptography==42.0.4
     # via
     #   -r requirements/quality.txt
     #   secretstorage
@@ -194,7 +193,7 @@ pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.3.0
+pip-tools==7.4.0
     # via -r requirements/pip-tools.txt
 pkginfo==1.9.6
     # via
@@ -258,7 +257,8 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==8.0.0
+    #   pip-tools
+pytest==8.0.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -345,7 +345,7 @@ tomlkit==0.12.3
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.12.1
+tox==4.13.0
     # via -r requirements/ci.txt
 twine==5.0.0
     # via -r requirements/quality.txt
@@ -360,12 +360,12 @@ uritemplate==4.1.1
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-urllib3==2.2.0
+urllib3==2.2.1
     # via
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.25.0
+virtualenv==20.25.1
     # via
     #   -r requirements/ci.txt
     #   tox
