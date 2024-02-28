@@ -8,10 +8,14 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-coverage[toml]==7.4.2
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
+    #   django
+coverage[toml]==7.4.3
     # via pytest-cov
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   djangorestframework
     #   drf-yasg
@@ -35,7 +39,7 @@ packaging==23.2
     #   pytest
 pluggy==1.4.0
     # via pytest
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -46,7 +50,6 @@ pytest-django==4.8.0
 pytz==2024.1
     # via
     #   -r requirements/base.txt
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
@@ -61,7 +64,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/base.txt
     #   asgiref

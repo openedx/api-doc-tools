@@ -16,23 +16,23 @@ babel==2.14.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/test.txt
+    #   django
 beautifulsoup4==4.12.3
     # via pydata-sphinx-theme
 certifi==2024.2.2
     # via requests
-cffi==1.16.0
-    # via cryptography
 charset-normalizer==3.3.2
     # via requests
-coverage[toml]==7.4.2
+coverage[toml]==7.4.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==42.0.4
-    # via secretstorage
-django==3.2.24
+django==4.2.10
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
@@ -64,7 +64,7 @@ importlib-metadata==7.0.1
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==6.1.1
+importlib-resources==6.1.2
     # via keyring
 inflection==0.5.1
     # via
@@ -76,13 +76,9 @@ iniconfig==2.0.0
     #   pytest
 jaraco-classes==3.3.1
     # via keyring
-jeepney==0.8.0
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.1.3
     # via sphinx
-keyring==24.3.0
+keyring==24.3.1
     # via twine
 markdown-it-py==3.0.0
     # via rich
@@ -109,8 +105,6 @@ pluggy==1.4.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pycparser==2.21
-    # via cffi
 pydata-sphinx-theme==0.14.4
     # via sphinx-book-theme
 pygments==2.17.2
@@ -121,7 +115,7 @@ pygments==2.17.2
     #   readme-renderer
     #   rich
     #   sphinx
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -134,14 +128,13 @@ pytz==2024.1
     # via
     #   -r requirements/test.txt
     #   babel
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-readme-renderer==42.0
+readme-renderer==43.0
     # via
     #   -r requirements/doc.in
     #   twine
@@ -158,8 +151,6 @@ rfc3986==2.0.0
     # via twine
 rich==13.7.0
     # via twine
-secretstorage==3.3.3
-    # via keyring
 snowballstemmer==2.2.0
     # via sphinx
 soupsieve==2.5
@@ -187,7 +178,7 @@ sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.1.0
+stevedore==5.2.0
     # via doc8
 tomli==2.0.1
     # via
@@ -197,7 +188,7 @@ tomli==2.0.1
     #   pytest
 twine==5.0.0
     # via -r requirements/doc.in
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/test.txt
     #   asgiref
