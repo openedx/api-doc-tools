@@ -13,7 +13,11 @@ astroid==3.1.0
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-build==1.0.3
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/quality.txt
+    #   django
+build==1.1.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
@@ -76,7 +80,7 @@ distlib==0.3.8
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.24
+django==4.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -193,9 +197,9 @@ pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.4.0
+pip-tools==7.4.1
     # via -r requirements/pip-tools.txt
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -274,7 +278,6 @@ python-slugify==8.0.4
 pytz==2024.1
     # via
     #   -r requirements/quality.txt
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
@@ -345,7 +348,7 @@ tomlkit==0.12.4
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.13.0
+tox==4.14.1
     # via -r requirements/ci.txt
 twine==5.0.0
     # via -r requirements/quality.txt
