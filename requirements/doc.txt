@@ -16,6 +16,10 @@ babel==2.14.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/test.txt
+    #   django
 beautifulsoup4==4.12.3
     # via pydata-sphinx-theme
 certifi==2024.2.2
@@ -30,7 +34,7 @@ coverage[toml]==7.4.3
     #   pytest-cov
 cryptography==42.0.5
     # via secretstorage
-django==3.2.24
+django==4.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -59,12 +63,13 @@ idna==3.6
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==7.0.1
+importlib-metadata==6.11.0
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==6.1.2
+importlib-resources==6.3.0
     # via keyring
 inflection==0.5.1
     # via
@@ -94,7 +99,7 @@ more-itertools==10.2.0
     # via jaraco-classes
 nh3==0.2.15
     # via readme-renderer
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -103,7 +108,7 @@ packaging==23.2
     #   sphinx
 pbr==6.0.0
     # via stevedore
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via twine
 pluggy==1.4.0
     # via
@@ -121,7 +126,7 @@ pygments==2.17.2
     #   readme-renderer
     #   rich
     #   sphinx
-pytest==8.0.2
+pytest==8.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -134,7 +139,6 @@ pytz==2024.1
     # via
     #   -r requirements/test.txt
     #   babel
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
@@ -211,7 +215,7 @@ urllib3==2.2.1
     # via
     #   requests
     #   twine
-zipp==3.17.0
+zipp==3.18.0
     # via
     #   importlib-metadata
     #   importlib-resources

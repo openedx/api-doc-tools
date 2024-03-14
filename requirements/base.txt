@@ -6,7 +6,9 @@
 #
 asgiref==3.7.2
     # via django
-django==3.2.24
+backports-zoneinfo==0.2.1
+    # via django
+django==4.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -20,11 +22,10 @@ drf-yasg==1.21.7
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-packaging==23.2
+packaging==24.0
     # via drf-yasg
 pytz==2024.1
     # via
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1

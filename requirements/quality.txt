@@ -12,6 +12,10 @@ astroid==3.1.0
     # via
     #   pylint
     #   pylint-celery
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/test.txt
+    #   django
 certifi==2024.2.2
     # via requests
 cffi==1.16.0
@@ -35,7 +39,7 @@ cryptography==42.0.5
     # via secretstorage
 dill==0.3.8
     # via pylint
-django==3.2.24
+django==4.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -57,11 +61,12 @@ exceptiongroup==1.2.0
     #   pytest
 idna==3.6
     # via requests
-importlib-metadata==7.0.1
+importlib-metadata==6.11.0
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   keyring
     #   twine
-importlib-resources==6.1.2
+importlib-resources==6.3.0
     # via keyring
 inflection==0.5.1
     # via
@@ -97,14 +102,14 @@ more-itertools==10.2.0
     # via jaraco-classes
 nh3==0.2.15
     # via readme-renderer
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
     #   pytest
 pbr==6.0.0
     # via stevedore
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via twine
 platformdirs==4.2.0
     # via pylint
@@ -136,7 +141,7 @@ pylint-plugin-utils==0.8.2
     # via
     #   pylint-celery
     #   pylint-django
-pytest==8.0.2
+pytest==8.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -150,7 +155,6 @@ python-slugify==8.0.4
 pytz==2024.1
     # via
     #   -r requirements/test.txt
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
@@ -209,7 +213,7 @@ urllib3==2.2.1
     # via
     #   requests
     #   twine
-zipp==3.17.0
+zipp==3.18.0
     # via
     #   importlib-metadata
     #   importlib-resources
