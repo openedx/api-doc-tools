@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.7.2
+asgiref==3.8.0
     # via
     #   -r requirements/quality.txt
     #   django
@@ -13,7 +13,12 @@ astroid==3.1.0
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-build==1.0.3
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/quality.txt
+    #   django
+    #   djangorestframework
+build==1.1.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
@@ -50,7 +55,7 @@ click-log==0.4.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-code-annotations==1.6.0
+code-annotations==1.7.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -58,7 +63,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.4.3
+coverage[toml]==7.4.4
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -76,14 +81,14 @@ distlib==0.3.8
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.24
+django==4.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
     #   djangorestframework
     #   drf-yasg
     #   edx-i18n-tools
-djangorestframework==3.14.0
+djangorestframework==3.15.0
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -110,14 +115,15 @@ idna==3.6
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==7.0.1
+importlib-metadata==6.11.0
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   build
     #   keyring
     #   twine
-importlib-resources==6.1.2
+importlib-resources==6.3.2
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -177,7 +183,7 @@ nh3==0.2.15
     # via
     #   -r requirements/quality.txt
     #   readme-renderer
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
@@ -193,9 +199,9 @@ pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.4.0
+pip-tools==7.4.1
     # via -r requirements/pip-tools.txt
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -258,7 +264,7 @@ pyproject-hooks==1.0.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==8.0.2
+pytest==8.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -274,8 +280,6 @@ python-slugify==8.0.4
 pytz==2024.1
     # via
     #   -r requirements/quality.txt
-    #   django
-    #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
     # via
@@ -345,7 +349,7 @@ tomlkit==0.12.4
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.13.0
+tox==4.14.1
     # via -r requirements/ci.txt
 twine==5.0.0
     # via -r requirements/quality.txt
@@ -369,11 +373,11 @@ virtualenv==20.25.1
     # via
     #   -r requirements/ci.txt
     #   tox
-wheel==0.42.0
+wheel==0.43.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-zipp==3.17.0
+zipp==3.18.1
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt

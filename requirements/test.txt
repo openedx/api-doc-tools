@@ -4,11 +4,16 @@
 #
 #    make upgrade
 #
-asgiref==3.7.2
+asgiref==3.8.0
     # via
     #   -r requirements/base.txt
     #   django
-coverage[toml]==7.4.3
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/base.txt
+    #   django
+    #   djangorestframework
+coverage[toml]==7.4.4
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -28,14 +33,14 @@ inflection==0.5.1
     #   drf-yasg
 iniconfig==2.0.0
     # via pytest
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/base.txt
     #   drf-yasg
     #   pytest
 pluggy==1.4.0
     # via pytest
-pytest==8.0.2
+pytest==8.1.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -46,8 +51,6 @@ pytest-django==4.8.0
 pytz==2024.1
     # via
     #   -r requirements/base.txt
-    #   django
-    #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
     # via
