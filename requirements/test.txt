@@ -14,7 +14,7 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   -r requirements/base.txt
     #   django
     #   djangorestframework
-coverage[toml]==7.4.4
+coverage[toml]==7.5.4
     # via pytest-cov
     # via
     #   -c requirements/common_constraints.txt
@@ -26,7 +26,7 @@ coverage[toml]==7.4.4
     #   drf-yasg
 drf-yasg==1.21.7
     # via -r requirements/base.txt
-exceptiongroup==1.2.0
+exceptiongroup==1.2.1
     # via pytest
 inflection==0.5.1
     # via
@@ -34,14 +34,14 @@ inflection==0.5.1
     #   drf-yasg
 iniconfig==2.0.0
     # via pytest
-packaging==24.0
+packaging==24.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
     #   pytest
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
-pytest==8.1.1
+pytest==8.2.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -57,7 +57,7 @@ pyyaml==6.0.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via
     #   -r requirements/base.txt
     #   django
@@ -65,7 +65,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.10.0
+typing-extensions==4.12.2
     # via
     #   -r requirements/base.txt
     #   asgiref

@@ -35,4 +35,3 @@ django-simple-history==3.0.0
 # So we need to pin it globally, for now.
 # Ticket for unpinning: https://github.com/openedx/edx-lint/issues/407
 importlib-metadata<7
-
