@@ -17,7 +17,7 @@ jobs:
         python-version: ["3.8", "3.11", "3.12"]
         toxenv:
           [
-            py38-django42-drflatest,quality
+            django42-drflatest,quality
           ]
 
     steps:
@@ -41,7 +41,7 @@ jobs:
         run: tox
 
       - name: Run Coverage
-        if: matrix.python-version == '3.8' && matrix.toxenv=='py38-django42-drflatest'
+        if: matrix.python-version == '3.12' && matrix.toxenv=='django42-drflatest'
         uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
