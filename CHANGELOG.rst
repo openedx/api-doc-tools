@@ -14,6 +14,11 @@ Change Log
 Unreleased
 ----------
 
+2.0.0 --- 2024-09-09
+--------------------
+* Drop support for Python 3.8
+* Add setuptools as a direct dependency
+
 1.8.0 --- 2024-02-29
 --------------------
 * Add support for python 3.11 and 3.12 support.
