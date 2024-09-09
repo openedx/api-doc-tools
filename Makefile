@@ -68,12 +68,12 @@ upgrade:  $(COMMON_CONSTRAINTS_TXT) ## update the requirements/*.txt files with 
 	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
 	pip install -qr requirements/pip-tools.txt
 	pip install -qr requirements/pip.txt
-	pip-compile --upgrade requirements/base.in
-	pip-compile --upgrade requirements/test.in
-	pip-compile --upgrade requirements/doc.in
-	pip-compile --upgrade requirements/quality.in
-	pip-compile --upgrade requirements/ci.in
-	pip-compile --upgrade requirements/dev.in
+	pip-compile --upgrade --allow-unsafe requirements/base.in
+	pip-compile --upgrade --allow-unsafe requirements/test.in
+	pip-compile --upgrade --allow-unsafe requirements/doc.in
+	pip-compile --upgrade --allow-unsafe requirements/quality.in
+	pip-compile --upgrade --allow-unsafe requirements/ci.in
+	pip-compile --upgrade --allow-unsafe requirements/dev.in
 	# Delete django, drf pins from test.txt so that tox can control
 	# Django version.
 	sed -i.tmp '/^[dD]jango==/d' requirements/test.txt
