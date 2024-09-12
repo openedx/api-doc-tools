@@ -22,7 +22,7 @@ inflection==0.5.1
     # via drf-yasg
 packaging==24.1
     # via drf-yasg
-pytz==2024.1
+pytz==2024.2
     # via drf-yasg
 pyyaml==6.0.2
     # via drf-yasg

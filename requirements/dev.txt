@@ -110,7 +110,7 @@ idna==3.8
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==8.4.0
+importlib-metadata==8.5.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -265,7 +265,7 @@ pyproject-hooks==1.1.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==8.3.2
+pytest==8.3.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -278,7 +278,7 @@ python-slugify==8.0.4
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2024.1
+pytz==2024.2
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -305,7 +305,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.8.0
+rich==13.8.1
     # via
     #   -r requirements/quality.txt
     #   twine
