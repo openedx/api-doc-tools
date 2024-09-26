@@ -8,7 +8,7 @@ asgiref==3.8.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==3.2.4
+astroid==3.3.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -101,16 +101,16 @@ edx-i18n-tools==1.6.3
     # via -r requirements/dev.in
 edx-lint==5.4.0
     # via -r requirements/quality.txt
-filelock==3.16.0
+filelock==3.16.1
     # via
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-idna==3.8
+idna==3.10
     # via
     #   -r requirements/quality.txt
     #   requests
-importlib-metadata==8.4.0
+importlib-metadata==8.5.0
     # via
     #   -r requirements/quality.txt
     #   keyring
@@ -149,7 +149,7 @@ jinja2==3.1.4
     #   -r requirements/quality.txt
     #   code-annotations
     #   diff-cover
-keyring==25.3.0
+keyring==25.4.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -206,7 +206,7 @@ pkginfo==1.10.0
     # via
     #   -r requirements/quality.txt
     #   twine
-platformdirs==4.3.2
+platformdirs==4.3.6
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -236,7 +236,7 @@ pygments==2.18.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==3.2.7
+pylint==3.3.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -256,7 +256,7 @@ pylint-plugin-utils==0.8.2
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyproject-api==1.7.1
+pyproject-api==1.8.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -265,7 +265,7 @@ pyproject-hooks==1.1.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==8.3.2
+pytest==8.3.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -278,7 +278,7 @@ python-slugify==8.0.4
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2024.1
+pytz==2024.2
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
@@ -305,7 +305,7 @@ rfc3986==2.0.0
     # via
     #   -r requirements/quality.txt
     #   twine
-rich==13.8.0
+rich==13.8.1
     # via
     #   -r requirements/quality.txt
     #   twine
@@ -337,7 +337,7 @@ tomlkit==0.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.18.1
+tox==4.20.0
     # via -r requirements/ci.txt
 twine==5.1.1
     # via -r requirements/quality.txt
@@ -345,12 +345,12 @@ uritemplate==4.1.1
     # via
     #   -r requirements/quality.txt
     #   drf-yasg
-urllib3==2.2.2
+urllib3==2.2.3
     # via
     #   -r requirements/quality.txt
     #   requests
     #   twine
-virtualenv==20.26.4
+virtualenv==20.26.5
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -358,7 +358,7 @@ wheel==0.44.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-zipp==3.20.1
+zipp==3.20.2
     # via
     #   -r requirements/quality.txt
     #   importlib-metadata
@@ -366,7 +366,7 @@ zipp==3.20.1
 # The following packages are considered to be unsafe in a requirements file:
 pip==24.2
     # via pip-tools
-setuptools==74.1.2
+setuptools==75.1.0
     # via
     #   -r requirements/quality.txt
     #   pip-tools

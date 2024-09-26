@@ -53,11 +53,11 @@ docutils==0.21.2
     #   sphinx
 drf-yasg==1.21.7
     # via -r requirements/test.txt
-idna==3.8
+idna==3.10
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==8.4.0
+importlib-metadata==8.5.0
     # via
     #   keyring
     #   twine
@@ -81,7 +81,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.4
     # via sphinx
-keyring==25.3.0
+keyring==25.4.1
     # via twine
 markdown-it-py==3.0.0
     # via rich
@@ -122,7 +122,7 @@ pygments==2.18.0
     #   readme-renderer
     #   rich
     #   sphinx
-pytest==8.3.2
+pytest==8.3.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -131,7 +131,7 @@ pytest-cov==5.0.0
     # via -r requirements/test.txt
 pytest-django==4.9.0
     # via -r requirements/test.txt
-pytz==2024.1
+pytz==2024.2
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -154,7 +154,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==13.8.0
+rich==13.8.1
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -195,13 +195,13 @@ uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-urllib3==2.2.2
+urllib3==2.2.3
     # via
     #   requests
     #   twine
-zipp==3.20.1
+zipp==3.20.2
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==74.1.2
+setuptools==75.1.0
     # via -r requirements/test.txt
