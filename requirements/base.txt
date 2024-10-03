@@ -22,7 +22,7 @@ inflection==0.5.1
     # via drf-yasg
 packaging==24.1
     # via drf-yasg
-pytz==2024.1
+pytz==2024.2
     # via drf-yasg
 pyyaml==6.0.2
     # via drf-yasg
@@ -32,5 +32,5 @@ uritemplate==4.1.1
     # via drf-yasg
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==74.1.2
+setuptools==75.1.0
     # via -r requirements/base.in
