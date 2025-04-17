@@ -17,7 +17,7 @@ jobs:
         python-version: ["3.11", "3.12"]
         toxenv:
           [
-            django42-drflatest,quality
+            django42-drflatest,django52-drflatest,quality
           ]
 
     steps:
