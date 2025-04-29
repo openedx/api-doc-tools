@@ -54,7 +54,7 @@ def load_requirements(*requirements_paths):
         if seen_spelling is None:
             by_canonical_name[canonical] = package
         elif seen_spelling != package:
-            raise Exception(
+            raise RuntimeError(
                 f'Encountered both "{seen_spelling}" and "{package}" in requirements '
                 'and constraints files; please use just one or the other.'
             )
@@ -154,6 +154,7 @@ setup(
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
         'Framework :: Django :: 4.2',
+        'Framework :: Django :: 5.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
