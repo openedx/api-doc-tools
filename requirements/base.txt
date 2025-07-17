@@ -4,33 +4,33 @@
 #
 #    make upgrade
 #
-asgiref==3.8.1
+asgiref==3.9.1
     # via django
-django==4.2.16
+django==4.2.23
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.7
+drf-yasg==1.21.10
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-packaging==24.1
+packaging==25.0
     # via drf-yasg
-pytz==2024.1
+pytz==2025.2
     # via drf-yasg
 pyyaml==6.0.2
     # via drf-yasg
-sqlparse==0.5.1
+sqlparse==0.5.3
     # via django
-uritemplate==4.1.1
+uritemplate==4.2.0
     # via drf-yasg
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==74.1.2
+setuptools==80.9.0
     # via -r requirements/base.in
