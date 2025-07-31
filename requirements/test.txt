@@ -4,11 +4,11 @@
 #
 #    make upgrade
 #
-asgiref==3.8.1
+asgiref==3.9.1
     # via
     #   -r requirements/base.txt
     #   django
-coverage[toml]==7.6.1
+coverage[toml]==7.10.1
     # via pytest-cov
     # via
     #   -c requirements/common_constraints.txt
@@ -18,30 +18,34 @@ coverage[toml]==7.6.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.7
+drf-yasg==1.21.10
     # via -r requirements/base.txt
 inflection==0.5.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
-packaging==24.1
+packaging==25.0
     # via
     #   -r requirements/base.txt
     #   drf-yasg
     #   pytest
-pluggy==1.5.0
+pluggy==1.6.0
+    # via
+    #   pytest
+    #   pytest-cov
+pygments==2.19.2
     # via pytest
-pytest==8.3.2
+pytest==8.4.1
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==5.0.0
+pytest-cov==6.2.1
     # via -r requirements/test.in
-pytest-django==4.9.0
+pytest-django==4.11.1
     # via -r requirements/test.in
-pytz==2024.1
+pytz==2025.2
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -49,15 +53,15 @@ pyyaml==6.0.2
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-sqlparse==0.5.1
+sqlparse==0.5.3
     # via
     #   -r requirements/base.txt
     #   django
-uritemplate==4.1.1
+uritemplate==4.2.0
     # via
     #   -r requirements/base.txt
     #   drf-yasg
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==74.1.2
+setuptools==80.9.0
     # via -r requirements/base.txt
