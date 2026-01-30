@@ -14,8 +14,12 @@ Change Log
 Unreleased
 ----------
 
+2.1.1 - 2026-01-39
+------------------
+* Fix make upgrade, update dependencies
+
 2.1.0 - 2025-04-18
----------------------
+------------------
 * Added Support for ``django 5.2``.
 
 2.0.0 --- 2024-09-09
@@ -27,8 +31,6 @@ Unreleased
 --------------------
 * Add support for python 3.11 and 3.12 support.
 * Removed django32 support.
-
-
 
 1.7.0 --- 2023-07-23
 --------------------
