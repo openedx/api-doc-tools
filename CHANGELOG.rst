@@ -14,6 +14,10 @@ Change Log
 Unreleased
 ----------
 
+2.1.2 - 2026-01-39
+------------------
+* Fix builds to PyPI
+
 2.1.1 - 2026-01-39
 ------------------
 * Fix make upgrade, update dependencies
