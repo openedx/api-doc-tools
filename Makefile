@@ -62,6 +62,7 @@ upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade:  $(COMMON_CONSTRAINTS_TXT) ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	# Make sure to compile files after any other files they include!
 	pip install -qr requirements/pip-tools.txt
+	pip install -qr requirements/pip.txt
 	sed 's/Django<4.0//g' requirements/common_constraints.txt > requirements/common_constraints.tmp
 	mv requirements/common_constraints.tmp requirements/common_constraints.txt
 	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
