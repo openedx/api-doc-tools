@@ -3,10 +3,9 @@ name: Publish package to PyPi
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 jobs:
-
   push:
     runs-on: ubuntu-latest
 
@@ -16,7 +15,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: 3.11
 
       - name: Install pip
         run: pip install -r requirements/pip.txt
@@ -32,4 +31,3 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_UPLOAD_TOKEN }}
-
