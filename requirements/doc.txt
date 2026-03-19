@@ -22,9 +22,9 @@ certifi==2026.2.25
     # via requests
 cffi==2.0.0
     # via cryptography
-charset-normalizer==3.4.5
+charset-normalizer==3.4.6
     # via requests
-coverage[toml]==7.13.4
+coverage[toml]==7.13.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -36,7 +36,7 @@ django==5.2.12
     #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -67,7 +67,7 @@ iniconfig==2.3.0
     #   pytest
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==6.1.0
+jaraco-context==6.1.1
     # via keyring
 jaraco-functools==4.4.0
     # via keyring
@@ -95,7 +95,6 @@ packaging==26.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-    #   pydata-sphinx-theme
     #   pytest
     #   sphinx
     #   twine
@@ -106,7 +105,7 @@ pluggy==1.6.0
     #   pytest-cov
 pycparser==3.0
     # via cffi
-pydata-sphinx-theme==0.15.4
+pydata-sphinx-theme==0.16.1
     # via sphinx-book-theme
 pygments==2.19.2
     # via
@@ -165,7 +164,7 @@ sphinx==9.1.0
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
-sphinx-book-theme==1.1.4
+sphinx-book-theme==1.2.0
     # via -r requirements/doc.in
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
@@ -202,5 +201,5 @@ urllib3==2.6.3
     #   twine
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==82.0.0
+setuptools==82.0.1
     # via -r requirements/test.txt
