@@ -14,6 +14,8 @@ Change Log
 Unreleased
 ----------
 
+* Dropped Django 4.2 support; bumped djangorestframework, edx-lint to 6.0.0, code-annotations to 3.0.0
+
 2.1.2 - 2026-01-39
 ------------------
 * Fix builds to PyPI
