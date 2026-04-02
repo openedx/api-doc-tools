@@ -16,7 +16,7 @@ certifi==2026.2.25
     # via requests
 cffi==2.0.0
     # via cryptography
-charset-normalizer==3.4.5
+charset-normalizer==3.4.6
     # via requests
 click==8.3.1
     # via
@@ -25,13 +25,13 @@ click==8.3.1
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==2.3.2
+code-annotations==3.0.0
     # via edx-lint
-coverage[toml]==7.13.4
+coverage[toml]==7.13.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==46.0.5
+cryptography==46.0.6
     # via secretstorage
 dill==0.4.1
     # via pylint
@@ -41,7 +41,7 @@ django==5.2.12
     #   -r requirements/test.txt
     #   djangorestframework
     #   drf-yasg
-djangorestframework==3.16.1
+djangorestframework==3.17.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -49,7 +49,7 @@ docutils==0.22.4
     # via readme-renderer
 drf-yasg==1.21.15
     # via -r requirements/test.txt
-edx-lint==5.6.0
+edx-lint==6.0.0
     # via -r requirements/quality.in
 id==1.6.1
     # via twine
@@ -69,7 +69,7 @@ isort==8.0.1
     #   pylint
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==6.1.0
+jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.4.0
     # via keyring
@@ -93,7 +93,7 @@ more-itertools==10.8.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-nh3==0.3.3
+nh3==0.3.4
     # via readme-renderer
 packaging==26.0
     # via
@@ -114,7 +114,7 @@ pycparser==3.0
     # via cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pygments==2.19.2
+pygments==2.20.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -139,7 +139,7 @@ pytest==9.0.2
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements/test.txt
 pytest-django==4.12.0
     # via -r requirements/test.txt
@@ -156,7 +156,7 @@ pyyaml==6.0.3
     #   drf-yasg
 readme-renderer==44.0
     # via twine
-requests==2.32.5
+requests==2.33.1
     # via
     #   requests-toolbelt
     #   twine
@@ -195,5 +195,5 @@ urllib3==2.6.3
     #   twine
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==82.0.0
+setuptools==82.0.1
     # via -r requirements/test.txt
