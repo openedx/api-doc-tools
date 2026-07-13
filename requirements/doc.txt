@@ -10,7 +10,7 @@ alabaster==1.0.0
     # via sphinx
 asgiref==3.11.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   django
 babel==2.18.0
     # via
@@ -26,22 +26,19 @@ charset-normalizer==3.4.5
     # via requests
 coverage[toml]==7.13.4
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest-cov
 cryptography==46.0.5
     # via secretstorage
 django==5.2.12
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/test.txt
+    #   -c common_constraints.txt
     #   djangorestframework
     #   drf-yasg
 djangorestframework==3.16.1
-    # via
-    #   -r requirements/test.txt
-    #   drf-yasg
+    # via drf-yasg
 doc8==2.0.0
-    # via -r requirements/doc.in
+    # via -r doc.in
 docutils==0.21.2
     # via
     #   doc8
@@ -50,7 +47,7 @@ docutils==0.21.2
     #   restructuredtext-lint
     #   sphinx
 drf-yasg==1.21.15
-    # via -r requirements/test.txt
+    # via -r test.txt
 id==1.6.1
     # via twine
 idna==3.11
@@ -59,11 +56,11 @@ imagesize==2.0.0
     # via sphinx
 inflection==0.5.1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
 iniconfig==2.3.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest
 jaraco-classes==3.4.0
     # via keyring
@@ -93,7 +90,7 @@ nh3==0.3.3
     # via readme-renderer
 packaging==26.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
     #   pydata-sphinx-theme
     #   pytest
@@ -101,7 +98,7 @@ packaging==26.0
     #   twine
 pluggy==1.6.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest
     #   pytest-cov
 pycparser==3.0
@@ -110,7 +107,7 @@ pydata-sphinx-theme==0.15.4
     # via sphinx-book-theme
 pygments==2.19.2
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   accessible-pygments
     #   doc8
     #   pydata-sphinx-theme
@@ -120,24 +117,24 @@ pygments==2.19.2
     #   sphinx
 pytest==9.0.2
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   pytest-cov
     #   pytest-django
 pytest-cov==7.0.0
-    # via -r requirements/test.txt
+    # via -r test.txt
 pytest-django==4.12.0
-    # via -r requirements/test.txt
+    # via -r test.txt
 pytz==2026.1.post1
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
 pyyaml==6.0.3
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
 readme-renderer==44.0
     # via
-    #   -r requirements/doc.in
+    #   -r doc.in
     #   twine
 requests==2.32.5
     # via
@@ -158,15 +155,15 @@ secretstorage==3.5.0
     # via keyring
 snowballstemmer==3.0.1
     # via sphinx
-soupsieve==2.8.3
+soupsieve==2.8.4
     # via beautifulsoup4
 sphinx==9.1.0
     # via
-    #   -r requirements/doc.in
+    #   -r doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
 sphinx-book-theme==1.1.4
-    # via -r requirements/doc.in
+    # via -r doc.in
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
 sphinxcontrib-devhelp==2.0.0
@@ -181,19 +178,19 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 sqlparse==0.5.5
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   django
 stevedore==5.7.0
     # via doc8
 twine==6.2.0
-    # via -r requirements/doc.in
+    # via -r doc.in
 typing-extensions==4.15.0
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
 uritemplate==4.2.0
     # via
-    #   -r requirements/test.txt
+    #   -r test.txt
     #   drf-yasg
 urllib3==2.6.3
     # via
@@ -203,4 +200,4 @@ urllib3==2.6.3
 
 # The following packages are considered to be unsafe in a requirements file:
 setuptools==82.0.0
-    # via -r requirements/test.txt
+    # via -r test.txt
