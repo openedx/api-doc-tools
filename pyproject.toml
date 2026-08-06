@@ -53,6 +53,7 @@ changelog_file = "CHANGELOG.rst"
 output_format = "rst"
 
 [tool.setuptools.packages.find]
+where = ["src"]
 include = ["edx_api_doc_tools*"]
 
 [tool.setuptools.package-data]
