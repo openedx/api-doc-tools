@@ -44,5 +44,3 @@ from .view_utils import (
     schema,
     schema_for,
 )
-
-
