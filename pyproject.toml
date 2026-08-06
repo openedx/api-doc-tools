@@ -60,6 +60,60 @@ include = ["edx_api_doc_tools*"]
 [tool.setuptools.exclude-package-data]
 "*" = ["tests*", "*.tests*"]
 
+[dependency-groups]
+test-base = [
+    "pytest-cov",
+    "pytest-django",
+]
+test = [
+    {include-group = "test-base"},
+    "Django>=5.2,<6.0",
+    "djangorestframework",
+]
+quality = [
+    {include-group = "test"},
+    "edx-lint",
+    "isort",
+    "pycodestyle",
+    "pydocstyle",
+    "twine",
+]
+doc = [
+    {include-group = "test"},
+    "doc8",
+    "sphinx-book-theme",
+    "readme-renderer",
+    "Sphinx",
+    "twine",
+]
+ci = [
+    "tox",
+    "tox-uv>=1",
+]
+dev = [
+    {include-group = "quality"},
+    {include-group = "ci"},
+]
+
+[tool.uv]
+package = true
+
+#  DO NOT EDIT constraint-dependencies DIRECTLY.
+#  This list is managed by `edx_lint write_uv_constraints`
+#  and will be overwritten the next time `make upgrade` is run.
+#  - GLOBAL constraints: edit edx_lint/files/common_constraints.txt
+#  - REPO-SPECIFIC constraints: edit [tool.edx_lint].uv_constraints in this file
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+]
+[tool.isort]
+indent = "    "
+line_length = 120
+multi_line_output = 3
+lines_after_imports = 2
+include_trailing_comma = true
+
 [tool.coverage.run]
 branch = true
 source = ["edx_api_doc_tools"]

@@ -1,9 +1,9 @@
 .PHONY: build_docs build_dummy_translations clean compile_translations \
         coverage detect_changed_source_translations diff_cover docs \
         dummy_translations extract_translations help isort isort_check \
-        pip-tools pull_translations push_translations pylint quality \
-        requirements selfcheck style test test-all upgrade upgrade \
-        upgrade-pip-tools validate validate_translations
+        pull_translations push_translations pylint quality \
+        requirements selfcheck style test test-all upgrade \
+        validate validate_translations
 
 .DEFAULT_GOAL := help
 
@@ -29,89 +29,50 @@ coverage: clean ## generate and view HTML coverage report
 	$(BROWSER)htmlcov/index.html
 
 build_docs:
-	doc8 --ignore-path docs/_build README.rst docs
+	uv run --group doc doc8 --ignore-path docs/_build README.rst docs
 	make -C docs clean
 	make -C docs html
-	python setup.py sdist
-	twine check dist/*.tar.gz
+	uv run --group doc python -m build --sdist
+	uv run --group doc twine check dist/*.tar.gz
 
-docs: ## generate and show Sphinx HTML documentation, including API docs
-	tox -e docs
+docs: build_docs ## generate and show Sphinx HTML documentation, including API docs
 	$(BROWSER)docs/_build/html/index.html
 
-pip-tools:
-	pip install -qr requirements/pip-tools.txt
+upgrade: ## update the requirements in pyproject.toml (uv.lock)
+	uv run --group quality edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade
 
-pip:
-	pip install -qr requirements/pip.txt
-
-upgrade-pip-tools: pip-tools
-	pip-compile --upgrade requirements/pip-tools.in
-
-define COMMON_CONSTRAINTS_TEMP_COMMENT
-# This is a temporary solution to override the real common_constraints.txt\n# In edx-lint, until the pyjwt constraint in edx-lint has been removed.\n# See BOM-2721 for more details.\n# Below is the copied and edited version of common_constraints\n
-endef
-
-COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
-.PHONY: $(COMMON_CONSTRAINTS_TXT)
-$(COMMON_CONSTRAINTS_TXT):
-	wget -O "$(@)" https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt || touch "$(@)"
-	echo "$(COMMON_CONSTRAINTS_TEMP_COMMENT)" | cat - $(@) > temp && mv temp $(@)
-
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade:  $(COMMON_CONSTRAINTS_TXT) ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	# Make sure to compile files after any other files they include!
-	pip install -qr requirements/pip-tools.txt
-	pip install -qr requirements/pip.txt
-	sed 's/Django<4.0//g' requirements/common_constraints.txt > requirements/common_constraints.tmp
-	mv requirements/common_constraints.tmp requirements/common_constraints.txt
-	pip-compile --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
-	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
-	pip install -qr requirements/pip-tools.txt
-	pip install -qr requirements/pip.txt
-	pip-compile --upgrade --allow-unsafe requirements/base.in
-	pip-compile --upgrade --allow-unsafe requirements/test.in
-	pip-compile --upgrade --allow-unsafe requirements/doc.in
-	pip-compile --upgrade --allow-unsafe requirements/quality.in
-	pip-compile --upgrade --allow-unsafe requirements/ci.in
-	pip-compile --upgrade --allow-unsafe requirements/dev.in
-	# Delete django, drf pins from test.txt so that tox can control
-	# Django version.
-	sed -i.tmp '/^[dD]jango==/d' requirements/test.txt
-	sed -i.tmp '/^djangorestframework==/d' requirements/test.txt
-	rm requirements/test.txt.tmp
-
-CHECKABLE_PYTHON=tests test_utils example edx_api_doc_tools manage.py setup.py test_settings.py
+CHECKABLE_PYTHON=tests test_utils example edx_api_doc_tools manage.py test_settings.py
 
 style:
-	pycodestyle $(CHECKABLE_PYTHON)
-	pydocstyle $(CHECKABLE_PYTHON)
+	uv run --group quality pycodestyle $(CHECKABLE_PYTHON)
+	uv run --group quality pydocstyle $(CHECKABLE_PYTHON)
 
-isort:  # sort all imports.
-	isort --recursive $(CHECKABLE_PYTHON)
+isort:  ## sort all imports
+	uv run --group quality isort --recursive $(CHECKABLE_PYTHON)
 
 isort_check:
-	isort --check-only --diff $(CHECKABLE_PYTHON)
+	uv run --group quality isort --check-only --diff $(CHECKABLE_PYTHON)
 
 pylint:
 	echo '"""This file exists only to satisify pylint; it is not committed."""' > tests/__init__.py
-	pylint --django-settings-module=test_settings $(CHECKABLE_PYTHON)
+	uv run --group quality pylint --django-settings-module=test_settings $(CHECKABLE_PYTHON)
 	rm tests/__init__.py
 
 quality: style isort_check pylint ## check code style, import ordering, linting, and this makefile
 	make selfcheck
 
-requirements: pip-tools ## install development environment requirements
-	pip-sync requirements/dev.txt requirements/private.*
+requirements: ## install development environment requirements
+	uv sync --group dev
 
 test: clean ## run tests in the current virtualenv
-	pytest
+	uv run --group test pytest
 
 diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml
 
-test-all: quality ## run tests on every supported Python/Django combination
-	tox
+test-all: ## run tests on every supported Django combination
+	uv run --group test pytest
 
 validate: quality test ## run tests and quality checks
 
