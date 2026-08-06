@@ -40,6 +40,9 @@ fallback_version = "0.0.0.dev0"
 
 [tool.semantic_release]
 tag_format = "{version}"
+build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+allow_zero_version = true
+major_on_zero = false
 
 [tool.semantic_release.changelog]
 mode = "update"
