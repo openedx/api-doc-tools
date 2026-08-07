@@ -30,7 +30,7 @@ jobs:
       with:
         git_committer_name: "github-actions"
         git_committer_email: "github-actions@github.com"
-        changelog: "false"
+        changelog: "true"
     - name: Upload dist
       if: steps.release.outputs.released == 'true'
       uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
