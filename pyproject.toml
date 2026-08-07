@@ -1,0 +1,140 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edx-api-doc-tools"
+dynamic = ["version"]
+description = "Tools for writing and generating API documentation for edX REST APIs"
+readme = "README.rst"
+license = "Apache-2.0"
+license-files = ["LICENSE.txt"]
+requires-python = ">=3.12"
+dependencies = [
+    "Django>=4.2",
+    "djangorestframework>=3.2.0",
+    "drf-yasg",
+    "setuptools",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+authors = [
+    {name = "Open edX Project", email = "oscm@openedx.org"},
+]
+
+[project.urls]
+Homepage = "https://github.com/openedx/api-doc-tools"
+
+[tool.setuptools_scm]
+version_scheme = "only-version"
+local_scheme = "no-local-version"
+fallback_version = "0.0.0.dev0"
+
+[tool.semantic_release]
+tag_format = "v{version}"
+build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+allow_zero_version = true
+major_on_zero = false
+
+[tool.semantic_release.changelog]
+mode = "update"
+insertion_flag = ".. changelog-insertion-marker"
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.rst"
+output_format = "rst"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["edx_api_doc_tools*"]
+
+[tool.setuptools.package-data]
+"edx_api_doc_tools" = [
+    "conf/locale/**",
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["tests*", "*.tests*"]
+
+[dependency-groups]
+test-base = [
+    "pytest-cov",
+    "pytest-django",
+]
+test = [
+    {include-group = "test-base"},
+    "Django>=5.2,<6.0",
+    "djangorestframework",
+]
+quality = [
+    {include-group = "test"},
+    "edx-lint",
+    "isort",
+    "pycodestyle",
+    "pydocstyle",
+    "twine",
+]
+doc = [
+    {include-group = "test"},
+    "doc8",
+    "sphinx-book-theme",
+    "readme-renderer",
+    "Sphinx",
+    "twine",
+]
+ci = [
+    "tox",
+    "tox-uv>=1",
+]
+dev = [
+    {include-group = "quality"},
+    {include-group = "ci"},
+    "diff-cover",
+    "edx-i18n-tools",
+]
+
+[tool.uv]
+package = true
+
+#  DO NOT EDIT constraint-dependencies DIRECTLY.
+#  This list is managed by `edx_lint write_uv_constraints`
+#  and will be overwritten the next time `make upgrade` is run.
+#  - GLOBAL constraints: edit edx_lint/files/common_constraints.txt
+#  - REPO-SPECIFIC constraints: edit [tool.edx_lint].uv_constraints in this file
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+]
+[tool.isort]
+indent = "    "
+line_length = 120
+multi_line_output = 3
+lines_after_imports = 2
+include_trailing_comma = true
+
+[tool.coverage.run]
+branch = true
+source = ["edx_api_doc_tools"]
+omit = ["*/tests/*", "*/migrations/*", "*/__pycache__/*", "*/settings.py"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"

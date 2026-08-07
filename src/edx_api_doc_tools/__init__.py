@@ -44,6 +44,3 @@ from .view_utils import (
     schema,
     schema_for,
 )
-
-
-__version__ = "3.0.0"
