@@ -36,13 +36,10 @@ Homepage = "https://github.com/openedx/api-doc-tools"
 [tool.setuptools_scm]
 version_scheme = "only-version"
 local_scheme = "no-local-version"
-fallback_version = "0.0.0.dev0"
 
 [tool.semantic_release]
 tag_format = "v{version}"
 build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
-allow_zero_version = true
-major_on_zero = false
 
 [tool.semantic_release.changelog]
 mode = "update"
@@ -66,6 +63,7 @@ include = ["edx_api_doc_tools*"]
 
 [dependency-groups]
 test-base = [
+    "pytest",
     "pytest-cov",
     "pytest-django",
 ]
@@ -84,6 +82,7 @@ quality = [
 ]
 doc = [
     {include-group = "test"},
+    "build",
     "doc8",
     "sphinx-book-theme",
     "readme-renderer",
@@ -96,6 +95,7 @@ ci = [
 ]
 dev = [
     {include-group = "quality"},
+    {include-group = "doc"},
     {include-group = "ci"},
     "diff-cover",
     "edx-i18n-tools",
@@ -103,6 +103,7 @@ dev = [
 
 [tool.uv]
 package = true
+default-groups = []
 
 #  DO NOT EDIT constraint-dependencies DIRECTLY.
 #  This list is managed by `edx_lint write_uv_constraints`
@@ -113,6 +114,10 @@ constraint-dependencies = [
     "Django<6.0",
     "elasticsearch<7.14.0",
 ]
+
+[tool.edx_lint]
+uv_constraints = []
+
 [tool.isort]
 indent = "    "
 line_length = 120
@@ -122,7 +127,7 @@ include_trailing_comma = true
 
 [tool.coverage.run]
 branch = true
-source = ["edx_api_doc_tools"]
+source_pkgs = ["edx_api_doc_tools"]
 omit = ["*/tests/*", "*/migrations/*", "*/__pycache__/*", "*/settings.py"]
 
 [tool.coverage.report]
