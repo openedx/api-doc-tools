@@ -4,11 +4,16 @@
 #
 #    make upgrade
 #
-asgiref==3.11.1
+asgiref==3.12.1
     # via
     #   -r requirements/base.txt
     #   django
-coverage[toml]==7.13.4
+attrs==26.1.0
+    # via
+    #   -r requirements/base.txt
+    #   jsonschema
+    #   referencing
+coverage[toml]==7.16.2
     # via pytest-cov
     # via
     #   -c requirements/common_constraints.txt
@@ -18,15 +23,27 @@ coverage[toml]==7.13.4
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.15
+drf-yasg==1.21.18
     # via -r requirements/base.txt
+importlib-resources==7.1.0
+    # via
+    #   -r requirements/base.txt
+    #   swagger-spec-validator
 inflection==0.5.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-iniconfig==2.3.0
+iniconfig==2.3.1
     # via pytest
-packaging==26.0
+jsonschema==4.26.0
+    # via
+    #   -r requirements/base.txt
+    #   swagger-spec-validator
+jsonschema-specifications==2025.9.1
+    # via
+    #   -r requirements/base.txt
+    #   jsonschema
+packaging==26.3
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -35,17 +52,17 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-pygments==2.19.2
+pygments==2.21.0
     # via pytest
-pytest==9.0.2
+pytest==9.1.1
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements/test.in
-pytest-django==4.12.0
+pytest-django==4.14.0
     # via -r requirements/test.in
-pytz==2026.1.post1
+pytz==2026.5
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -53,15 +70,35 @@ pyyaml==6.0.3
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-sqlparse==0.5.5
+    #   swagger-spec-validator
+referencing==0.37.0
+    # via
+    #   -r requirements/base.txt
+    #   jsonschema
+    #   jsonschema-specifications
+rpds-py==2026.9.1
+    # via
+    #   -r requirements/base.txt
+    #   jsonschema
+    #   referencing
+sqlparse==0.6.0
     # via
     #   -r requirements/base.txt
     #   django
+swagger-spec-validator==3.0.4
+    # via
+    #   -r requirements/base.txt
+    #   drf-yasg
+typing-extensions==4.16.0
+    # via
+    #   -r requirements/base.txt
+    #   referencing
+    #   swagger-spec-validator
 uritemplate==4.2.0
     # via
     #   -r requirements/base.txt
     #   drf-yasg
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==82.0.0
+setuptools==84.0.0
     # via -r requirements/base.txt
