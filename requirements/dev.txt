@@ -21,7 +21,7 @@ cachetools==7.0.3
     # via
     #   -r requirements/ci.txt
     #   tox
-certifi==2026.2.25
+certifi==2026.10.19
     # via
     #   -r requirements/quality.txt
     #   requests
@@ -360,7 +360,9 @@ wheel==0.46.3
 
 # The following packages are considered to be unsafe in a requirements file:
 pip==26.0.1
-    # via pip-tools
+    # via
+    #   -c requirements/common_constraints.txt
+    #   pip-tools
 setuptools==82.0.0
     # via
     #   -r requirements/quality.txt
