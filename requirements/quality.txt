@@ -12,7 +12,7 @@ astroid==4.0.4
     # via
     #   pylint
     #   pylint-celery
-certifi==2026.2.25
+certifi==2026.10.19
     # via requests
 cffi==2.0.0
     # via cryptography
