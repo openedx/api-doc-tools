@@ -191,7 +191,7 @@ packaging==26.0
     #   wheel
 path==16.16.0
     # via edx-i18n-tools
-pip-tools==7.5.3
+pip-tools==7.6.2
     # via -r requirements/pip-tools.txt
 platformdirs==4.9.4
     # via
@@ -359,7 +359,7 @@ wheel==0.46.3
     #   pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
-pip==26.0.1
+pip==26.2.2
     # via
     #   -c requirements/common_constraints.txt
     #   pip-tools
