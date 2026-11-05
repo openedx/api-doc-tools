@@ -42,7 +42,7 @@ TEMPLATES = [
 ]
 
 LOCALE_PATHS = [
-    root('edx_api_doc_tools', 'conf', 'locale'),
+    root('src', 'edx_api_doc_tools', 'conf', 'locale'),
 ]
 
 ROOT_URLCONF = 'edx_api_doc_tools.urls'
