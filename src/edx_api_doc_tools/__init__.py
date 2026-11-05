@@ -8,6 +8,8 @@ In this file is the public Python API for REST documentation.
 # but they are imported into here so they can be imported
 # directly from `edx_api_doc_tools`.
 
+from importlib.metadata import version
+
 # Expose OpenAPI module through the edx_api_doc_tools package
 # so that general users don't have to know about drf_yasg.
 from drf_yasg import openapi
@@ -44,3 +46,6 @@ from .view_utils import (
     schema,
     schema_for,
 )
+
+
+__version__ = version("edx-api-doc-tools")
