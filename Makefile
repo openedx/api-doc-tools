@@ -2,7 +2,7 @@
         coverage detect_changed_source_translations diff_cover docs \
         dummy_translations extract_translations help isort isort_check \
         pull_translations push_translations pylint quality \
-        requirements selfcheck style test test-all upgrade \
+        requirements selfcheck style test upgrade \
         validate validate_translations
 
 .DEFAULT_GOAL := help
@@ -39,7 +39,7 @@ docs: build_docs ## generate and show Sphinx HTML documentation, including API d
 	$(BROWSER)docs/_build/html/index.html
 
 upgrade: ## update the requirements in pyproject.toml (uv.lock)
-	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv run --with 'edx-lint>=6.2' edx_lint write_uv_constraints pyproject.toml
 	uv lock --upgrade
 
 CHECKABLE_PYTHON=tests test_utils example src/edx_api_doc_tools manage.py test_settings.py
@@ -70,9 +70,6 @@ test: clean ## run tests in the current virtualenv
 
 diff_cover: test ## find diff lines that need test coverage
 	diff-cover coverage.xml
-
-test-all: ## run tests on every supported Django combination
-	pytest
 
 validate: quality test ## run tests and quality checks
 

@@ -69,7 +69,7 @@ test = [
 ]
 quality = [
     {include-group = "test"},
-    "edx-lint",
+    "edx-lint>=6.2",
     "isort",
     "pycodestyle",
     "pydocstyle",
@@ -91,6 +91,7 @@ ci = [
 dev = [
     {include-group = "quality"},
     {include-group = "ci"},
+    {include-group = "doc"},
     "diff-cover",
     "edx-i18n-tools",
 ]
