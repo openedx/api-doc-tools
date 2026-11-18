@@ -80,8 +80,8 @@ Have a question about this repository, or about the Open edX project in general?
 .. |pypi| image:: https://img.shields.io/pypi/v/edx-api-doc-tools.svg
     :target: https://pypi.python.org/pypi/edx-api-doc-tools/
     :alt: PyPI
-.. |CI| image:: https://github.com/openedx/api-doc-tools/workflows/Python%20CI/badge.svg?branch=master
-    :target: https://github.com/openedx/api-doc-tools/actions?query=workflow%3A%22Python+CI%22
+.. |CI| image:: https://github.com/openedx/api-doc-tools/actions/workflows/release.yml/badge.svg?branch=master
+    :target: https://github.com/openedx/api-doc-tools/actions/workflows/release.yml
     :alt: CI
 .. |codecov| image:: http://codecov.io/github/edx/api-doc-tools/coverage.svg?branch=master
     :target: http://codecov.io/github/edx/api-doc-tools?branch=master

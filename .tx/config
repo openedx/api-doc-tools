@@ -2,14 +2,14 @@
 host = https://www.transifex.com
 
 [o:open-edx:p:edx-platform:r:api-doc-tools]
-file_filter = edx_api_doc_tools/conf/locale/<lang>/LC_MESSAGES/django.po
-source_file = edx_api_doc_tools/conf/locale/en/LC_MESSAGES/django.po
+file_filter = src/edx_api_doc_tools/conf/locale/<lang>/LC_MESSAGES/django.po
+source_file = src/edx_api_doc_tools/conf/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type        = PO
 
 [o:open-edx:p:edx-platform:r:api-doc-tools-js]
-file_filter = edx_api_doc_tools/conf/locale/<lang>/LC_MESSAGES/djangojs.po
-source_file = edx_api_doc_tools/conf/locale/en/LC_MESSAGES/djangojs.po
+file_filter = src/edx_api_doc_tools/conf/locale/<lang>/LC_MESSAGES/djangojs.po
+source_file = src/edx_api_doc_tools/conf/locale/en/LC_MESSAGES/djangojs.po
 source_lang = en
 type        = PO
 
